@@ -368,7 +368,7 @@ export const ui = {
                 "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/88de79c3-d7ba-4b75-8aba-2a2f0bcc1af1.png"
             }
         },
-        "logos": {
+        "brandImages": {
             "BOT": {
                 "header": "https://image.s50.sfmc-content.com/lib/fe3a11717564047c721370/m/1/ff5c8deb-6196-4b6b-b5b4-98d7bba6c8e0.png",
                 "footer": "https://image.s50.sfmc-content.com/lib/fe3a11717564047c721370/m/1/afdf9e63-1adc-4f68-bb9d-6c76e0a6bd54.png",
@@ -376,6 +376,10 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3a11717564047c721370/m/1/f268a247-18d7-4bad-a71b-31718a9304e3.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3a11717564047c721370/m/1/856b9658-76e5-41d2-a919-0eec2443a271.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3a11717564047c721370/m/1/645ccc2a-744f-49d3-bb83-aa009417642e.png"
+                },
+                "banner": {
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7cc71adc-1e16-4a6c-a13c-7a6f3bc28268.png",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/d084b402-4ed6-4b60-919e-e9f79efd63e9.png"
                 }
             },
             "BLT": {
@@ -385,6 +389,10 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3911717564047c721371/m/1/33b2f060-8218-4f5a-b4a7-a017f3e7738d.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3911717564047c721371/m/1/c3613dfe-46fd-46cb-b327-78acab17ea05.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3911717564047c721371/m/1/b91688e8-8997-484e-801a-8f23bb6e26ed.png"
+                },
+                "banner": {
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7cc71adc-1e16-4a6c-a13c-7a6f3bc28268.png",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/d084b402-4ed6-4b60-919e-e9f79efd63e9.png"
                 }
             },
             "BT": {
@@ -394,6 +402,10 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3811717564047c721372/m/1/5092b29d-1e87-457e-bded-ee28a65b9563.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3811717564047c721372/m/1/0af0e721-63f1-4f79-bbca-8abaab057c71.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3811717564047c721372/m/1/87daf262-8d2a-49cc-b065-d1dadbf518ad.png"
+                },
+                "banner": {
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/a80e3b57-447d-4874-8288-462a25262909.png",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/88de79c3-d7ba-4b75-8aba-2a2f0bcc1af1.png"
                 }
             },
             "KB": {
@@ -403,6 +415,10 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3711717564047c721373/m/1/16908ccc-c3be-4211-947e-b9bdc617e308.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3711717564047c721373/m/1/510f11aa-b9b9-459d-9870-198b19d58914.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3711717564047c721373/m/1/795b57f3-d170-4c8e-9946-c0a122a43002.png"
+                },
+                "banner": {
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/a1005274-7355-438e-ae2e-fe594940257e.png",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/24187833-f751-4b6f-a092-68eeedec9cfa.png"
                 }
             },
             "SMP": {
@@ -412,6 +428,10 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3611717564047c721374/m/1/95520785-12a1-41a6-8641-10d0265496b0.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3611717564047c721374/m/1/6ebea07d-a892-4756-8732-a93154772f95.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3611717564047c721374/m/1/3809b939-c2e2-4225-825f-40943291146e.png"
+                },
+                "banner": {
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b8c4b71a-335e-4a7b-bd33-706de8bdb46a.png",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/78470bb2-c0e7-415b-9def-329029ab38c8.png"
                 }
             },
             "SOR": {
@@ -421,6 +441,10 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3511717564047c721375/m/1/14622651-a90c-48e5-b50e-9c167b7c87c4.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3511717564047c721375/m/1/d6abf51b-5feb-49b1-a332-81d1f482e28e.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3511717564047c721375/m/1/2cf9fa34-3e97-46d6-aad2-3386ec7aab5a.png"
+                },
+                "banner": {
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b8c4b71a-335e-4a7b-bd33-706de8bdb46a.png",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/78470bb2-c0e7-415b-9def-329029ab38c8.png"
                 }
             },
             "TA": {
@@ -430,6 +454,10 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3411717564047c721376/m/1/dd8ca22e-c227-4ee5-9dfe-7dad0e663888.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3411717564047c721376/m/1/163890c0-ae47-4feb-ac9d-b59b350ec5c3.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3411717564047c721376/m/1/834cac4f-dc78-4975-a4e1-b4d0887d3d88.png"
+                },
+                "banner": {
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b8c4b71a-335e-4a7b-bd33-706de8bdb46a.png",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/78470bb2-c0e7-415b-9def-329029ab38c8.png"
                 }
             },
             "UT": {
@@ -439,6 +467,10 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3311717564047c721377/m/1/3c00a108-fff7-43d0-b6d5-a0555d91d161.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3311717564047c721377/m/1/8bc3d63e-da23-476c-a60b-e952570b9c5b.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3311717564047c721377/m/1/907476bf-6335-41eb-a775-a4df6040e155.png"
+                },
+                "banner": {
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/a1005274-7355-438e-ae2e-fe594940257e.png",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/24187833-f751-4b6f-a092-68eeedec9cfa.png"
                 }
             },
             "YA": {
@@ -448,6 +480,10 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3211717564047c721378/m/1/b66ef9e7-a87e-4a03-b75f-c1efbc409525.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3211717564047c721378/m/1/af3efc13-8e92-452c-ba66-c0645af8bf4f.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3211717564047c721378/m/1/bef28c42-1d3a-4d0c-aff0-45121ede68cf.png"
+                },
+                "banner": {
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7cc71adc-1e16-4a6c-a13c-7a6f3bc28268.png",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/d084b402-4ed6-4b60-919e-e9f79efd63e9.png"
                 }
             },
             "OB": {
@@ -457,6 +493,10 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3111717564047c721379/m/1/3bdb3fa5-88e2-4377-a06c-61c6dd930be2.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3111717564047c721379/m/1/90551807-fca0-4d8e-b545-37d211efcf33.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3111717564047c721379/m/1/96636bc6-052e-46dc-9650-1fa89e508c0e.png"
+                },
+                "banner": {
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7cc71adc-1e16-4a6c-a13c-7a6f3bc28268.png",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/d084b402-4ed6-4b60-919e-e9f79efd63e9.png"
                 }
             }
         }

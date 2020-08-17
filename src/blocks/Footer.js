@@ -60,7 +60,7 @@ class Article extends React.Component {
         }
 
         regex = /\[imgLogo\]/gi;
-        html = html.replace(regex, ui.images.logos[this.props.content.brandId].footer);
+        html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].footer);
 
         if (this.props.content.toggleMenu) {
             regex = /\[menuHtml\]/gi;

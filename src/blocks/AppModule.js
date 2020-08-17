@@ -96,7 +96,7 @@ class Article extends React.Component {
             html = html.replace(regex, this.props.content.imgAppUrl);
         } else {
             regex = /\[imgApp\]/gi;
-            html = html.replace(regex, ui.images.logos[this.props.content.brandId].app[this.props.content.appColor === "mono" ? (this.props.content.toggleInvertedColors ? "white" : "black") : "color"])
+            html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].app[this.props.content.appColor === "mono" ? (this.props.content.toggleInvertedColors ? "white" : "black") : "color"])
         }
 
         if (this.props.content.toggleTopBorder) {

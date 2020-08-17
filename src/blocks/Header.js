@@ -41,13 +41,13 @@ class Article extends React.Component {
         }
 
         regex = /\[bannerDesktop\]/gi;
-        html = html.replace(regex, ui.images.banners[this.props.content.themeColor].desktop);
+        html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.desktop);
 
         regex = /\[bannerMobile\]/gi;
-        html = html.replace(regex, ui.images.banners[this.props.content.themeColor].mobile);
+        html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.mobile);
 
         regex = /\[imgLogo\]/gi;
-        html = html.replace(regex, ui.images.logos[this.props.content.brandId].header);
+        html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header);
 
 
         // Auto version
