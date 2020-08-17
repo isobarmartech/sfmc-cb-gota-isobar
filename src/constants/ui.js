@@ -8,8 +8,8 @@ export const ui = {
         "twitter": "https://twitter.com/barran_nyheter",
         "instagram": "https://www.instagram.com/barometern/",
         "applinks": {
-            "googleplay": "#barometern-googleplay",
-            "appstore": "#barometern-appstore"
+            "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinBarometern&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/minbarometern/id1373780935"
         },
         "menu": [{
             "title": "Start",
@@ -34,8 +34,8 @@ export const ui = {
         "twitter": "https://twitter.com/BLT_se",
         "instagram": "https://www.instagram.com/blekingelanstidning/",
         "applinks": {
-            "googleplay": "#googleplay",
-            "appstore": "#appstore"
+            "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinBLT&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/minblt/id1371335882"
         },
         "menu": [{
             "title": "Start",
@@ -60,8 +60,8 @@ export const ui = {
         "twitter": "https://twitter.com/boras_tidning",
         "instagram": "https://www.instagram.com/borastidning/?hl=sv",
         "applinks": {
-            "googleplay": "#googleplay",
-            "appstore": "#appstore"
+            "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinBT&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/minbt/id1351181432"
         },
         "menu": [{
             "title": "Start",
@@ -86,8 +86,8 @@ export const ui = {
         "twitter": "https://twitter.com/kbladet",
         "instagram": "https://www.instagram.com/kristianstadsbladet/",
         "applinks": {
-            "googleplay": "#googleplay",
-            "appstore": "#appstore"
+            "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinKb&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/minkb/id1377218854"
         },
         "menu": [{
             "title": "Start",
@@ -112,8 +112,8 @@ export const ui = {
         "twitter": "https://twitter.com/smalandsposten",
         "instagram": "https://www.instagram.com/smalandsposten/",
         "applinks": {
-            "googleplay": "#googleplay",
-            "appstore": "#appstore"
+            "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinSMP&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/minsmp/id1373785440"
         },
         "menu": [{
             "title": "Start",
@@ -138,8 +138,8 @@ export const ui = {
         "twitter": "https://twitter.com/Sydostran",
         "instagram": "https://www.instagram.com/sydostran/",
         "applinks": {
-            "googleplay": "#googleplay",
-            "appstore": "#appstore"
+            "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinSydostran&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/minsyd%C3%B6stran/id1371337398"
         },
         "menu": [{
             "title": "Start",
@@ -164,8 +164,8 @@ export const ui = {
         "twitter": "https://twitter.com/trelleborg",
         "instagram": "https://www.instagram.com/trelleborgsallehanda/",
         "applinks": {
-            "googleplay": "#googleplay",
-            "appstore": "#appstore"
+            "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinTA&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/minta/id1377138104"
         },
         "menu": [{
             "title": "Start",
@@ -190,8 +190,8 @@ export const ui = {
         "twitter": "https://twitter.com/ulrtid",
         "instagram": "https://www.instagram.com/ulricehamns_tidning/",
         "applinks": {
-            "googleplay": "#googleplay",
-            "appstore": "#appstore"
+            "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinUT&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/minut/id1381526851"
         },
         "menu": [{
             "title": "Start",
@@ -216,8 +216,8 @@ export const ui = {
         "twitter": "https://twitter.com/ystad",
         "instagram": "https://www.instagram.com/ystadsallehanda/",
         "applinks": {
-            "googleplay": "#googleplay",
-            "appstore": "#appstore"
+            "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinYA&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/minya/id1377190711"
         },
         "menu": [{
             "title": "Start",
@@ -242,8 +242,8 @@ export const ui = {
         "twitter": "https://twitter.com/olandsbladet",
         "instagram": "https://www.instagram.com/olandsbladet/",
         "applinks": {
-            "googleplay": "#googleplay",
-            "appstore": "#appstore"
+            "googleplay": "https://play.google.com/store/apps/details?id=se.olandsbladet.reader&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/min%C3%B6landsbladet/id1388268779"
         },
         "menu": [{
             "title": "Start",
