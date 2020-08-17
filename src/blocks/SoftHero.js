@@ -164,7 +164,6 @@ class Article extends React.Component {
                         textBody: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus minima quas est, unde itaque ullam ipsum maiores provident nihil ratione eius earum nemo fuga, rem veniam.",
                         textCta: "Read more",
                         linkCta: "#",
-                        signatureId: "",
                         imageSignature: "https://via.placeholder.com/250x70",
                         textSignature: "Firstname Lastname \n Title",
                         signatureName: "",
@@ -182,7 +181,6 @@ class Article extends React.Component {
 
         for (let i = 0; i < ui.signatures.length; i++) {
             arr.push({
-                value: `${ui.signatures[i].id}`,
                 label: `${ui.signatures[i].name}`,
                 img: `${ui.signatures[i].img}`,
                 title: `${ui.signatures[i].title}`
@@ -455,7 +453,6 @@ class Article extends React.Component {
                                                     iconName="down"
                                                     iconVariant="border-filled"
                                                     onSelect={event => {
-                                                        this.onChange("signatureId", event.value);
                                                         this.onChange("imageSignature", event.img);
                                                         this.onChange("signatureName", event.label);
                                                         this.onChange("signatureTitle", event.title);
