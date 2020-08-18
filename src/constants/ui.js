@@ -2,7 +2,7 @@ export const ui = {
     "brands": [{
         "name": "Barometern OT",
         "id": "BOT",
-        "brandColor": "#005CA9",
+        "colors": ["#005CA9", "#003653", "#00FFFF", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.barometern.se/",
         "facebook": "https://www.facebook.com/barometern/",
         "twitter": "https://twitter.com/barran_nyheter",
@@ -28,7 +28,7 @@ export const ui = {
     }, {
         "name": "Blekinge Läns Tidning",
         "id": "BLT",
-        "brandColor": "#005CA9",
+        "colors": ["#005CA9", "#003653", "#00FFFF", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.blt.se/",
         "facebook": "https://www.facebook.com/BLT.se/",
         "twitter": "https://twitter.com/BLT_se",
@@ -54,7 +54,7 @@ export const ui = {
     }, {
         "name": "Borås Tidning",
         "id": "BT",
-        "brandColor": "#41AD49",
+        "colors": ["#41AD49", "#003200", "#3AFF00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.bt.se/",
         "facebook": "https://facebook.com/borastidning/",
         "twitter": "https://twitter.com/boras_tidning",
@@ -80,7 +80,7 @@ export const ui = {
     }, {
         "name": "Kristianstadsbladet",
         "id": "KB",
-        "brandColor": "#ED7E00",
+        "colors": ["#ED7E00", "#3C2814", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.kristianstadsbladet.se/",
         "facebook": "https://www.facebook.com/kristianstadsbladet/",
         "twitter": "https://twitter.com/kbladet",
@@ -106,7 +106,7 @@ export const ui = {
     }, {
         "name": "Smålandsposten",
         "id": "SMP",
-        "brandColor": "#D00019",
+        "colors": ["#D00019", "#730E0E", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.smp.se/",
         "facebook": "https://www.facebook.com/smalandsposten/",
         "twitter": "https://twitter.com/smalandsposten",
@@ -132,7 +132,7 @@ export const ui = {
     }, {
         "name": "Sydöstran",
         "id": "SOR",
-        "brandColor": "#D00019",
+        "colors": ["#D00019", "#730E0E", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.sydostran.se/",
         "facebook": "https://www.facebook.com/Sydostran/",
         "twitter": "https://twitter.com/Sydostran",
@@ -158,7 +158,7 @@ export const ui = {
     }, {
         "name": "Trelleborgs Allehanda",
         "id": "TA",
-        "brandColor": "#D00019",
+        "colors": ["#D00019", "#730E0E", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.trelleborgsallehanda.se/",
         "facebook": "https://www.facebook.com/trelleborgsallehanda/",
         "twitter": "https://twitter.com/trelleborg",
@@ -184,7 +184,7 @@ export const ui = {
     }, {
         "name": "Ulricehamns Tidning",
         "id": "UT",
-        "brandColor": "#ED7E00",
+        "colors": ["#ED7E00", "#3C2814", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.ut.se/",
         "facebook": "https://www.facebook.com/ulrtid/",
         "twitter": "https://twitter.com/ulrtid",
@@ -210,7 +210,7 @@ export const ui = {
     }, {
         "name": "Ystads Allehande",
         "id": "YA",
-        "brandColor": "#005CA9",
+        "colors": ["#005CA9", "#003653", "#00FFFF", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.ystadsallehanda.se/",
         "facebook": "https://www.facebook.com/ystadsallehanda/",
         "twitter": "https://twitter.com/ystad",
@@ -236,7 +236,7 @@ export const ui = {
     }, {
         "name": "Ölandsbladet",
         "id": "OB",
-        "brandColor": "#005CA9",
+        "colors": ["#005CA9", "#003653", "#00FFFF", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.olandsbladet.se/",
         "facebook": "https://www.facebook.com/Olandsbladet/",
         "twitter": "https://twitter.com/olandsbladet",
@@ -279,9 +279,6 @@ export const ui = {
     }],
     "colors": ["#005CA9", "#D00019", "#ED7E00", "#41AD49", "#D10A10", "#A8C30B", "#CE95C2", "#003653", "#730E0E", "#3C2814", "#003200", "#E84D0E", "#66C1BE", "#DC6BA6", "#00FFFF", "#FFED00", "#", "#3AFF00", "#EFAA00", "#62B8E8"],
     "modules": {
-        "gifbanner": {
-            "colors": ["#005CA9", "#D00019", "#ED7E00", "#41AD49"]
-        },
         "columns": {
             "amount": {
                 2: {

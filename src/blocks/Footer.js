@@ -27,14 +27,6 @@ class Article extends React.Component {
         let pattern, regex;
         let html = LAYOUT;
 
-        // In case we have a working color
-        if (this.props.content.bgWorkingColor) {
-            html = html.replace(
-                new RegExp("\\[themeColor\\]", "gi"),
-                this.props.content.bgWorkingColor
-            );
-        }
-
         if (this.props.content.toggleIcons) {
             regex = /\[appIconsHtml\]/gi;
             html = html.replace(regex, APP_ICONS);
@@ -81,8 +73,6 @@ class Article extends React.Component {
                 menu_items = menu_items + menu_item;
             }
 
-            regex = /\[linkArrowUrl\]/gi;
-            menu_items = menu_items.replace(regex, ui.images.arrows[this.props.content.themeColor]);
 
             regex = /\[menuItemHtml\]/gi;
             html = html.replace(regex, menu_items);
@@ -95,6 +85,17 @@ class Article extends React.Component {
         if (this.props.content.textLegal !== undefined) {
             regex = /\[textLegal\]/gi;
             html = html.replace(regex, richTextToHtml(this.props.content.textLegal));
+        }
+
+        // In case we have a working color
+        if (this.props.content.themeWorkingColor) {
+            regex = /\[themeColor\]/gi;
+            html = html.replace(regex, this.props.content.themeWorkingColor);
+            regex = /\[linkArrowUrl\]/gi;
+            html = html.replace(regex, ui.images.arrows[this.props.content.themeWorkingColor]);
+        } else {
+            regex = /\[linkArrowUrl\]/gi;
+            html = html.replace(regex, ui.images.arrows[this.props.content.themeColor]);
         }
 
         // Auto version
@@ -129,6 +130,7 @@ class Article extends React.Component {
                         brandName: "Select Brand",
                         brandId: "",
                         brandIndex: "",
+                        colorSwatches: "",
                         linkArrowUrl: "",
                         textLegal: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.",
                         linkLogo: "#",
@@ -161,7 +163,8 @@ class Article extends React.Component {
                 label: `${ui.brands[i].name}`,
                 value: `${ui.brands[i].id}`,
                 website: `${ui.brands[i].website}`,
-                brandColor: `${ui.brands[i].brandColor}`,
+                brandColor: `${ui.brands[i].colors[0]}`,
+                swatches: ui.brands[i].colors,
                 facebook: `${ui.brands[i].facebook}`,
                 twitter: `${ui.brands[i].twitter}`,
                 instagram: `${ui.brands[i].instagram}`,
@@ -204,6 +207,7 @@ class Article extends React.Component {
                                             this.onChange("brandId", event.value);
                                             this.onChange("linkLogo", event.website);
                                             this.onChange("themeColor", event.brandColor);
+                                            this.onChange("colorSwatches", event.swatches);
                                             this.onChange("brandName", event.label)
                                             this.onChange("linkFacebook", event.facebook);
                                             this.onChange("linkTwitter", event.twitter);
@@ -278,8 +282,9 @@ class Article extends React.Component {
                                 <div className="slds-text-title slds-m-bottom_xx-small">Theme Color</div>
                                 <ColorPicker
                                     hideInput={true}
-                                    swatchColors={ui.colors}
+                                    swatchColors={this.props.content.colorSwatches}
                                     value={this.props.content.themeColor}
+                                    valueWorking={this.props.content.themeColor}
                                     variant={"swatches"}
                                     events={{
                                         onChange: (event, data) => {
@@ -287,13 +292,13 @@ class Article extends React.Component {
                                         },
                                         onWorkingColorChange: (event, data) => {
                                             this.onChange(
-                                                "bgWorkingColor",
+                                                "themeWorkingColor",
                                                 data.color.hex
                                             );
                                         }
                                     }}
                                     onClose={() =>
-                                        this.onChange("bgWorkingColor", undefined)
+                                        this.onChange("themeWorkingColor", undefined)
                                     }
                                 />
                             </div>

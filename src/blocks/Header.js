@@ -2,7 +2,6 @@ import React from "react";
 import {
     Card,
     Input,
-    ColorPicker,
     IconSettings,
     Dropdown,
     Checkbox
@@ -23,14 +22,6 @@ class Article extends React.Component {
     setContent = () => {
         let pattern, regex;
         let html = LAYOUT;
-
-        // In case we have a working color
-        if (this.props.content.bgWorkingColor) {
-            html = html.replace(
-                new RegExp("\\[themeColor\\]", "gi"),
-                this.props.content.bgWorkingColor
-            );
-        }
 
         if (this.props.content.toggleGif) {
             regex = /\[gifHtml\]/gi;
@@ -146,29 +137,6 @@ class Article extends React.Component {
                                     variant="toggle"
                                     checked={this.props.content.toggleGif}
                                     onChange={(event) => { this.onChange('toggleGif', event.target.checked) }}
-                                />
-                            </div>
-                            <div className="slds-float_left slds-m-right_medium slds-m-top_small">
-                                <div className="slds-text-title slds-m-bottom_xx-small">Theme Color</div>
-                                <ColorPicker
-                                    hideInput={true}
-                                    swatchColors={ui.modules.gifbanner.colors}
-                                    value={this.props.content.themeColor ? this.props.content.themeColor : "#005CA9"}
-                                    variant={"swatches"}
-                                    events={{
-                                        onChange: (event, data) => {
-                                            this.onChange("themeColor", data.color);
-                                        },
-                                        onWorkingColorChange: (event, data) => {
-                                            this.onChange(
-                                                "bgWorkingColor",
-                                                data.color.hex
-                                            );
-                                        }
-                                    }}
-                                    onClose={() =>
-                                        this.onChange("bgWorkingColor", undefined)
-                                    }
                                 />
                             </div>
                         </div>
