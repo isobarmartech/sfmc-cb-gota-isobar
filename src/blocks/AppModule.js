@@ -390,7 +390,7 @@ class Article extends React.Component {
                             this.props.content.toggleHeadline ? (
                                 <>
                                     <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Headline Text</div>
-                                    <RichTextEditor onChange={(data) => this.onChange("textHeadline", data)} text={this.props.content.textHeadline} toggleBold={false} toggleItalic={true} toggleLink={true} />
+                                    <RichTextEditor onChange={(data) => this.onChange("textHeadline", data)} text={this.props.content.textHeadline} toggleBold={false} toggleItalic={true} toggleLink={false} />
                                 </>
                             ) : null
                         }
@@ -398,7 +398,7 @@ class Article extends React.Component {
                             this.props.content.toggleBody ? (
                                 <>
                                     <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Body Text</div>
-                                    <RichTextEditor onChange={(data) => this.onChange("textBody", data)} text={this.props.content.textBody} toggleBold={true} toggleItalic={true} toggleLink={true} />
+                                    <RichTextEditor onChange={(data) => this.onChange("textBody", data)} text={this.props.content.textBody} toggleBold={true} toggleItalic={true} toggleLink={false} />
                                 </>
                             ) : null
                         }
