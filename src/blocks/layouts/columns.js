@@ -12,7 +12,6 @@ export const LAYOUT = `
                     <td>
                         [headlineHtml]
                         [bodyHtml]
-                        [spacerHtml]
                         <table border="0" cellspacing="0" cellpadding="0" width="100%">
                             <tr>
                                 [columnHtml]
@@ -41,9 +40,7 @@ export const HEADLINE = `
         </td>
         <td class="w-20" width="60" style="font-size: 1px; line-height: 1px; width: 60px;">&nbsp;</td>
     </tr>
-    <tr>
-        <td colspan="3" height="10" style="font-size: 1px; line-height: 1px; height: 10px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
 </table>
 <!-- headline -->
 `;
@@ -58,38 +55,33 @@ export const BODY = `
         </td>
         <td class="w-20" width="60" style="font-size: 1px; line-height: 1px; width: 60px;">&nbsp;</td>
     </tr>
-    <tr>
-        <td colspan="3" height="10" style="font-size: 1px; line-height: 1px; height: 10px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
 </table>
 <!-- body -->
 `;
 
 export const SPACER = `
-<table border="0" cellspacing="0" cellpadding="0" width="100%">
-    <tr>
-        <td height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
-    </tr>
-</table>
-`;
+<tr>
+    <td [spacerExtra] height="[spacerHeight]" style="font-size: 1px; line-height: 1px; height: [spacerHeight]px;">&nbsp;</td>
+</tr>
+`
 
 export const COLUMN = `
 <th class="break" valign="top" width="[colWidth]" style="width: [colWidth]px; border: 1px solid #E3E3DE;">
-[columnImageHtml]
-<table border="0" cellspacing="0" cellpadding="0" width="100%">
-    <tr>
-        <td height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
-    </tr>
-</table>
-[columnHeadlineHtml]
-[columnBodyHtml]
-[ctaHtml]
-<table border="0" cellspacing="0" cellpadding="0" width="100%">
-    <tr>
-        <td height="10" style="font-size: 1px; line-height: 1px; height: 10px;">&nbsp;</td>
-    </tr>
-</table>
+    [columnImageHtml]
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        [spacerHtml]
+        <tr>
+        <td>
+            [columnHeadlineHtml]
+            [columnBodyHtml]
+            [ctaHtml]
+        </td>
+        </tr>
+        [spacerHtml]
+    </table>
 </th>
+
 `;
 
 export const COLUMN_SPACER = `
@@ -118,9 +110,7 @@ export const COLUMN_HEADLINE = `
         </td>
         <td class="w-20" width="15" style="font-size: 1px; line-height: 1px; width: 15px;">&nbsp;</td>
     </tr>
-    <tr>
-        <td colspan="3" height="10" style="font-size: 1px; line-height: 1px; height: 10px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
 </table>
 <!-- headline -->
 `;
@@ -135,9 +125,7 @@ export const COLUMN_BODY = `
         </td>
         <td class="w-20" width="15" style="font-size: 1px; line-height: 1px; width: 15px;">&nbsp;</td>
     </tr>
-    <tr>
-        <td colspan="3" height="10" style="font-size: 1px; line-height: 1px; height: 10px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
 </table>
 <!-- body -->
 `;
@@ -145,9 +133,7 @@ export const COLUMN_BODY = `
 export const CTA_BUTTON = `
 <!-- CTA - button -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
-    <tr>
-        <td colspan="3" height="15" style="font-size: 1px; line-height: 1px; height: 15px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
     <tr>
         <td class="w-20" width="15" style="font-size: 1px; line-height: 1px; width: 15px;">&nbsp;</td>
         <td align="center">
@@ -163,9 +149,6 @@ export const CTA_BUTTON = `
         </td>
         <td class="w-20" width="15" style="font-size: 1px; line-height: 1px; width: 15px;">&nbsp;</td>
     </tr>
-    <tr>
-        <td colspan="3" height="15" style="font-size: 1px; line-height: 1px; height: 15px;">&nbsp;</td>
-    </tr>
 </table>
 <!-- CTA - button -->
 `;
@@ -173,9 +156,7 @@ export const CTA_BUTTON = `
 export const CTA_LINK = `
 <!-- CTA - link -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
-    <tr>
-        <td colspan="3" height="15" style="font-size: 1px; line-height: 1px; height: 15px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
     <tr>
         <td class="w-20" width="15" style="font-size: 1px; line-height: 1px; width: 15px;">&nbsp;</td>
         <td align="center">
@@ -195,9 +176,6 @@ export const CTA_LINK = `
             </table>
         </td>
         <td class="w-20" width="15" style="font-size: 1px; line-height: 1px; width: 15px;">&nbsp;</td>
-    </tr>
-    <tr>
-        <td colspan="3" height="15" style="font-size: 1px; line-height: 1px; height: 15px;">&nbsp;</td>
     </tr>
 </table>
 <!-- CTA - link -->

@@ -56,9 +56,7 @@ export const APP_IMAGE = `
             <img src="[imgApp]" alt="" width="70" height="auto" style="display: block; border: 0; width: 70px;" class="w-50">
         </td>
     </tr>
-    <tr>
-        <td height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
 </table>
 <!-- app logo -->
 `;
@@ -71,9 +69,7 @@ export const HEADLINE = `
             [textHeadline]
         </td>
     </tr>
-    <tr>
-        <td height="10" style="font-size: 1px; line-height: 1px; height: 10px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
 </table>
 <!-- headline -->
 `;
@@ -86,9 +82,7 @@ export const BODY = `
             [textBody]
         </td>
     </tr>
-    <tr>
-        <td height="25" style="font-size: 1px; line-height: 1px; height: 25px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
 </table>
 <!-- body -->
 `;
@@ -130,3 +124,9 @@ export const DOUBLE_CTA = `
 </table>
 <!-- double cta -->
 `;
+
+export const SPACER = `
+<tr>
+    <td [spacerExtra] height="[spacerHeight]" style="font-size: 1px; line-height: 1px; height: [spacerHeight]px;">&nbsp;</td>
+</tr>
+`

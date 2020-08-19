@@ -37,11 +37,14 @@ export const IMAGE = `
             </a>
         </td>
     </tr>
-    <tr>
-        <td class="h-20" height="35" style="font-size: 1px; line-height: 1px; height: 35px;">&nbsp;</td>
-    </tr>
+    [imageSpacerHtml]
 </table>
 <!-- image -->
+`
+export const IMAGE_SPACER = `
+<tr>
+    <td class="h-20" height="35" style="font-size: 1px; line-height: 1px; height: 35px;">&nbsp;</td>
+</tr>
 `
 
 export const TRUMPET = `

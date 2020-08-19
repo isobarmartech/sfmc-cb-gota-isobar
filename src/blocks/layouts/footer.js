@@ -1,34 +1,7 @@
 export const LAYOUT = `
 <!-- FOOTER START -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
-    <tr>
-        <td height="1" style="font-size: 1px; line-height: 1px; height: 1px;" bgcolor="#D8D8D8">&nbsp;</td>
-    </tr>
-    <tr>
-        <td align="center" bgcolor="#F4F2F0">
-            <table border="0" cellspacing="0" cellpadding="0" width="620" style="width: 620px;" class="w-full">
-                <tr>
-                    <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
-                    <td>
-                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                            <tr>
-                                <td height="25" style="font-size: 1px; line-height: 1px; height: 25px;">&nbsp;</td>
-                            </tr>
-                        </table>
-                        [appIconsHtml]
-                        [menuHtml]
-                        [legalHtml]
-                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                            <tr>
-                                <td height="25" style="font-size: 1px; line-height: 1px; height: 25px;">&nbsp;</td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
+    [contentWrapperHtml]
     <tr>
         <td align="center" bgcolor="#000000">
             <table border="0" cellspacing="0" cellpadding="0" width="620" style="width: 620px;" class="w-full">
@@ -53,6 +26,37 @@ export const LAYOUT = `
 </table>
 <!-- FOOTER END -->
 `;
+
+export const CONTENT_WRAPPER = `
+<tr>
+    <td height="1" style="font-size: 1px; line-height: 1px; height: 1px;" bgcolor="#D8D8D8">&nbsp;</td>
+</tr>
+<tr>
+    <td align="center" bgcolor="#F4F2F0">
+        <table border="0" cellspacing="0" cellpadding="0" width="620" style="width: 620px;" class="w-full">
+            <tr>
+                <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
+                <td>
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                        <tr>
+                            <td height="25" style="font-size: 1px; line-height: 1px; height: 25px;">&nbsp;</td>
+                        </tr>
+                    </table>
+                    [appIconsHtml]
+                    [menuHtml]
+                    [legalHtml]
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                        <tr>
+                            <td height="25" style="font-size: 1px; line-height: 1px; height: 25px;">&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
+            </tr>
+        </table>
+    </td>
+</tr>
+`
 
 export const APP_ICONS = `
 <!-- app icons -->
@@ -82,9 +86,7 @@ export const APP_ICONS = `
             </table>
         </td>
     </tr>
-    <tr>
-        <td height="25" style="font-size: 1px; line-height: 1px; height: 25px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
 </table>
 <!-- app icons -->
 `;
@@ -100,9 +102,7 @@ export const MENU = `
     <tr>
         <td height="1" style="font-size: 1px; line-height: 1px; height: 1px;" bgcolor="#B2B2B0">&nbsp;</td>
     </tr>
-    <tr>
-        <td height="35" style="font-size: 1px; line-height: 1px; height: 35px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
 </table>
 <!-- menu -->
 `;
@@ -171,3 +171,9 @@ export const LEGAL = `
 </table>
 <!-- legal -->
 `;
+
+export const SPACER = `
+<tr>
+    <td [spacerExtra] height="[spacerHeight]" style="font-size: 1px; line-height: 1px; height: [spacerHeight]px;">&nbsp;</td>
+</tr>
+`

@@ -14,7 +14,24 @@ export const LAYOUT = `
                             <tr>
                                 <td>
                                     [imageHtml]
-                                    [contentWrapperHtml]
+                                    <table border="0" cellspacing="0" cellpadding="0" width="100%" bgcolor="#FFFFFF">
+                                        <tr>
+                                            <td colspan="3" height="40" style="font-size: 1px; line-height: 1px; height: 40px;">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-20" width="60" style="font-size: 1px; line-height: 1px; width: 60px;">&nbsp;</td>
+                                            <td>
+                                                [headlineHtml]
+                                                [checklistWrapperHtml]
+                                                [ctaHtml]
+                                                [subtextHtml]
+                                            </td>
+                                            <td class="w-20" width="60" style="font-size: 1px; line-height: 1px; width: 60px;">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" height="30" style="font-size: 1px; line-height: 1px; height: 30px;">&nbsp;</td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
                         </table>
@@ -31,27 +48,6 @@ export const LAYOUT = `
 </table>
 <!-- CHECKLIST END -->
 `;
-
-export const CONTENT_WRAPPER = `
-<table border="0" cellspacing="0" cellpadding="0" width="100%" bgcolor="#FFFFFF">
-    <tr>
-        <td colspan="3" height="40" style="font-size: 1px; line-height: 1px; height: 40px;">&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="w-20" width="60" style="font-size: 1px; line-height: 1px; width: 60px;">&nbsp;</td>
-        <td>
-            [headlineHtml]
-            [checklistWrapperHtml]
-            [ctaHtml]
-            [subtextHtml]
-        </td>
-        <td class="w-20" width="60" style="font-size: 1px; line-height: 1px; width: 60px;">&nbsp;</td>
-    </tr>
-    <tr>
-        <td colspan="3" height="40" style="font-size: 1px; line-height: 1px; height: 40px;">&nbsp;</td>
-    </tr>
-</table>
-`
 
 export const IMAGE = `
 <!-- image -->
@@ -73,7 +69,9 @@ export const HEADLINE = `
             [textHeadline]
         </td>
     </tr>
-    [spacerHtml]
+    <tr>
+        <td height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
+    </tr>
 </table>
 <!-- headline -->
 `
@@ -82,7 +80,9 @@ export const CHECKLIST_WRAPPER = `
 <!-- checkmark wrapper -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
     [checkmarkHtml]
-    [spacerHtml]
+    <tr>
+        <td colspan="2" height="15" style="font-size: 1px; line-height: 1px; height: 15px;">&nbsp;</td>
+    </tr>
 </table>
 <!-- checkmark wrapper -->
 `
@@ -98,7 +98,9 @@ export const CHECKLIST_CHECKMARK = {
             [textCheckmark1]
         </td>
     </tr>
-    [spacerHtml]
+    <tr>
+        <td colspan="2" height="[checkmarkHeight]" style="font-size: 1px; line-height: 1px; height: [checkmarkHeight]px;">&nbsp;</td>
+    </tr>
     <!-- single checkmark -->
     `,
     2: `
@@ -111,7 +113,9 @@ export const CHECKLIST_CHECKMARK = {
             [textCheckmark2]
         </td>
     </tr>
-    [spacerHtml]
+    <tr>
+        <td colspan="2" height="[checkmarkHeight]" style="font-size: 1px; line-height: 1px; height: [checkmarkHeight]px;">&nbsp;</td>
+    </tr>
     <!-- single checkmark -->
     `,
     3: `
@@ -124,7 +128,9 @@ export const CHECKLIST_CHECKMARK = {
             [textCheckmark3]
         </td>
     </tr>
-    [spacerHtml]
+    <tr>
+        <td colspan="2" height="[checkmarkHeight]" style="font-size: 1px; line-height: 1px; height: [checkmarkHeight]px;">&nbsp;</td>
+    </tr>
     <!-- single checkmark -->
     `,
     4: `
@@ -137,7 +143,9 @@ export const CHECKLIST_CHECKMARK = {
             [textCheckmark4]
         </td>
     </tr>
-    [spacerHtml]
+    <tr>
+        <td colspan="2" height="[checkmarkHeight]" style="font-size: 1px; line-height: 1px; height: [checkmarkHeight]px;">&nbsp;</td>
+    </tr>
     <!-- single checkmark -->
     `,
     5: `
@@ -150,7 +158,9 @@ export const CHECKLIST_CHECKMARK = {
             [textCheckmark5]
         </td>
     </tr>
-    [spacerHtml]
+    <tr>
+        <td colspan="2" height="[checkmarkHeight]" style="font-size: 1px; line-height: 1px; height: [checkmarkHeight]px;">&nbsp;</td>
+    </tr>
     <!-- single checkmark -->
     `
 
@@ -172,7 +182,9 @@ export const CTA_BUTTON = `
             </table>
         </td>
     </tr>
-    [spacerHtml]
+    <tr>
+        <td height="15" style="font-size: 1px; line-height: 1px; height: 15px;">&nbsp;</td>
+    </tr>
 </table>
 <!-- CTA - button -->
 `
@@ -199,7 +211,9 @@ export const CTA_LINK = `
             </table>
         </td>
     </tr>
-    [spacerHtml]
+    <tr>
+        <td height="15" style="font-size: 1px; line-height: 1px; height: 15px;">&nbsp;</td>
+    </tr>
 </table>
 <!-- CTA - link -->
 `
@@ -212,12 +226,9 @@ export const SUBTEXT = `
             [textSubtext]
         </td>
     </tr>
+    <tr>
+        <td height="10" style="font-size: 1px; line-height: 1px; height: 10px;">&nbsp;</td>
+    </tr>
 </table>
 <!-- subtext -->
-`
-
-export const SPACER = `
-<tr>
-    <td [spacerExtra] height="[spacerHeight]" style="font-size: 1px; line-height: 1px; height: [spacerHeight]px;">&nbsp;</td>
-</tr>
 `

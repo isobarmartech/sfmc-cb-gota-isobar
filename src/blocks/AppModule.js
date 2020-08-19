@@ -11,7 +11,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT, TOP_BORDER, APP_IMAGE, HEADLINE, BODY, DOUBLE_CTA } from "./layouts/appModule";
+import { LAYOUT, TOP_BORDER, APP_IMAGE, HEADLINE, BODY, DOUBLE_CTA, SPACER } from "./layouts/appModule";
 import { ui } from "../constants/ui.js";
 import RichTextEditor from '../components/RichTextEditor';
 import { richTextToHtml } from "../components/RichTextEditor";
@@ -31,6 +31,24 @@ class Article extends React.Component {
         if (this.props.content.toggleImgApp) {
             regex = /\[imgAppHtml\]/gi;
             html = html.replace(regex, APP_IMAGE);
+            if (this.props.content.toggleHeadline || this.props.content.toggleBody) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "20");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else if (this.props.content.toggleDoubleCta) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "25");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[imgAppHtml\]/gi;
             html = html.replace(regex, "");
@@ -39,6 +57,24 @@ class Article extends React.Component {
         if (this.props.content.toggleHeadline) {
             regex = /\[headlineHtml\]/gi;
             html = html.replace(regex, HEADLINE);
+            if (this.props.content.toggleBody) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "10");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else if (this.props.content.toggleDoubleCta) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "25");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[headlineHtml\]/gi;
             html = html.replace(regex, "");
@@ -47,6 +83,17 @@ class Article extends React.Component {
         if (this.props.content.toggleBody) {
             regex = /\[bodyHtml\]/gi;
             html = html.replace(regex, BODY);
+            if (this.props.content.toggleDoubleCta) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "25");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[bodyHtml\]/gi;
             html = html.replace(regex, "");

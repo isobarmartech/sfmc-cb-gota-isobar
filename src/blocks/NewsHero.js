@@ -11,7 +11,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT, IMAGE, TRUMPET, HEADLINE, TEASER } from "./layouts/newsHero";
+import { LAYOUT, IMAGE, TRUMPET, HEADLINE, TEASER, IMAGE_SPACER } from "./layouts/newsHero";
 import { ui } from "../constants/ui.js";
 import RichTextEditor from '../components/RichTextEditor';
 import { richTextToHtml } from "../components/RichTextEditor";
@@ -31,6 +31,13 @@ class Article extends React.Component {
         if (this.props.content.toggleImage) {
             regex = /\[imageHtml\]/gi;
             html = html.replace(regex, IMAGE);
+            if (this.props.content.toggleTrumpet || this.props.content.toggleHeadline || this.props.content.toggleTeaser) {
+                regex = /\[imageSpacerHtml\]/gi;
+                html = html.replace(regex, IMAGE_SPACER);
+            } else {
+                regex = /\[imageSpacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[imageHtml\]/gi;
             html = html.replace(regex, "");

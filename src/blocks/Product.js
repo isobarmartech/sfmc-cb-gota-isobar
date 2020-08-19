@@ -11,7 +11,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT, IMAGE, HEADLINE, BODY, CTA_BUTTON, CTA_LINK } from "./layouts/product";
+import { LAYOUT, IMAGE, HEADLINE, BODY, CTA_BUTTON, CTA_LINK, CONTENT_WRAPPER, SPACER } from "./layouts/product";
 import { ui } from "../constants/ui.js";
 import RichTextEditor from '../components/RichTextEditor';
 import { richTextToHtml } from "../components/RichTextEditor";
@@ -28,9 +28,28 @@ class Article extends React.Component {
         let pattern, regex;
         let html = LAYOUT;
 
+        if (this.props.content.toggleHeadline || this.props.content.toggleBody || this.props.content.toggleCta) {
+            regex = /\[contentWrapperHtml\]/gi;
+            html = html.replace(regex, CONTENT_WRAPPER);
+        } else {
+            regex = /\[contentWrapperHtml\]/gi;
+            html = html.replace(regex, "");
+        }
+
         if (this.props.content.toggleImage) {
             regex = /\[imageHtml\]/gi;
             html = html.replace(regex, IMAGE);
+            if (this.props.content.toggleHeadline || this.props.content.toggleBody || this.props.content.toggleCta) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "25");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, `class="h-15"`);
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[imageHtml\]/gi;
             html = html.replace(regex, "");
@@ -39,6 +58,17 @@ class Article extends React.Component {
         if (this.props.content.toggleHeadline) {
             regex = /\[headlineHtml\]/gi;
             html = html.replace(regex, HEADLINE);
+            if (this.props.content.toggleBody || this.props.content.toggleCta) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "15");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[headlineHtml\]/gi;
             html = html.replace(regex, "");
@@ -47,6 +77,17 @@ class Article extends React.Component {
         if (this.props.content.toggleBody) {
             regex = /\[bodyHtml\]/gi;
             html = html.replace(regex, BODY);
+            if (this.props.content.toggleCta) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "10");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[bodyHtml\]/gi;
             html = html.replace(regex, "");

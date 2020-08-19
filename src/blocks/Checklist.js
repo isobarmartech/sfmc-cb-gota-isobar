@@ -12,7 +12,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT, IMAGE, HEADLINE, CHECKLIST_WRAPPER, CHECKLIST_CHECKMARK, CTA_BUTTON, CTA_LINK, SUBTEXT } from "./layouts/checklist";
+import { LAYOUT, IMAGE, HEADLINE, CHECKLIST_WRAPPER, CHECKLIST_CHECKMARK, CTA_BUTTON, CTA_LINK, SUBTEXT, CONTENT_WRAPPER, SPACER } from "./layouts/checklist";
 import { ui } from "../constants/ui.js";
 import RichTextEditor from '../components/RichTextEditor';
 import { richTextToHtml } from "../components/RichTextEditor";
@@ -29,6 +29,14 @@ class Article extends React.Component {
         let pattern, regex;
         let html = LAYOUT;
 
+        if (this.props.content.toggleHeadline || this.props.content.toggleChecklist || this.props.content.toggleCta || this.props.content.toggleSubtext) {
+            regex = /\[contentWrapperHtml\]/gi;
+            html = html.replace(regex, CONTENT_WRAPPER);
+        } else {
+            regex = /\[contentWrapperHtml\]/gi;
+            html = html.replace(regex, "");
+        }
+
         if (this.props.content.toggleImage) {
             regex = /\[imageHtml\]/gi;
             html = html.replace(regex, IMAGE);
@@ -40,6 +48,17 @@ class Article extends React.Component {
         if (this.props.content.toggleHeadline) {
             regex = /\[headlineHtml\]/gi;
             html = html.replace(regex, HEADLINE);
+            if (this.props.content.toggleChecklist || this.props.content.toggleCta || this.props.content.toggleSubtext) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "20");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[headlineHtml\]/gi;
             html = html.replace(regex, "");
@@ -47,13 +66,22 @@ class Article extends React.Component {
 
         let check_list = CHECKLIST_WRAPPER;
 
-        if (this.props.content.checkmarkAmount === "1") {
-            regex = /\[checkmarkHtml\]/gi;
-            check_list = check_list.replace(regex, CHECKLIST_CHECKMARK[1]);
-        } else if (this.props.content.checkmarkAmount > 1 && this.props.content.checkmarkAmount < 6) {
+        if (this.props.content.checkmarkAmount > 0 && this.props.content.checkmarkAmount < 6) {
             let x = "";
             for (let i = 0; i < this.props.content.checkmarkAmount; i++) {
                 x = x + CHECKLIST_CHECKMARK[`${i + 1}`]
+
+                if ((i + 1) < this.props.content.checkmarkAmount) {
+                    regex = /\[spacerHtml\]/gi;
+                    x = x.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    x = x.replace(regex, this.props.content.checkmarkHeight);
+                    regex = /\[spacerExtra\]/gi;
+                    x = x.replace(regex, `colspan="2"`);
+                } else {
+                    regex = /\[spacerHtml\]/gi;
+                    x = x.replace(regex, "");
+                }
             }
             regex = /\[checkmarkHtml\]/gi;
             check_list = check_list.replace(regex, x);
@@ -65,6 +93,17 @@ class Article extends React.Component {
         if (this.props.content.toggleChecklist) {
             regex = /\[checklistWrapperHtml\]/gi;
             html = html.replace(regex, check_list);
+            if (this.props.content.toggleCta || this.props.content.toggleSubtext) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "20");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, `colspan="2"`);
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[checklistWrapperHtml\]/gi;
             html = html.replace(regex, "");
@@ -77,6 +116,17 @@ class Article extends React.Component {
                 html = html.replace(regex, CTA_BUTTON);
             } else if (this.props.content.ctaStyle === "link") {
                 html = html.replace(regex, CTA_LINK);
+            }
+            if (this.props.content.toggleSubtext) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "20");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
             }
         } else {
             regex = /\[ctaHtml\]/gi;

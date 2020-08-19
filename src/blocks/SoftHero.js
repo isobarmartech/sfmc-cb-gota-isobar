@@ -11,7 +11,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT, IMAGE, HEADLINE, GREETING, BODY, SIGNATURE, CTA_BUTTON, CTA_LINK } from "./layouts/softHero";
+import { LAYOUT, IMAGE, HEADLINE, GREETING, BODY, SIGNATURE, CTA_BUTTON, CTA_LINK, CONTENT_WRAPPER, SPACER } from "./layouts/softHero";
 import { ui } from "../constants/ui.js";
 import RichTextEditor from '../components/RichTextEditor';
 import { richTextToHtml } from "../components/RichTextEditor";
@@ -28,6 +28,15 @@ class Article extends React.Component {
         let pattern, regex;
         let html = LAYOUT;
 
+
+        if (this.props.content.toggleHeadline || this.props.content.toggleGreeting || this.props.content.toggleBody || this.props.content.toggleCta || this.props.content.toggleSignature) {
+            regex = /\[contentWrapperHtml\]/gi;
+            html = html.replace(regex, CONTENT_WRAPPER);
+        } else {
+            regex = /\[contentWrapperHtml\]/gi;
+            html = html.replace(regex, "");
+        }
+
         if (this.props.content.toggleImage) {
             regex = /\[imageHtml\]/gi;
             html = html.replace(regex, IMAGE);
@@ -39,6 +48,15 @@ class Article extends React.Component {
         if (this.props.content.toggleHeadline) {
             regex = /\[headlineHtml\]/gi;
             html = html.replace(regex, HEADLINE);
+            if (this.props.content.toggleGreeting || this.props.content.toggleBody || this.props.content.toggleCta || this.props.content.toggleSignature) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "20");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[headlineHtml\]/gi;
             html = html.replace(regex, "");
@@ -56,6 +74,18 @@ class Article extends React.Component {
         if (this.props.content.toggleGreeting) {
             regex = /\[greetingHtml\]/gi;
             html = html.replace(regex, GREETING);
+            if (this.props.content.toggleBody) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            } else if (this.props.content.toggleCta || this.props.content.toggleSignature) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "20");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[greetingHtml\]/gi;
             html = html.replace(regex, "");
@@ -64,6 +94,15 @@ class Article extends React.Component {
         if (this.props.content.toggleBody) {
             regex = /\[bodyHtml\]/gi;
             html = html.replace(regex, BODY);
+            if (this.props.content.toggleCta || this.props.content.toggleSignature) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "20");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[bodyHtml\]/gi;
             html = html.replace(regex, "");
@@ -75,6 +114,15 @@ class Article extends React.Component {
                 html = html.replace(regex, CTA_BUTTON);
             } else if (this.props.content.ctaStyle === "link") {
                 html = html.replace(regex, CTA_LINK);
+            }
+            if (this.props.content.toggleSignature) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "20");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
             }
         } else {
             regex = /\[ctaHtml\]/gi;

@@ -67,7 +67,9 @@ export const HEADLINE = `
             [textHeadline]
         </td>
     </tr>
-    [spacerHtml]
+    <tr>
+        <td height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
+    </tr>
 </table>
 <!-- headline -->
 `
@@ -80,7 +82,6 @@ export const GREETING = `
             [textGreeting]
         </td>
     </tr>
-    [spacerHtml]
 </table>
 <!-- greeting -->
 `
@@ -93,7 +94,6 @@ export const BODY = `
             [textBody]
         </td>
     </tr>
-    [spacerHtml]
 </table>
 <!-- body -->
 `
@@ -101,6 +101,9 @@ export const BODY = `
 export const CTA_BUTTON = `
 <!-- CTA - button -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+        <td height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
+    </tr>
     <tr>
         <td align="[alignContent]">
             <table border="0" cellspacing="0" cellpadding="0">
@@ -114,7 +117,6 @@ export const CTA_BUTTON = `
             </table>
         </td>
     </tr>
-    [spacerHtml]
 </table>
 <!-- CTA - button -->
 `
@@ -122,6 +124,9 @@ export const CTA_BUTTON = `
 export const CTA_LINK = `
 <!-- CTA - button -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+        <td height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
+    </tr>
     <tr>
         <td align="[alignContent]">
             <table border="0" cellspacing="0" cellpadding="0">
@@ -140,30 +145,31 @@ export const CTA_LINK = `
             </table>
         </td>
     </tr>
-    [spacerHtml]
 </table>
 <!-- CTA - button -->
 `
 
 export const SIGNATURE = `
+
 <!-- signature -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+        <td height="30" style="font-size: 1px; line-height: 1px; height: 30px;">&nbsp;</td>
+    </tr>
+    <!-- signature image -->
     <tr>
         <td align="[alignContent]">
             <img src="[imageSignature]" alt="" width="250" height="auto" style="display: block; border: 0; width: 250px;" class="w-230">
         </td>
     </tr>
+    <!-- signature image -->
+    <!-- signature text -->
     <tr>
         <td class="sans font-14" align="[alignContent]" style="font-size: 16px; line-height: 21px; color: #2E2926; font-family: 'Sanomat Sans', Arial, sans-serif; font-weight: 300;">
             [textSignature]
         </td>
     </tr>
+    <!-- signature text -->
 </table>
 <!-- signature -->
-`
-
-export const SPACER = `
-<tr>
-    <td height="[spacerHeight]" style="font-size: 1px; line-height: 1px; height: [spacerHeight]px;">&nbsp;</td>
-</tr>
 `

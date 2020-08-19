@@ -11,17 +11,7 @@ export const LAYOUT = `
                     <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
                     <td>
                         [imageHtml]
-                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                            <tr>
-                                <td class="w-20" width="60" style="font-size: 1px; line-height: 1px; width: 60px;">&nbsp;</td>
-                                <td>
-                                    [headlineHtml]
-                                    [bodyHtml]
-                                    [ctaHtml]
-                                </td>
-                                <td class="w-20" width="60" style="font-size: 1px; line-height: 1px; width: 60px;">&nbsp;</td>
-                            </tr>
-                        </table>
+                        [contentWrapperHtml]
                     </td>
                     <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
                 </tr>
@@ -35,6 +25,26 @@ export const LAYOUT = `
 <!-- PRODUCT END -->
 `;
 
+export const CONTENT_WRAPPER = `
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+        <td colspan="3" height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="w-20" width="60" style="font-size: 1px; line-height: 1px; width: 60px;">&nbsp;</td>
+        <td>
+            [headlineHtml]
+            [bodyHtml]
+            [ctaHtml]
+        </td>
+        <td class="w-20" width="60" style="font-size: 1px; line-height: 1px; width: 60px;">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
+    </tr>
+</table>
+`
+
 export const IMAGE = `
 <!-- image -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
@@ -43,9 +53,6 @@ export const IMAGE = `
             <img src="[image]" alt="" width="600" height="auto" style="display: block; border: 0; width: 600px;" class="w-full">
         </td>
     </tr>
-    <tr>
-        <td class="h-15" height="25" style="font-size: 1px; line-height: 1px; height: 25px;">&nbsp;</td>
-    </tr>
 </table>
 <!-- image -->
 `
@@ -53,14 +60,12 @@ export const IMAGE = `
 export const HEADLINE = `
 <!-- headline -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
-<tr>
-    <td class="serif font-16" align="[alignContent]" style="font-size: 24px; line-height: 30px; color: #2E2926; font-family: 'Sanomat', Georgia, serif; font-weight: 700;">
-        [textHeadline]
-    </td>
-</tr>
-<tr>
-    <td height="15" style="font-size: 1px; line-height: 1px; height: 15px;">&nbsp;</td>
-</tr>
+    <tr>
+        <td class="serif font-16" align="[alignContent]" style="font-size: 24px; line-height: 30px; color: #2E2926; font-family: 'Sanomat', Georgia, serif; font-weight: 700;">
+            [textHeadline]
+        </td>
+    </tr>
+    [spacerHtml]
 </table>
 <!-- headline -->
 `
@@ -73,9 +78,7 @@ export const BODY = `
             [textBody]
         </td>
     </tr>
-    <tr>
-        <td height="10" style="font-size: 1px; line-height: 1px; height: 10px;">&nbsp;</td>
-    </tr>
+    [spacerHtml]
 </table>
 <!-- body -->
 `
@@ -98,9 +101,6 @@ export const CTA_BUTTON = `
                 </tr>
             </table>
         </td>
-    </tr>
-    <tr>
-        <td height="15" style="font-size: 1px; line-height: 1px; height: 15px;">&nbsp;</td>
     </tr>
 </table>
 <!-- CTA - button -->
@@ -130,9 +130,12 @@ export const CTA_LINK = `
             </table>
         </td>
     </tr>
-    <tr>
-        <td height="15" style="font-size: 1px; line-height: 1px; height: 15px;">&nbsp;</td>
-    </tr>
 </table>
 <!-- CTA - link -->
+`
+
+export const SPACER = `
+<tr>
+    <td [spacerExtra] height="[spacerHeight]" style="font-size: 1px; line-height: 1px; height: [spacerHeight]px;">&nbsp;</td>
+</tr>
 `

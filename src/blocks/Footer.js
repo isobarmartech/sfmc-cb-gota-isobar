@@ -10,7 +10,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT, APP_ICONS, MENU, MENU_ITEM, COPYRIGHT, LEGAL } from "./layouts/footer";
+import { LAYOUT, APP_ICONS, MENU, MENU_ITEM, COPYRIGHT, LEGAL, CONTENT_WRAPPER, SPACER } from "./layouts/footer";
 import { ui } from "../constants/ui.js";
 import RichTextEditor from '../components/RichTextEditor';
 import { richTextToHtml } from "../components/RichTextEditor";
@@ -27,32 +27,32 @@ class Article extends React.Component {
         let pattern, regex;
         let html = LAYOUT;
 
+        if (this.props.content.toggleIcons || this.props.content.toggleMenu || this.props.content.toggleLegal) {
+            regex = /\[contentWrapperHtml\]/gi;
+            html = html.replace(regex, CONTENT_WRAPPER);
+        } else {
+            regex = /\[contentWrapperHtml\]/gi;
+            html = html.replace(regex, "");
+        }
+
         if (this.props.content.toggleIcons) {
             regex = /\[appIconsHtml\]/gi;
             html = html.replace(regex, APP_ICONS);
+            if (this.props.content.toggleMenu || this.props.content.toggleLegal) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "25");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[appIconsHtml\]/gi;
             html = html.replace(regex, "");
         }
-
-        if (this.props.content.toggleLegal) {
-            regex = /\[legalHtml\]/gi;
-            html = html.replace(regex, LEGAL);
-        } else {
-            regex = /\[legalHtml\]/gi;
-            html = html.replace(regex, "");
-        }
-
-        if (this.props.content.toggleCopyright) {
-            regex = /\[copyrightHtml\]/gi;
-            html = html.replace(regex, COPYRIGHT);
-        } else {
-            regex = /\[copyrightHtml\]/gi;
-            html = html.replace(regex, "");
-        }
-
-        regex = /\[imgLogo\]/gi;
-        html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].footer);
 
         if (this.props.content.toggleMenu) {
             regex = /\[menuHtml\]/gi;
@@ -76,10 +76,42 @@ class Article extends React.Component {
 
             regex = /\[menuItemHtml\]/gi;
             html = html.replace(regex, menu_items);
+
+            if (this.props.content.toggleLegal) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "35");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, "");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[menuHtml\]/gi;
             html = html.replace(regex, "");
         }
+
+        if (this.props.content.toggleLegal) {
+            regex = /\[legalHtml\]/gi;
+            html = html.replace(regex, LEGAL);
+        } else {
+            regex = /\[legalHtml\]/gi;
+            html = html.replace(regex, "");
+        }
+
+        if (this.props.content.toggleCopyright) {
+            regex = /\[copyrightHtml\]/gi;
+            html = html.replace(regex, COPYRIGHT);
+        } else {
+            regex = /\[copyrightHtml\]/gi;
+            html = html.replace(regex, "");
+        }
+
+        regex = /\[imgLogo\]/gi;
+        html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].footer);
+
 
         // Handle Rich Text Input
         if (this.props.content.textLegal !== undefined) {

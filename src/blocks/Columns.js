@@ -11,7 +11,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT, HEADLINE, BODY, SPACER, COLUMN_IMAGE, COLUMN_HEADLINE, COLUMN_BODY, CTA_BUTTON, CTA_LINK, COLUMN, COLUMN_SPACER } from "./layouts/columns";
+import { LAYOUT, HEADLINE, SPACER, BODY, COLUMN_IMAGE, COLUMN_HEADLINE, COLUMN_BODY, CTA_BUTTON, CTA_LINK, COLUMN, COLUMN_SPACER } from "./layouts/columns";
 import { ui } from "../constants/ui.js";
 import RichTextEditor from '../components/RichTextEditor';
 import { richTextToHtml } from "../components/RichTextEditor";
@@ -32,6 +32,24 @@ class Article extends React.Component {
         if (this.props.content.toggleHeadline) {
             regex = /\[headlineHtml\]/gi;
             html = html.replace(regex, HEADLINE);
+            if (this.props.content.toggleBody) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "10");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, `colspan="3"`);
+            } else if (this.props.content.toggleBody || this.props.content.toggleColImg || this.props.content.toggleColHeadline || this.props.content.toggleColBody || this.props.content.toggleColCta) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "20");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, `colspan="3"`);
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[headlineHtml\]/gi;
             html = html.replace(regex, "");
@@ -40,16 +58,19 @@ class Article extends React.Component {
         if (this.props.content.toggleBody) {
             regex = /\[bodyHtml\]/gi;
             html = html.replace(regex, BODY);
+            if (this.props.content.toggleColImg || this.props.content.toggleColHeadline || this.props.content.toggleColBody || this.props.content.toggleColCta) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "20");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, `colspan="3"`);
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[bodyHtml\]/gi;
-            html = html.replace(regex, "");
-        }
-
-        if (this.props.content.toggleHeadline || this.props.content.toggleBody) {
-            regex = /\[spacerHtml\]/gi;
-            html = html.replace(regex, SPACER);
-        } else if (this.props.content.toggleHeadline === "off" || this.props.content.toggleBody === "off") {
-            regex = /\[spacerHtml\]/gi;
             html = html.replace(regex, "");
         }
 
@@ -58,6 +79,18 @@ class Article extends React.Component {
         for (let i = 0; i < this.props.content.colAmount; i++) {
 
             let col = COLUMN;
+
+            if (this.props.content.toggleColHeadline || this.props.content.toggleColBody || this.props.content.toggleColCta) {
+                regex = /\[spacerHtml\]/gi;
+                col = col.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                col = col.replace(regex, "20");
+                regex = /\[spacerExtra\]/gi;
+                col = col.replace(regex, "");
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                col = col.replace(regex, "");
+            }
 
             if (this.props.content.toggleColImg) {
                 regex = /\[columnImageHtml\]/gi;
@@ -74,6 +107,18 @@ class Article extends React.Component {
                 col = col.replace(regex, COLUMN_HEADLINE);
                 regex = /\[colHeadline\]/gi;
                 col = col.replace(regex, `[colHeadline${i + 1}]`);
+
+                if (this.props.content.toggleColBody || this.props.content.toggleColCta) {
+                    regex = /\[spacerHtml\]/gi;
+                    col = col.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    col = col.replace(regex, "10");
+                    regex = /\[spacerExtra\]/gi;
+                    col = col.replace(regex, `colspan="3"`);
+                } else {
+                    regex = /\[spacerHtml\]/gi;
+                    col = col.replace(regex, "");
+                }
             } else {
                 regex = /\[columnHeadlineHtml\]/gi;
                 col = col.replace(regex, "");
@@ -84,6 +129,18 @@ class Article extends React.Component {
                 col = col.replace(regex, COLUMN_BODY);
                 regex = /\[colBody\]/gi;
                 col = col.replace(regex, `[colBody${i + 1}]`);
+
+                if (this.props.content.toggleColCta) {
+                    regex = /\[spacerHtml\]/gi;
+                    col = col.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    col = col.replace(regex, "10");
+                    regex = /\[spacerExtra\]/gi;
+                    col = col.replace(regex, `colspan="3"`);
+                } else {
+                    regex = /\[spacerHtml\]/gi;
+                    col = col.replace(regex, "");
+                }
             } else {
                 regex = /\[columnBodyHtml\]/gi;
                 col = col.replace(regex, "");
@@ -100,6 +157,18 @@ class Article extends React.Component {
                 col = col.replace(regex, `[colCtaText${i + 1}]`);
                 regex = /\[colCtaLink\]/gi;
                 col = col.replace(regex, `[colCtaLink${i + 1}]`);
+
+                if (this.props.content.toggleColHeadline || this.props.content.toggleColBody) {
+                    regex = /\[spacerHtml\]/gi;
+                    col = col.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    col = col.replace(regex, "10");
+                    regex = /\[spacerExtra\]/gi;
+                    col = col.replace(regex, `colspan="3"`);
+                } else {
+                    regex = /\[spacerHtml\]/gi;
+                    col = col.replace(regex, "");
+                }
             } else {
                 regex = /\[ctaHtml\]/gi;
                 col = col.replace(regex, "");
