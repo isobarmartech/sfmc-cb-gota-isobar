@@ -10,7 +10,7 @@ export const LAYOUT = `
                 <tr>
                     <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
                     <td class="sans" align="center" style="font-size: 11px; line-height: 16px; color: #2E2926; font-family: 'Sanomat Sans', Arial, sans-serif; font-weight: 300;">
-                        Ser mailet konstigt ut? <a href="#" style="color: [themeColor]; text-decoration: none;">Klicka här</a> för att öppna webbversion.
+                        Ser mailet konstigt ut? <a href="%%view_email_url%%" style="color: [themeColor]; text-decoration: none;">Klicka här</a> för att öppna webbversionen.
                     </td>
                     <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
                 </tr>

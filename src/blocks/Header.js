@@ -85,9 +85,11 @@ class Article extends React.Component {
                 label: `${ui.brands[i].name}`,
                 value: `${ui.brands[i].id}`,
                 website: `${ui.brands[i].website}`,
-                brandColor: `${ui.brands[i].brandColor}`
+                brandColor: `${ui.brands[i].colors[0]}`
             })
         }
+
+        console.log(arr)
         return arr;
     }
 
