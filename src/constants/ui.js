@@ -11,6 +11,10 @@ export const ui = {
             "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinBarometern&hl=sv",
             "appstore": "https://apps.apple.com/se/app/minbarometern/id1373780935"
         },
+        "applinks_secondary": {
+            "googleplay": "https://play.google.com/store/apps/details?id=se.gotamedia.MinOT&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/minot/id1373783525"
+        },
         "menu": [{
             "title": "Start",
             "link": "https://www.barometern.se/"
@@ -24,7 +28,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.barometern.se/"
         }],
-        "publisher": "Anders Enström"
+        "signatures": [{
+            "name": "Anders Enström",
+            "title": "",
+            "img": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/192ed1f1-fdab-4ea0-8620-264653006a90.png"
+        }]
     }, {
         "name": "Blekinge Läns Tidning",
         "id": "BLT",
@@ -50,7 +58,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.blt.se/"
         }],
-        "publisher": "Mimmi Karlsson-Bernfalk"
+        "signatures": [{
+            "name": "Mimmi Karlsson-Bernfalk",
+            "title": "",
+            "img": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/022f67c9-1c72-4fbc-bdaa-b1c1a9dfe15c.png"
+        }]
     }, {
         "name": "Borås Tidning",
         "id": "BT",
@@ -76,7 +88,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.bt.se/"
         }],
-        "publisher": "Stefan Eklund"
+        "signatures": [{
+            "name": "Stefan Eklund",
+            "title": "",
+            "img": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/fb6dd450-d557-420a-a2ec-4fcd5b037c2d.png"
+        }]
     }, {
         "name": "Kristianstadsbladet",
         "id": "KB",
@@ -102,7 +118,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.kristianstadsbladet.se/"
         }],
-        "publisher": "Jörgen Svensson"
+        "signatures": [{
+            "name": "Jörgen Svensson",
+            "title": "",
+            "img": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/fb5da1e8-a7f9-46c9-a5fe-75c3fc7f99c5.png"
+        }]
     }, {
         "name": "Smålandsposten",
         "id": "SMP",
@@ -128,7 +148,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.smp.se/"
         }],
-        "publisher": "Jens Nielsen"
+        "signatures": [{
+            "name": "Kristina Bingström",
+            "title": "",
+            "img": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/46bbf67e-a54f-4c49-9bee-c8746e572acd.png"
+        }]
     }, {
         "name": "Sydöstran",
         "id": "SOR",
@@ -154,7 +178,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.sydostran.se/"
         }],
-        "publisher": "Anders Nilsson"
+        "signatures": [{
+            "name": "Anders Nilsson",
+            "title": "",
+            "img": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/682c8fa2-6e79-4783-9da3-a2bd5249de58.png"
+        }]
     }, {
         "name": "Trelleborgs Allehanda",
         "id": "TA",
@@ -180,7 +208,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.trelleborgsallehanda.se/"
         }],
-        "publisher": "Martin Falkenby"
+        "signatures": [{
+            "name": "Martin Falkenby",
+            "title": "",
+            "img": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/e9f9f102-9b59-4679-9a60-8ffa24a1c49e.png"
+        }]
     }, {
         "name": "Ulricehamns Tidning",
         "id": "UT",
@@ -206,7 +238,12 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.ut.se/"
         }],
-        "publisher": "Kajsa Kettil"
+        "publisher": "Kajsa Kettil",
+        "signatures": [{
+            "name": "",
+            "title": "",
+            "img": ""
+        }]
     }, {
         "name": "Ystads Allehande",
         "id": "YA",
@@ -232,7 +269,12 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.ystadsallehanda.se/"
         }],
-        "publisher": "Lars Mohlin"
+        "publisher": "Lars Mohlin",
+        "signatures": [{
+            "name": "",
+            "title": "",
+            "img": ""
+        }]
     }, {
         "name": "Ölandsbladet",
         "id": "OB",
@@ -258,7 +300,12 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.olandsbladet.se/"
         }],
-        "publisher": "Peter Boström"
+        "publisher": "Peter Boström",
+        "signatures": [{
+            "name": "",
+            "title": "",
+            "img": ""
+        }]
     }
     ],
     "signatures": [{
@@ -276,6 +323,46 @@ export const ui = {
         "name": "Ronald McDonald",
         "title": "Man of the people",
         "img": "https://via.placeholder.com/250x70?text=Ronald McDonald"
+    }, {
+        "name": "Anders Enström",
+        "title": "",
+        "img": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/192ed1f1-fdab-4ea0-8620-264653006a90.png"
+    }, {
+        "name": "Mimmi Karlsson",
+        "title": "",
+        "img": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/022f67c9-1c72-4fbc-bdaa-b1c1a9dfe15c.png"
+    }, {
+        "name": "Stefan Eklund",
+        "title": "",
+        "img": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/fb6dd450-d557-420a-a2ec-4fcd5b037c2d.png"
+    }, {
+        "name": "Jörgen Svensson",
+        "title": "",
+        "img": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/fb5da1e8-a7f9-46c9-a5fe-75c3fc7f99c5.png"
+    }, {
+        "name": "Peter Boström",
+        "title": "",
+        "img": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/6edab72b-4cd8-4aeb-95ab-78761cb4df75.png"
+    }, {
+        "name": "Kristina Bingström",
+        "title": "",
+        "img": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/46bbf67e-a54f-4c49-9bee-c8746e572acd.png"
+    }, {
+        "name": "Anders Nilsson",
+        "title": "",
+        "img": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/682c8fa2-6e79-4783-9da3-a2bd5249de58.png"
+    }, {
+        "name": "Martin Falkenby",
+        "title": "",
+        "img": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/e9f9f102-9b59-4679-9a60-8ffa24a1c49e.png"
+    }, {
+        "name": "Kajsa Kettil",
+        "title": "",
+        "img": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/22a4710e-4ce2-4cd5-a67d-26578fcaa6d4.png"
+    }, {
+        "name": "Lars Mohlin",
+        "title": "",
+        "img": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/4fac7dca-3399-4fa5-8137-becf5a8b04ad.png"
     }],
     "colors": ["#005CA9", "#D00019", "#ED7E00", "#41AD49", "#D10A10", "#A8C30B", "#CE95C2", "#003653", "#730E0E", "#3C2814", "#003200", "#E84D0E", "#66C1BE", "#DC6BA6", "#00FFFF", "#FFED00", "#", "#3AFF00", "#EFAA00", "#62B8E8"],
     "modules": {
@@ -345,7 +432,8 @@ export const ui = {
             "#66C1BE": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/1df02456-5284-4e7b-aa40-f06cd56bf84a.png",
             "#62B8E8": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/ccc4b1a7-b9e5-4d41-b2c3-c728cf2806ee.png",
             "#CE95C2": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/92adac12-54ff-4464-8a4e-b8be4b48f6db.png",
-            "#DC6BA6": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b3252b7d-65d8-43cd-b4e6-95a7ac67c6c1.png"
+            "#DC6BA6": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b3252b7d-65d8-43cd-b4e6-95a7ac67c6c1.png",
+            "#FFFFFF": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/6d70b60c-ab0d-41b2-8ba5-ffe3d0915607.png"
         },
         "banners": {
             "#005CA9": {
@@ -373,6 +461,11 @@ export const ui = {
                     "black": "https://image.s50.sfmc-content.com/lib/fe3a11717564047c721370/m/1/f268a247-18d7-4bad-a71b-31718a9304e3.png",
                     "white": "https://image.s50.sfmc-content.com/lib/fe3a11717564047c721370/m/1/856b9658-76e5-41d2-a919-0eec2443a271.png",
                     "color": "https://image.s50.sfmc-content.com/lib/fe3a11717564047c721370/m/1/645ccc2a-744f-49d3-bb83-aa009417642e.png"
+                },
+                "app_secondary": {
+                    "black": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/5ec51a31-9e80-46fe-8dad-6c72b079e597.png",
+                    "white": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/866c3ce2-ee4c-4fa3-bc92-75f645b941b2.png",
+                    "color": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/44a793fd-aa8e-4def-9a6b-aa0ca6c4672f.png"
                 },
                 "banner": {
                     "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7cc71adc-1e16-4a6c-a13c-7a6f3bc28268.png",

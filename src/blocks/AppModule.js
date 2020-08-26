@@ -11,7 +11,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT, TOP_BORDER, APP_IMAGE, HEADLINE, BODY, DOUBLE_CTA, SPACER } from "./layouts/appModule";
+import { LAYOUT, TOP_BORDER, APP_IMAGE, HEADLINE, BODY, DOUBLE_CTA, LAYOUT_DUAL, APP_IMAGE_DUAL, APP_IMAGE_DUAL_SECONDARY, HEADLINE_DUAL, HEADLINE_DUAL_SECONDARY, BODY_DUAL, BODY_DUAL_SECONDARY, DOUBLE_CTA_DUAL, DOUBLE_CTA_DUAL_SECONDARY, SPACER } from "./layouts/appModule";
 import { ui } from "../constants/ui.js";
 import RichTextEditor from '../components/RichTextEditor';
 import { richTextToHtml } from "../components/RichTextEditor";
@@ -28,83 +28,205 @@ class Article extends React.Component {
         let pattern, regex;
         let html = LAYOUT;
 
-        if (this.props.content.toggleImgApp) {
-            regex = /\[imgAppHtml\]/gi;
-            html = html.replace(regex, APP_IMAGE);
-            if (this.props.content.toggleHeadline || this.props.content.toggleBody) {
-                regex = /\[spacerHtml\]/gi;
-                html = html.replace(regex, SPACER);
-                regex = /\[spacerHeight\]/gi;
-                html = html.replace(regex, "20");
-                regex = /\[spacerExtra\]/gi;
-                html = html.replace(regex, "");
-            } else if (this.props.content.toggleDoubleCta) {
-                regex = /\[spacerHtml\]/gi;
-                html = html.replace(regex, SPACER);
-                regex = /\[spacerHeight\]/gi;
-                html = html.replace(regex, "25");
-                regex = /\[spacerExtra\]/gi;
-                html = html.replace(regex, "");
+
+        if (this.props.content.appAmount === "1") {
+
+            if (this.props.content.toggleImgApp) {
+                regex = /\[imgAppHtml\]/gi;
+                html = html.replace(regex, APP_IMAGE);
+                if (this.props.content.toggleHeadline || this.props.content.toggleBody) {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    html = html.replace(regex, "20");
+                    regex = /\[spacerExtra\]/gi;
+                    html = html.replace(regex, "");
+                } else if (this.props.content.toggleDoubleCta) {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    html = html.replace(regex, "25");
+                    regex = /\[spacerExtra\]/gi;
+                    html = html.replace(regex, "");
+                } else {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, "");
+                }
             } else {
-                regex = /\[spacerHtml\]/gi;
+                regex = /\[imgAppHtml\]/gi;
                 html = html.replace(regex, "");
             }
-        } else {
-            regex = /\[imgAppHtml\]/gi;
-            html = html.replace(regex, "");
-        }
 
-        if (this.props.content.toggleHeadline) {
-            regex = /\[headlineHtml\]/gi;
-            html = html.replace(regex, HEADLINE);
+            if (this.props.content.toggleHeadline) {
+                regex = /\[headlineHtml\]/gi;
+                html = html.replace(regex, HEADLINE);
+                if (this.props.content.toggleBody) {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    html = html.replace(regex, "10");
+                    regex = /\[spacerExtra\]/gi;
+                    html = html.replace(regex, "");
+                } else if (this.props.content.toggleDoubleCta) {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    html = html.replace(regex, "25");
+                    regex = /\[spacerExtra\]/gi;
+                    html = html.replace(regex, "");
+                } else {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, "");
+                }
+            } else {
+                regex = /\[headlineHtml\]/gi;
+                html = html.replace(regex, "");
+            }
+
             if (this.props.content.toggleBody) {
-                regex = /\[spacerHtml\]/gi;
-                html = html.replace(regex, SPACER);
-                regex = /\[spacerHeight\]/gi;
-                html = html.replace(regex, "10");
-                regex = /\[spacerExtra\]/gi;
-                html = html.replace(regex, "");
-            } else if (this.props.content.toggleDoubleCta) {
-                regex = /\[spacerHtml\]/gi;
-                html = html.replace(regex, SPACER);
-                regex = /\[spacerHeight\]/gi;
-                html = html.replace(regex, "25");
-                regex = /\[spacerExtra\]/gi;
-                html = html.replace(regex, "");
+                regex = /\[bodyHtml\]/gi;
+                html = html.replace(regex, BODY);
+                if (this.props.content.toggleDoubleCta) {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    html = html.replace(regex, "25");
+                    regex = /\[spacerExtra\]/gi;
+                    html = html.replace(regex, "");
+                } else {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, "");
+                }
             } else {
-                regex = /\[spacerHtml\]/gi;
+                regex = /\[bodyHtml\]/gi;
                 html = html.replace(regex, "");
             }
-        } else {
-            regex = /\[headlineHtml\]/gi;
-            html = html.replace(regex, "");
-        }
 
-        if (this.props.content.toggleBody) {
-            regex = /\[bodyHtml\]/gi;
-            html = html.replace(regex, BODY);
             if (this.props.content.toggleDoubleCta) {
-                regex = /\[spacerHtml\]/gi;
-                html = html.replace(regex, SPACER);
-                regex = /\[spacerHeight\]/gi;
-                html = html.replace(regex, "25");
-                regex = /\[spacerExtra\]/gi;
-                html = html.replace(regex, "");
+                regex = /\[ctaHtml\]/gi;
+                html = html.replace(regex, DOUBLE_CTA);
             } else {
-                regex = /\[spacerHtml\]/gi;
+                regex = /\[ctaHtml\]/gi;
                 html = html.replace(regex, "");
             }
-        } else {
-            regex = /\[bodyHtml\]/gi;
-            html = html.replace(regex, "");
-        }
 
-        if (this.props.content.toggleDoubleCta) {
-            regex = /\[ctaHtml\]/gi;
-            html = html.replace(regex, DOUBLE_CTA);
         } else {
-            regex = /\[ctaHtml\]/gi;
-            html = html.replace(regex, "");
+            html = LAYOUT_DUAL;
+
+            if (this.props.content.appAmount === "flipped") {
+
+                regex = /\[imgAppHtml_secondary\]/gi;
+                html = html.replace(regex, "[imgAppHtml[dummy]]");
+                regex = /\[imgAppHtml\]/gi;
+                html = html.replace(regex, "[imgAppHtml_secondary]");
+
+                regex = /\[headlineHtml_secondary\]/gi;
+                html = html.replace(regex, "[headlineHtml[dummy]]");
+                regex = /\[headlineHtml\]/gi;
+                html = html.replace(regex, "[headlineHtml_secondary]");
+
+                regex = /\[bodyHtml_secondary\]/gi;
+                html = html.replace(regex, "[bodyHtml[dummy]]");
+                regex = /\[bodyHtml\]/gi;
+                html = html.replace(regex, "[bodyHtml_secondary]");
+
+                regex = /\[ctaHtml_secondary\]/gi;
+                html = html.replace(regex, "[ctaHtml[dummy]]");
+                regex = /\[ctaHtml\]/gi;
+                html = html.replace(regex, "[ctaHtml_secondary]");
+
+                regex = /\[dummy\]/gi;
+                html = html.replace(regex, "");
+            }
+
+            if (this.props.content.toggleImgApp) {
+                regex = /\[imgAppHtml\]/gi;
+                html = html.replace(regex, APP_IMAGE_DUAL);
+                regex = /\[imgAppHtml_secondary\]/gi;
+                html = html.replace(regex, APP_IMAGE_DUAL_SECONDARY);
+                if (this.props.content.toggleHeadline || this.props.content.toggleBody) {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    html = html.replace(regex, "20");
+                    regex = /\[spacerExtra\]/gi;
+                    html = html.replace(regex, "");
+                } else {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, "");
+                }
+            } else {
+                regex = /\[imgAppHtml\]/gi;
+                html = html.replace(regex, "");
+                regex = /\[imgAppHtml_secondary\]/gi;
+                html = html.replace(regex, "");
+            }
+
+            if (this.props.content.toggleHeadline) {
+                regex = /\[headlineHtml\]/gi;
+                html = html.replace(regex, HEADLINE_DUAL);
+                regex = /\[headlineHtml_secondary\]/gi;
+                html = html.replace(regex, HEADLINE_DUAL_SECONDARY);
+                if (this.props.content.toggleBody) {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    html = html.replace(regex, "10");
+                    regex = /\[spacerExtra\]/gi;
+                    html = html.replace(regex, `colspan="3"`);
+                } else if (this.props.content.toggleDoubleCta) {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    html = html.replace(regex, "20");
+                    regex = /\[spacerExtra\]/gi;
+                    html = html.replace(regex, `colspan="3"`);
+                } else {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, "");
+                }
+            } else {
+                regex = /\[headlineHtml\]/gi;
+                html = html.replace(regex, "");
+                regex = /\[headlineHtml_secondary\]/gi;
+                html = html.replace(regex, "");
+            }
+
+            if (this.props.content.toggleBody) {
+                regex = /\[bodyHtml\]/gi;
+                html = html.replace(regex, BODY_DUAL);
+                regex = /\[bodyHtml_secondary\]/gi;
+                html = html.replace(regex, BODY_DUAL_SECONDARY);
+                if (this.props.content.toggleDoubleCta) {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, SPACER);
+                    regex = /\[spacerHeight\]/gi;
+                    html = html.replace(regex, "20");
+                    regex = /\[spacerExtra\]/gi;
+                    html = html.replace(regex, `colspan="3"`);
+                } else {
+                    regex = /\[spacerHtml\]/gi;
+                    html = html.replace(regex, "");
+                }
+            } else {
+                regex = /\[bodyHtml\]/gi;
+                html = html.replace(regex, "");
+                regex = /\[bodyHtml_secondary\]/gi;
+                html = html.replace(regex, "");
+            }
+
+            if (this.props.content.toggleDoubleCta) {
+                regex = /\[ctaHtml\]/gi;
+                html = html.replace(regex, DOUBLE_CTA_DUAL);
+                regex = /\[ctaHtml_secondary\]/gi;
+                html = html.replace(regex, DOUBLE_CTA_DUAL_SECONDARY);
+            } else {
+                regex = /\[ctaHtml\]/gi;
+                html = html.replace(regex, "");
+                regex = /\[ctaHtml_secondary\]/gi;
+                html = html.replace(regex, "");
+            }
+
         }
 
         if (this.props.content.toggleInvertedColors) {
@@ -112,6 +234,8 @@ class Article extends React.Component {
             html = html.replace(regex, "#FFFFFF");
             regex = /\[themeColor\]/gi;
             html = html.replace(regex, "#FFFFFF");
+            regex = /\[linkArrowUrl\]/gi;
+            html = html.replace(regex, ui.images.arrows["#FFFFFF"]);
 
             // In case we have a working color
             if (this.props.content.themeWorkingColor) {
@@ -137,9 +261,13 @@ class Article extends React.Component {
             if (this.props.content.themeWorkingColor) {
                 regex = /\[themeColor\]/gi;
                 html = html.replace(regex, this.props.content.themeWorkingColor);
+                regex = /\[linkArrowUrl\]/gi;
+                html = html.replace(regex, ui.images.arrows[this.props.content.themeWorkingColor]);
             } else {
                 regex = /\[themeColor\]/gi;
                 html = html.replace(regex, this.props.content.themeColor);
+                regex = /\[linkArrowUrl\]/gi;
+                html = html.replace(regex, ui.images.arrows[this.props.content.themeColor]);
 
             }
 
@@ -150,11 +278,19 @@ class Article extends React.Component {
         }
 
         if (this.props.content.appColor === "custom") {
-            regex = /\[imgApp\]/gi;
+            regex = /\[imgAppUrl\]/gi;
             html = html.replace(regex, this.props.content.imgAppUrl);
+            if (this.props.content.appAmount !== "1") {
+                regex = /\[imgAppUrl_secondary\]/gi;
+                html = html.replace(regex, this.props.content.imgAppUrl_secondary);
+            }
         } else {
-            regex = /\[imgApp\]/gi;
+            regex = /\[imgAppUrl\]/gi;
             html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].app[this.props.content.appColor === "mono" ? (this.props.content.toggleInvertedColors ? "white" : "black") : "color"])
+            if (this.props.content.appAmount !== "1") {
+                regex = /\[imgAppUrl_secondary\]/gi;
+                html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].app_secondary[this.props.content.appColor === "mono" ? (this.props.content.toggleInvertedColors ? "white" : "black") : "color"])
+            }
         }
 
         if (this.props.content.toggleTopBorder) {
@@ -204,12 +340,12 @@ class Article extends React.Component {
                         toggleBody: true,
                         toggleDoubleCta: true,
                         toggleInvertedColors: false,
+                        appAmount: "1",
                         appColor: "mono",
                         themeColor: "",
                         brandName: "Select Brand",
                         brandId: "",
                         colorSwatches: "",
-                        imgApp: "",
                         imgAppUrl: "http://via.placeholder.com/70x70",
                         textHeadline: "Lorem ipsum dolor sit amet",
                         textBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.",
@@ -217,6 +353,13 @@ class Article extends React.Component {
                         linkCta1: "#",
                         textCta2: "App Store",
                         linkCta2: "#",
+                        imgAppUrl_secondary: "http://via.placeholder.com/70x70",
+                        textHeadline_secondary: "Lorem ipsum dolor sit amet",
+                        textBody_secondary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.",
+                        textCta1_secondary: "Google Play",
+                        linkCta1_secondary: "#",
+                        textCta2_secondary: "App Store",
+                        linkCta2_secondary: "#",
                         textColor: "#2E2926",
                         ctaTextColor: "#FFFFFF",
                         bgColor: "#F4F2F0"
@@ -236,6 +379,8 @@ class Article extends React.Component {
                 swatches: ui.brands[i].colors,
                 linkCta1: ui.brands[i].applinks !== undefined ? ui.brands[i].applinks.googleplay : "#",
                 linkCta2: ui.brands[i].applinks !== undefined ? ui.brands[i].applinks.appstore : "#",
+                linkCta1_secondary: ui.brands[i].applinks_secondary !== undefined ? ui.brands[i].applinks_secondary.googleplay : "#",
+                linkCta2_secondary: ui.brands[i].applinks_secondary !== undefined ? ui.brands[i].applinks_secondary.appstore : "#"
             })
         }
         return arr;
@@ -260,12 +405,17 @@ class Article extends React.Component {
                                         iconName="down"
                                         iconVariant="border-filled"
                                         onSelect={event => {
+                                            if (event.value !== "BOT") {
+                                                this.onChange("appAmount", "1");
+                                            }
                                             this.onChange("brandId", event.value);
                                             this.props.content.toggleInvertedColors === true ? this.onChange("themeColor", event.swatches[1]) : this.onChange("themeColor", event.swatches[0]);
                                             this.onChange("colorSwatches", event.swatches);
                                             this.onChange("brandName", event.label);
                                             this.onChange("linkCta1", event.linkCta1);
                                             this.onChange("linkCta2", event.linkCta2);
+                                            this.onChange("linkCta1_secondary", event.linkCta1_secondary);
+                                            this.onChange("linkCta2_secondary", event.linkCta2_secondary);
                                         }}
                                         options={this.brandList()}
                                     />
@@ -277,6 +427,35 @@ class Article extends React.Component {
 
                 {this.props.content.brandName !== undefined && this.props.content.brandName !== "Select Brand" ? (
                     <>
+                        {this.props.content.brandId === "BOT" ? (
+                            <>
+                                <div className="slds-text-title slds-m-top_small">App Amount</div>
+                                <RadioButtonGroup
+                                    onChange={event => {
+                                        this.onChange("appAmount", event.target.value);
+                                    }}
+                                >
+                                    <Radio
+                                        label="One App"
+                                        variant="button-group"
+                                        value="1"
+                                        checked={this.props.content.appAmount === "1"}
+                                    ></Radio>
+                                    <Radio
+                                        label="Two Apps"
+                                        variant="button-group"
+                                        value="2"
+                                        checked={this.props.content.appAmount === "2"}
+                                    ></Radio>
+                                    <Radio
+                                        label="Two Apps Flipped"
+                                        variant="button-group"
+                                        value="flipped"
+                                        checked={this.props.content.appAmount === "flipped"}
+                                    ></Radio>
+                                </RadioButtonGroup>
+                            </>
+                        ) : null}
                         <div className="slds-clearfix">
                             <div className="slds-float_left slds-m-right_medium slds-m-top_small">
                                 <div className="slds-text-title slds-m-bottom_xx-small">Inverted Colors</div>
@@ -418,69 +597,309 @@ class Article extends React.Component {
                                         checked={this.props.content.appColor === "custom"}
                                     ></Radio>
                                 </RadioButtonGroup>
-                                {
-                                    this.props.content.appColor === "custom" ? (
-                                        <>
-                                            <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">App Image URL</div>
-                                            <Input
-                                                value={this.props.content.imgAppUrl}
-                                                onChange={event => {
-                                                    this.onChange("imgAppUrl", event.target.value);
-                                                }}
-                                            />
-                                        </>
-                                    ) : null
-                                }
                             </>
                         ) : null}
-                        {
-                            this.props.content.toggleHeadline ? (
-                                <>
-                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Headline Text</div>
-                                    <RichTextEditor onChange={(data) => this.onChange("textHeadline", data)} text={this.props.content.textHeadline} toggleBold={false} toggleItalic={true} toggleLink={false} />
-                                </>
-                            ) : null
-                        }
-                        {
-                            this.props.content.toggleBody ? (
-                                <>
-                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Body Text</div>
-                                    <RichTextEditor onChange={(data) => this.onChange("textBody", data)} text={this.props.content.textBody} toggleBold={true} toggleItalic={true} toggleLink={false} />
-                                </>
-                            ) : null
-                        }
-                        {this.props.content.toggleDoubleCta ? (
+                        {this.props.content.appAmount === "1" ? (
                             <>
-                                <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 1</div>
-                                <Input
-                                    value={this.props.content.textCta1}
-                                    onChange={event => {
-                                        this.onChange("textCta1", event.target.value);
-                                    }}
-                                />
-                                <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 1</div>
-                                <Input
-                                    value={this.props.content.linkCta1}
-                                    onChange={event => {
-                                        this.onChange("linkCta1", event.target.value);
-                                    }}
-                                />
-                                <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 2</div>
-                                <Input
-                                    value={this.props.content.textCta2}
-                                    onChange={event => {
-                                        this.onChange("textCta2", event.target.value);
-                                    }}
-                                />
-                                <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 2</div>
-                                <Input
-                                    value={this.props.content.linkCta2}
-                                    onChange={event => {
-                                        this.onChange("linkCta2", event.target.value);
-                                    }}
-                                />
+                                {this.props.content.appColor === "custom" ? (
+                                    <>
+                                        <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">App Image URL</div>
+                                        <Input
+                                            value={this.props.content.imgAppUrl}
+                                            onChange={event => {
+                                                this.onChange("imgAppUrl", event.target.value);
+                                            }}
+                                        />
+                                    </>
+                                ) : null}
+                                {this.props.content.toggleHeadline ? (
+                                    <>
+                                        <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Headline Text</div>
+                                        <RichTextEditor onChange={(data) => this.onChange("textHeadline", data)} text={this.props.content.textHeadline} toggleBold={false} toggleItalic={true} toggleLink={false} />
+                                    </>
+                                ) : null}
+                                {this.props.content.toggleBody ? (
+                                    <>
+                                        <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Body Text</div>
+                                        <RichTextEditor onChange={(data) => this.onChange("textBody", data)} text={this.props.content.textBody} toggleBold={true} toggleItalic={true} toggleLink={false} />
+                                    </>
+                                ) : null}
+                                {this.props.content.toggleDoubleCta ? (
+                                    <>
+                                        <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 1</div>
+                                        <Input
+                                            value={this.props.content.textCta1}
+                                            onChange={event => {
+                                                this.onChange("textCta1", event.target.value);
+                                            }}
+                                        />
+                                        <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 1</div>
+                                        <Input
+                                            value={this.props.content.linkCta1}
+                                            onChange={event => {
+                                                this.onChange("linkCta1", event.target.value);
+                                            }}
+                                        />
+                                        <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 2</div>
+                                        <Input
+                                            value={this.props.content.textCta2}
+                                            onChange={event => {
+                                                this.onChange("textCta2", event.target.value);
+                                            }}
+                                        />
+                                        <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 2</div>
+                                        <Input
+                                            value={this.props.content.linkCta2}
+                                            onChange={event => {
+                                                this.onChange("linkCta2", event.target.value);
+                                            }}
+                                        />
+                                    </>
+                                ) : null}
                             </>
-                        ) : null
+                        ) :
+                            <>
+                                {this.props.content.appAmount === "2" ? (
+                                    <>
+
+                                        <div className="slds-theme_shade slds-p-around_medium slds-m-top_small slds-box">
+                                            <div className="slds-text-heading_small slds-m-bottom_xx-small">App Left</div>
+                                            {this.props.content.appColor === "custom" ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">App Image URL</div>
+                                                    <Input
+                                                        value={this.props.content.imgAppUrl}
+                                                        onChange={event => {
+                                                            this.onChange("imgAppUrl", event.target.value);
+                                                        }}
+                                                    />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleHeadline ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Headline Text</div>
+                                                    <RichTextEditor onChange={(data) => this.onChange("textHeadline", data)} text={this.props.content.textHeadline} toggleBold={false} toggleItalic={true} toggleLink={false} />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleBody ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Body Text</div>
+                                                    <RichTextEditor onChange={(data) => this.onChange("textBody", data)} text={this.props.content.textBody} toggleBold={true} toggleItalic={true} toggleLink={false} />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleDoubleCta ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 1</div>
+                                                    <Input
+                                                        value={this.props.content.textCta1}
+                                                        onChange={event => {
+                                                            this.onChange("textCta1", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 1</div>
+                                                    <Input
+                                                        value={this.props.content.linkCta1}
+                                                        onChange={event => {
+                                                            this.onChange("linkCta1", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 2</div>
+                                                    <Input
+                                                        value={this.props.content.textCta2}
+                                                        onChange={event => {
+                                                            this.onChange("textCta2", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 2</div>
+                                                    <Input
+                                                        value={this.props.content.linkCta2}
+                                                        onChange={event => {
+                                                            this.onChange("linkCta2", event.target.value);
+                                                        }}
+                                                    />
+                                                </>
+                                            ) : null}
+                                        </div>
+                                        <div className="slds-theme_shade slds-p-around_medium slds-m-top_small slds-box">
+                                            <div className="slds-text-heading_small slds-m-bottom_xx-small">App Right</div>
+                                            {this.props.content.appColor === "custom" ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">App Image URL</div>
+                                                    <Input
+                                                        value={this.props.content.imgAppUrl_secondary}
+                                                        onChange={event => {
+                                                            this.onChange("imgAppUrl_secondary", event.target.value);
+                                                        }}
+                                                    />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleHeadline ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Headline Text</div>
+                                                    <RichTextEditor onChange={(data) => this.onChange("textHeadline_secondary", data)} text={this.props.content.textHeadline_secondary} toggleBold={false} toggleItalic={true} toggleLink={false} />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleBody ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Body Text</div>
+                                                    <RichTextEditor onChange={(data) => this.onChange("textBody_secondary", data)} text={this.props.content.textBody_secondary} toggleBold={true} toggleItalic={true} toggleLink={false} />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleDoubleCta ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 1</div>
+                                                    <Input
+                                                        value={this.props.content.textCta1_secondary}
+                                                        onChange={event => {
+                                                            this.onChange("textCta1_secondary", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 1</div>
+                                                    <Input
+                                                        value={this.props.content.linkCta1_secondary}
+                                                        onChange={event => {
+                                                            this.onChange("linkCta1_secondary", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 2</div>
+                                                    <Input
+                                                        value={this.props.content.textCta2_secondary}
+                                                        onChange={event => {
+                                                            this.onChange("textCta2_secondary", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 2</div>
+                                                    <Input
+                                                        value={this.props.content.linkCta2_secondary}
+                                                        onChange={event => {
+                                                            this.onChange("linkCta2_secondary", event.target.value);
+                                                        }}
+                                                    />
+                                                </>
+                                            ) : null}
+                                        </div>
+                                    </>
+                                ) :
+                                    <>
+                                        <div className="slds-theme_shade slds-p-around_medium slds-m-top_small slds-box">
+                                            <div className="slds-text-heading_small slds-m-bottom_xx-small">App Left</div>
+                                            {this.props.content.appColor === "custom" ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">App Image URL</div>
+                                                    <Input
+                                                        value={this.props.content.imgAppUrl_secondary}
+                                                        onChange={event => {
+                                                            this.onChange("imgAppUrl_secondary", event.target.value);
+                                                        }}
+                                                    />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleHeadline ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Headline Text</div>
+                                                    <RichTextEditor onChange={(data) => this.onChange("textHeadline_secondary", data)} text={this.props.content.textHeadline_secondary} toggleBold={false} toggleItalic={true} toggleLink={false} />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleBody ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Body Text</div>
+                                                    <RichTextEditor onChange={(data) => this.onChange("textBody_secondary", data)} text={this.props.content.textBody_secondary} toggleBold={true} toggleItalic={true} toggleLink={false} />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleDoubleCta ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 1</div>
+                                                    <Input
+                                                        value={this.props.content.textCta1_secondary}
+                                                        onChange={event => {
+                                                            this.onChange("textCta1_secondary", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 1</div>
+                                                    <Input
+                                                        value={this.props.content.linkCta1_secondary}
+                                                        onChange={event => {
+                                                            this.onChange("linkCta1_secondary", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 2</div>
+                                                    <Input
+                                                        value={this.props.content.textCta2_secondary}
+                                                        onChange={event => {
+                                                            this.onChange("textCta2_secondary", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 2</div>
+                                                    <Input
+                                                        value={this.props.content.linkCta2_secondary}
+                                                        onChange={event => {
+                                                            this.onChange("linkCta2_secondary", event.target.value);
+                                                        }}
+                                                    />
+                                                </>
+                                            ) : null}
+                                        </div>
+                                        <div className="slds-theme_shade slds-p-around_medium slds-m-top_small slds-box">
+                                            <div className="slds-text-heading_small slds-m-bottom_xx-small">App Right</div>
+                                            {this.props.content.appColor === "custom" ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">App Image URL</div>
+                                                    <Input
+                                                        value={this.props.content.imgAppUrl}
+                                                        onChange={event => {
+                                                            this.onChange("imgAppUrl", event.target.value);
+                                                        }}
+                                                    />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleHeadline ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Headline Text</div>
+                                                    <RichTextEditor onChange={(data) => this.onChange("textHeadline", data)} text={this.props.content.textHeadline} toggleBold={false} toggleItalic={true} toggleLink={false} />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleBody ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Body Text</div>
+                                                    <RichTextEditor onChange={(data) => this.onChange("textBody", data)} text={this.props.content.textBody} toggleBold={true} toggleItalic={true} toggleLink={false} />
+                                                </>
+                                            ) : null}
+                                            {this.props.content.toggleDoubleCta ? (
+                                                <>
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 1</div>
+                                                    <Input
+                                                        value={this.props.content.textCta1}
+                                                        onChange={event => {
+                                                            this.onChange("textCta1", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 1</div>
+                                                    <Input
+                                                        value={this.props.content.linkCta1}
+                                                        onChange={event => {
+                                                            this.onChange("linkCta1", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA text 2</div>
+                                                    <Input
+                                                        value={this.props.content.textCta2}
+                                                        onChange={event => {
+                                                            this.onChange("textCta2", event.target.value);
+                                                        }}
+                                                    />
+                                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">CTA Link 2</div>
+                                                    <Input
+                                                        value={this.props.content.linkCta2}
+                                                        onChange={event => {
+                                                            this.onChange("linkCta2", event.target.value);
+                                                        }}
+                                                    />
+                                                </>
+                                            ) : null}
+                                        </div>
+                                    </>
+                                }
+                            </>
                         }
                     </>
                 ) : null
