@@ -28,11 +28,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.barometern.se/"
         }],
-        "signatures": [{
+        "publisher": {
             "name": "Anders Enström",
-            "title": "",
-            "img": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/192ed1f1-fdab-4ea0-8620-264653006a90.png"
-        }]
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/192ed1f1-fdab-4ea0-8620-264653006a90.png"
+        }
     }, {
         "name": "Blekinge Läns Tidning",
         "id": "BLT",
@@ -58,11 +58,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.blt.se/"
         }],
-        "signatures": [{
+        "publisher": {
             "name": "Mimmi Karlsson-Bernfalk",
-            "title": "",
-            "img": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/022f67c9-1c72-4fbc-bdaa-b1c1a9dfe15c.png"
-        }]
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/022f67c9-1c72-4fbc-bdaa-b1c1a9dfe15c.png"
+        }
     }, {
         "name": "Borås Tidning",
         "id": "BT",
@@ -88,11 +88,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.bt.se/"
         }],
-        "signatures": [{
+        "publisher": {
             "name": "Stefan Eklund",
-            "title": "",
-            "img": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/fb6dd450-d557-420a-a2ec-4fcd5b037c2d.png"
-        }]
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/fb6dd450-d557-420a-a2ec-4fcd5b037c2d.png"
+        }
     }, {
         "name": "Kristianstadsbladet",
         "id": "KB",
@@ -118,11 +118,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.kristianstadsbladet.se/"
         }],
-        "signatures": [{
+        "publisher": {
             "name": "Jörgen Svensson",
-            "title": "",
-            "img": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/fb5da1e8-a7f9-46c9-a5fe-75c3fc7f99c5.png"
-        }]
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/fb5da1e8-a7f9-46c9-a5fe-75c3fc7f99c5.png"
+        }
     }, {
         "name": "Smålandsposten",
         "id": "SMP",
@@ -148,11 +148,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.smp.se/"
         }],
-        "signatures": [{
+        "publisher": {
             "name": "Kristina Bingström",
-            "title": "",
-            "img": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/46bbf67e-a54f-4c49-9bee-c8746e572acd.png"
-        }]
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/46bbf67e-a54f-4c49-9bee-c8746e572acd.png"
+        }
     }, {
         "name": "Sydöstran",
         "id": "SOR",
@@ -178,11 +178,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.sydostran.se/"
         }],
-        "signatures": [{
+        "publisher": {
             "name": "Anders Nilsson",
-            "title": "",
-            "img": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/682c8fa2-6e79-4783-9da3-a2bd5249de58.png"
-        }]
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/682c8fa2-6e79-4783-9da3-a2bd5249de58.png"
+        }
     }, {
         "name": "Trelleborgs Allehanda",
         "id": "TA",
@@ -208,11 +208,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.trelleborgsallehanda.se/"
         }],
-        "signatures": [{
+        "publisher": {
             "name": "Martin Falkenby",
-            "title": "",
-            "img": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/e9f9f102-9b59-4679-9a60-8ffa24a1c49e.png"
-        }]
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/e9f9f102-9b59-4679-9a60-8ffa24a1c49e.png"
+        }
     }, {
         "name": "Ulricehamns Tidning",
         "id": "UT",
@@ -238,12 +238,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.ut.se/"
         }],
-        "publisher": "Kajsa Kettil",
-        "signatures": [{
-            "name": "",
-            "title": "",
-            "img": ""
-        }]
+        "publisher": {
+            "name": "Kajsa Kettil",
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/22a4710e-4ce2-4cd5-a67d-26578fcaa6d4.png"
+        }
     }, {
         "name": "Ystads Allehande",
         "id": "YA",
@@ -269,12 +268,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.ystadsallehanda.se/"
         }],
-        "publisher": "Lars Mohlin",
-        "signatures": [{
-            "name": "",
-            "title": "",
-            "img": ""
-        }]
+        "publisher": {
+            "name": "Lars Mohlin",
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/4fac7dca-3399-4fa5-8137-becf5a8b04ad.png"
+        }
     }, {
         "name": "Ölandsbladet",
         "id": "OB",
@@ -300,12 +298,11 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.olandsbladet.se/"
         }],
-        "publisher": "Peter Boström",
-        "signatures": [{
-            "name": "",
-            "title": "",
-            "img": ""
-        }]
+        "publisher": {
+            "name": "Peter Boström",
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/6edab72b-4cd8-4aeb-95ab-78761cb4df75.png"
+        }
     }
     ],
     "signatures": [{
@@ -325,43 +322,43 @@ export const ui = {
         "img": "https://via.placeholder.com/250x70?text=Ronald McDonald"
     }, {
         "name": "Anders Enström",
-        "title": "",
+        "title": "Chefredaktör & ansvarig utgivare",
         "img": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/192ed1f1-fdab-4ea0-8620-264653006a90.png"
     }, {
         "name": "Mimmi Karlsson",
-        "title": "",
+        "title": "Chefredaktör & ansvarig utgivare",
         "img": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/022f67c9-1c72-4fbc-bdaa-b1c1a9dfe15c.png"
     }, {
         "name": "Stefan Eklund",
-        "title": "",
+        "title": "Chefredaktör & ansvarig utgivare",
         "img": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/fb6dd450-d557-420a-a2ec-4fcd5b037c2d.png"
     }, {
         "name": "Jörgen Svensson",
-        "title": "",
+        "title": "Chefredaktör & ansvarig utgivare",
         "img": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/fb5da1e8-a7f9-46c9-a5fe-75c3fc7f99c5.png"
     }, {
         "name": "Peter Boström",
-        "title": "",
+        "title": "Chefredaktör & ansvarig utgivare",
         "img": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/6edab72b-4cd8-4aeb-95ab-78761cb4df75.png"
     }, {
         "name": "Kristina Bingström",
-        "title": "",
+        "title": "Chefredaktör & ansvarig utgivare",
         "img": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/46bbf67e-a54f-4c49-9bee-c8746e572acd.png"
     }, {
         "name": "Anders Nilsson",
-        "title": "",
+        "title": "Chefredaktör & ansvarig utgivare",
         "img": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/682c8fa2-6e79-4783-9da3-a2bd5249de58.png"
     }, {
         "name": "Martin Falkenby",
-        "title": "",
+        "title": "Chefredaktör & ansvarig utgivare",
         "img": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/e9f9f102-9b59-4679-9a60-8ffa24a1c49e.png"
     }, {
         "name": "Kajsa Kettil",
-        "title": "",
+        "title": "Chefredaktör & ansvarig utgivare",
         "img": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/22a4710e-4ce2-4cd5-a67d-26578fcaa6d4.png"
     }, {
         "name": "Lars Mohlin",
-        "title": "",
+        "title": "Chefredaktör & ansvarig utgivare",
         "img": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/4fac7dca-3399-4fa5-8137-becf5a8b04ad.png"
     }],
     "colors": ["#005CA9", "#D00019", "#ED7E00", "#41AD49", "#D10A10", "#A8C30B", "#CE95C2", "#003653", "#730E0E", "#3C2814", "#003200", "#E84D0E", "#66C1BE", "#DC6BA6", "#00FFFF", "#FFED00", "#", "#3AFF00", "#EFAA00", "#62B8E8"],

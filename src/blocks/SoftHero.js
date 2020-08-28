@@ -146,6 +146,9 @@ class Article extends React.Component {
             html = html.replace(regex, "");
         }
 
+        regex = /\[imageSignature\]/gi;
+        html = html.replace(regex, this.props.content.publisherSignature);
+
         // Handle Rich Text Input
         if (this.props.content.textHeadline !== undefined) {
             regex = /\[textHeadline\]/gi;
@@ -156,7 +159,7 @@ class Article extends React.Component {
             html = html.replace(regex, richTextToHtml(this.props.content.textBody));
         }
 
-        if (this.props.content.signatureName !== undefined && this.props.content.signatureTitle !== undefined) {
+        if (this.props.content.publisherName !== undefined && this.props.content.publisherTitle !== undefined) {
             regex = /\[textSignature\]/gi;
             html = html.replace(regex, richTextToHtml(this.props.content.textSignature));
         }
@@ -212,12 +215,14 @@ class Article extends React.Component {
                         textBody: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus minima quas est, unde itaque ullam ipsum maiores provident nihil ratione eius earum nemo fuga, rem veniam.",
                         textCta: "Read more",
                         linkCta: "#",
-                        imageSignature: "https://via.placeholder.com/250x70",
+                        signatureVersion: "default",
+                        publisherSignature: "https://via.placeholder.com/250x70",
+                        publisherName: "",
+                        publisherTitle: "",
                         textSignature: "[b]Name Nameson[/b] \n Title",
-                        signatureName: "",
-                        signatureTitle: "",
                         brandName: "Select Brand",
-                        colorSwatches: ""
+                        colorSwatches: "",
+                        brandIndex: ""
                     }
                 });
             }
@@ -231,28 +236,15 @@ class Article extends React.Component {
             arr.push({
                 label: `${ui.brands[i].name}`,
                 brandColor: `${ui.brands[i].colors[0]}`,
-                swatches: ui.brands[i].colors
+                brandIndex: i,
+                swatches: ui.brands[i].colors,
+                publisher_name: `${ui.brands[i].publisher.name}`,
+                publisher_title: `${ui.brands[i].publisher.title}`,
+                publisher_signa: `${ui.brands[i].publisher.signature}`
             })
         }
-
         return arr;
     }
-
-    signatureList = () => {
-        let arr = [{ label: "Custom", name: "Name Nameson", img: "https://via.placeholder.com/250x70", title: "Title" }];
-
-        for (let i = 0; i < ui.signatures.length; i++) {
-            arr.push({
-                label: `${ui.signatures[i].name}`,
-                name: `${ui.signatures[i].name}`,
-                img: `${ui.signatures[i].img}`,
-                title: `${ui.signatures[i].title}`
-            })
-        }
-
-        return arr;
-    }
-
 
     render() {
         if (this.props.content.brandName !== undefined && this.props.content.brandName !== "Select Brand") {
@@ -276,6 +268,11 @@ class Article extends React.Component {
                                             this.onChange("themeColor", event.brandColor);
                                             this.onChange("brandName", event.label);
                                             this.onChange("colorSwatches", event.swatches);
+                                            this.onChange("publisherName", event.publisher_name);
+                                            this.onChange("publisherTitle", event.publisher_title);
+                                            this.onChange("publisherSignature", event.publisher_signa);
+                                            this.onChange("textSignature", `[b]${event.publisher_name}[/b] \n ${event.publisher_title}`);
+                                            this.onChange("brandIndex", event.brandIndex);
                                         }}
                                         options={this.brandList()}
                                     />
@@ -528,47 +525,49 @@ class Article extends React.Component {
                                     }}
                                 />
                             </>
-                        ) : null
-                        }
-                        {
-                            this.props.content.toggleSignature ? (
-                                <>
-                                    <div className="slds-clearfix">
-                                        <div className="slds-float_left slds-m-right_medium slds-m-top_small">
-                                            <IconSettings iconPath="/assets/icons">
-                                                <div className="slds-grid slds-grid_pull-padded slds-grid_vertical-align-center slds-m-top_small">
-                                                    <div className="slds-col_padded">
-                                                        <span>Select signature </span>
-                                                        <Dropdown
-                                                            length={null}
-                                                            iconCategory="utility"
-                                                            iconName="down"
-                                                            iconVariant="border-filled"
-                                                            onSelect={event => {
-                                                                this.onChange("imageSignature", event.img);
-                                                                this.onChange("signatureName", event.name);
-                                                                this.onChange("signatureTitle", event.title);
-                                                                this.onChange("textSignature", `[b]${event.name}[/b]\n${event.title}`);
-                                                            }}
-                                                            options={this.signatureList()}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </IconSettings>
-                                        </div>
-                                    </div>
-                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Signature Image URL <span style={{ color: "#0070d2" }}>- Image Size: 250px Width</span></div>
-                                    <Input
-                                        value={this.props.content.imageSignature}
-                                        onChange={event => {
-                                            this.onChange("imageSignature", event.target.value);
-                                        }}
-                                    />
-                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Signature Text</div>
-                                    <RichTextEditor onChange={(data) => this.onChange("textSignature", data)} text={this.props.content.textSignature} toggleBold={true} toggleItalic={true} toggleLink={true} />
-                                </>
-                            ) : null
-                        }
+                        ) : null}
+                        {this.props.content.toggleSignature ? (
+                            <>
+                                <div className="slds-text-title slds-m-top_small">Signature</div>
+                                <RadioButtonGroup
+                                    onChange={event => {
+                                        this.onChange("signatureVersion", event.target.value);
+
+                                        if (event.target.value === "default") {
+                                            this.onChange("textSignature", `[b]${ui.brands[this.props.content.brandIndex].publisher.name}[/b] \n ${ui.brands[this.props.content.brandIndex].publisher.title}`);
+                                            this.onChange("publisherSignature", ui.brands[this.props.content.brandIndex].publisher.signature);
+                                        } else if (event.target.value === "custom") {
+                                            this.onChange("textSignature", "[b]Name Nameson[/b] \n Title");
+                                            this.onChange("publisherSignature", "https://via.placeholder.com/250x70");
+                                        }
+
+                                    }}
+                                >
+                                    <Radio
+                                        label="Default"
+                                        variant="button-group"
+                                        value="default"
+                                        checked={this.props.content.signatureVersion === "default"}
+                                    ></Radio>
+                                    <Radio
+                                        label="Custom"
+                                        variant="button-group"
+                                        value="custom"
+                                        checked={this.props.content.signatureVersion === "custom"}
+                                    ></Radio>
+                                </RadioButtonGroup>
+                                <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Signature Image URL <span style={{ color: "#0070d2" }}>- Image Size: 250px Width</span></div>
+                                <Input
+                                    value={this.props.content.publisherSignature}
+                                    onChange={event => {
+                                        this.onChange("publisherSignature", event.target.value);
+                                    }}
+                                />
+                                <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Signature Text</div>
+                                <RichTextEditor onChange={(data) => this.onChange("textSignature", data)} text={this.props.content.textSignature} toggleBold={true} toggleItalic={true} toggleLink={true} />
+                            </>
+                        ) : null}
+
                     </>
                 ) : null
                 }
