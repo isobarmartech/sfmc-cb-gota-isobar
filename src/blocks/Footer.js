@@ -10,7 +10,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT, APP_ICONS, MENU, MENU_ITEM, COPYRIGHT, LEGAL, CONTENT_WRAPPER, SPACER } from "./layouts/footer";
+import { LAYOUT, APP_ICONS, MENU, MENU_ITEM, COPYRIGHT, LEGAL, CONTENT_WRAPPER, ADDRESS, USUBSCRIBE, SPACER } from "./layouts/footer";
 import { ui } from "../constants/ui.js";
 import RichTextEditor from '../components/RichTextEditor';
 import { richTextToHtml } from "../components/RichTextEditor";
@@ -27,7 +27,7 @@ class Article extends React.Component {
         let pattern, regex;
         let html = LAYOUT;
 
-        if (this.props.content.toggleIcons || this.props.content.toggleMenu || this.props.content.toggleLegal) {
+        if (this.props.content.toggleIcons || this.props.content.toggleMenu || this.props.content.toggleCopyright || this.props.content.toggleLegal || this.props.content.toggleAddress || this.props.content.toggleUnsubscribe) {
             regex = /\[contentWrapperHtml\]/gi;
             html = html.replace(regex, CONTENT_WRAPPER);
         } else {
@@ -38,7 +38,7 @@ class Article extends React.Component {
         if (this.props.content.toggleIcons) {
             regex = /\[appIconsHtml\]/gi;
             html = html.replace(regex, APP_ICONS);
-            if (this.props.content.toggleMenu || this.props.content.toggleLegal) {
+            if (this.props.content.toggleMenu || this.props.content.toggleCopyright || this.props.content.toggleLegal || this.props.content.toggleAddress || this.props.content.toggleUnsubscribe) {
                 regex = /\[spacerHtml\]/gi;
                 html = html.replace(regex, SPACER);
                 regex = /\[spacerHeight\]/gi;
@@ -77,7 +77,7 @@ class Article extends React.Component {
             regex = /\[menuItemHtml\]/gi;
             html = html.replace(regex, menu_items);
 
-            if (this.props.content.toggleLegal) {
+            if (this.props.content.toggleCopyright || this.props.content.toggleLegal || this.props.content.toggleAddress || this.props.content.toggleUnsubscribe) {
                 regex = /\[spacerHtml\]/gi;
                 html = html.replace(regex, SPACER);
                 regex = /\[spacerHeight\]/gi;
@@ -93,19 +93,71 @@ class Article extends React.Component {
             html = html.replace(regex, "");
         }
 
+        if (this.props.content.toggleCopyright) {
+            regex = /\[copyrightHtml\]/gi;
+            html = html.replace(regex, COPYRIGHT);
+            if (this.props.content.toggleLegal) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            } else if (this.props.content.toggleAddress || this.props.content.toggleUnsubscribe) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "15");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, `colspan="3"`);
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
+        } else {
+            regex = /\[copyrightHtml\]/gi;
+            html = html.replace(regex, "");
+        }
+
         if (this.props.content.toggleLegal) {
             regex = /\[legalHtml\]/gi;
             html = html.replace(regex, LEGAL);
+            if (this.props.content.toggleAddress || this.props.content.toggleUnsubscribe) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "15");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, `colspan="3"`);
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
             regex = /\[legalHtml\]/gi;
             html = html.replace(regex, "");
         }
 
-        if (this.props.content.toggleCopyright) {
-            regex = /\[copyrightHtml\]/gi;
-            html = html.replace(regex, COPYRIGHT);
+        if (this.props.content.toggleAddress) {
+            regex = /\[addressHtml\]/gi;
+            html = html.replace(regex, ADDRESS);
+            if (this.props.content.toggleUnsubscribe) {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, SPACER);
+                regex = /\[spacerHeight\]/gi;
+                html = html.replace(regex, "15");
+                regex = /\[spacerExtra\]/gi;
+                html = html.replace(regex, `colspan="3"`);
+            } else {
+                regex = /\[spacerHtml\]/gi;
+                html = html.replace(regex, "");
+            }
         } else {
-            regex = /\[copyrightHtml\]/gi;
+            regex = /\[addressHtml\]/gi;
+            html = html.replace(regex, "");
+        }
+
+        if (this.props.content.toggleUnsubscribe) {
+            regex = /\[unsubscribeHtml\]/gi;
+            html = html.replace(regex, USUBSCRIBE);
+        } else {
+            regex = /\[unsubscribeHtml\]/gi;
             html = html.replace(regex, "");
         }
 
@@ -157,6 +209,8 @@ class Article extends React.Component {
                         toggleMenu: true,
                         toggleCopyright: true,
                         toggleLegal: true,
+                        toggleAddress: true,
+                        toggleUnsubscribe: true,
                         menuAmount: "1",
                         themeColor: "",
                         brandName: "Select Brand",
@@ -170,6 +224,10 @@ class Article extends React.Component {
                         linkFacebook: "#",
                         linkTwitter: "#",
                         linkInstagram: "#",
+                        textUnsubscribe: "",
+                        linkUnsubscribe: "",
+                        textAddress: "",
+                        linkAddress: "",
                         textMenuItem1: "",
                         linkMenuItem1: "",
                         textMenuItem2: "",
@@ -202,6 +260,10 @@ class Article extends React.Component {
                 instagram: `${ui.brands[i].instagram}`,
                 index: i,
                 menuAmount: ui.brands[i].menu.length,
+                textUnsubscribe: ui.brands[i].unsubscribe.text,
+                linkUnsubscribe: ui.brands[i].unsubscribe.link,
+                textAddress: ui.brands[i].address.text,
+                linkAddress: ui.brands[i].address.link,
                 textMenuItem1: ui.brands[i].menu[0] !== undefined ? ui.brands[i].menu[0].title : "Menu item 1",
                 textMenuItem2: ui.brands[i].menu[1] !== undefined ? ui.brands[i].menu[1].title : "Menu item 2",
                 textMenuItem3: ui.brands[i].menu[2] !== undefined ? ui.brands[i].menu[2].title : "Menu item 3",
@@ -246,6 +308,10 @@ class Article extends React.Component {
                                             this.onChange("linkInstagram", event.instagram);
                                             this.onChange("brandIndex", event.index);
                                             this.onChange("menuAmount", event.menuAmount);
+                                            this.onChange("textUnsubscribe", event.textUnsubscribe);
+                                            this.onChange("linkUnsubscribe", event.linkUnsubscribe);
+                                            this.onChange("textAddress", event.textAddress);
+                                            this.onChange("linkAddress", event.linkAddress);
                                             this.onChange("textMenuItem1", event.textMenuItem1);
                                             this.onChange("textMenuItem2", event.textMenuItem2);
                                             this.onChange("textMenuItem3", event.textMenuItem3);
@@ -296,6 +362,21 @@ class Article extends React.Component {
                                 />
                             </div>
                             <div className="slds-float_left slds-m-right_medium slds-m-top_small">
+                                <div className="slds-text-title slds-m-bottom_xx-small">Copyright</div>
+                                <Checkbox
+                                    labels={{
+                                        label: '',
+                                        toggleDisabled: '',
+                                        toggleEnabled: ''
+                                    }}
+                                    variant="toggle"
+                                    checked={this.props.content.toggleCopyright}
+                                    onChange={(event) => { this.onChange('toggleCopyright', event.target.checked) }}
+                                />
+                            </div>
+                        </div>
+                        <div className="slds-clearfix">
+                            <div className="slds-float_left slds-m-right_medium slds-m-top_small">
                                 <div className="slds-text-title slds-m-bottom_xx-small">Legal Text</div>
                                 <Checkbox
                                     labels={{
@@ -306,6 +387,32 @@ class Article extends React.Component {
                                     variant="toggle"
                                     checked={this.props.content.toggleLegal}
                                     onChange={(event) => { this.onChange('toggleLegal', event.target.checked) }}
+                                />
+                            </div>
+                            <div className="slds-float_left slds-m-right_medium slds-m-top_small">
+                                <div className="slds-text-title slds-m-bottom_xx-small">Address</div>
+                                <Checkbox
+                                    labels={{
+                                        label: '',
+                                        toggleDisabled: '',
+                                        toggleEnabled: ''
+                                    }}
+                                    variant="toggle"
+                                    checked={this.props.content.toggleAddress}
+                                    onChange={(event) => { this.onChange('toggleAddress', event.target.checked) }}
+                                />
+                            </div>
+                            <div className="slds-float_left slds-m-right_medium slds-m-top_small">
+                                <div className="slds-text-title slds-m-bottom_xx-small">Unsubscribe</div>
+                                <Checkbox
+                                    labels={{
+                                        label: '',
+                                        toggleDisabled: '',
+                                        toggleEnabled: ''
+                                    }}
+                                    variant="toggle"
+                                    checked={this.props.content.toggleUnsubscribe}
+                                    onChange={(event) => { this.onChange('toggleUnsubscribe', event.target.checked) }}
                                 />
                             </div>
                         </div>
@@ -457,17 +564,6 @@ class Article extends React.Component {
                         }
                         {this.props.content.toggleLegal ? (
                             <>
-                                <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Brand Copyright</div>
-                                <Checkbox
-                                    labels={{
-                                        label: '',
-                                        toggleDisabled: '',
-                                        toggleEnabled: ''
-                                    }}
-                                    variant="toggle"
-                                    checked={this.props.content.toggleCopyright}
-                                    onChange={(event) => { this.onChange('toggleCopyright', event.target.checked) }}
-                                />
                                 <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Legal Text</div>
                                 <RichTextEditor onChange={(data) => this.onChange("textLegal", data)} text={this.props.content.textLegal} toggleBold={true} toggleItalic={true} toggleLink={true} />
                             </>

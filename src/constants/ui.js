@@ -28,6 +28,14 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.barometern.se/"
         }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
         "publisher": {
             "name": "Anders Enström",
             "title": "Chefredaktör & ansvarig utgivare",
@@ -58,6 +66,14 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.blt.se/"
         }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
         "publisher": {
             "name": "Mimmi Karlsson-Bernfalk",
             "title": "Chefredaktör & ansvarig utgivare",
@@ -88,6 +104,14 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.bt.se/"
         }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
         "publisher": {
             "name": "Stefan Eklund",
             "title": "Chefredaktör & ansvarig utgivare",
@@ -118,6 +142,14 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.kristianstadsbladet.se/"
         }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
         "publisher": {
             "name": "Jörgen Svensson",
             "title": "Chefredaktör & ansvarig utgivare",
@@ -148,6 +180,14 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.smp.se/"
         }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
         "publisher": {
             "name": "Kristina Bingström",
             "title": "Chefredaktör & ansvarig utgivare",
@@ -178,6 +218,14 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.sydostran.se/"
         }],
+        "unsubscribe": {
+            "text": "Avregistrera",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
         "publisher": {
             "name": "Anders Nilsson",
             "title": "Chefredaktör & ansvarig utgivare",
@@ -208,6 +256,14 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.trelleborgsallehanda.se/"
         }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
         "publisher": {
             "name": "Martin Falkenby",
             "title": "Chefredaktör & ansvarig utgivare",
@@ -238,6 +294,14 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.ut.se/"
         }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
         "publisher": {
             "name": "Kajsa Kettil",
             "title": "Chefredaktör & ansvarig utgivare",
@@ -268,6 +332,14 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.ystadsallehanda.se/"
         }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
         "publisher": {
             "name": "Lars Mohlin",
             "title": "Chefredaktör & ansvarig utgivare",
@@ -298,6 +370,14 @@ export const ui = {
             "title": "Läs E-tidningen",
             "link": "https://etidning.olandsbladet.se/"
         }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
         "publisher": {
             "name": "Peter Boström",
             "title": "Chefredaktör & ansvarig utgivare",
@@ -432,24 +512,6 @@ export const ui = {
             "#DC6BA6": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b3252b7d-65d8-43cd-b4e6-95a7ac67c6c1.png",
             "#FFFFFF": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/6d70b60c-ab0d-41b2-8ba5-ffe3d0915607.png"
         },
-        "banners": {
-            "#005CA9": {
-                "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7cc71adc-1e16-4a6c-a13c-7a6f3bc28268.png",
-                "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/d084b402-4ed6-4b60-919e-e9f79efd63e9.png"
-            },
-            "#ED7E00": {
-                "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/a1005274-7355-438e-ae2e-fe594940257e.png",
-                "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/24187833-f751-4b6f-a092-68eeedec9cfa.png"
-            },
-            "#D00019": {
-                "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b8c4b71a-335e-4a7b-bd33-706de8bdb46a.png",
-                "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/78470bb2-c0e7-415b-9def-329029ab38c8.png"
-            },
-            "#41AD49": {
-                "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/a80e3b57-447d-4874-8288-462a25262909.png",
-                "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/88de79c3-d7ba-4b75-8aba-2a2f0bcc1af1.png"
-            }
-        },
         "brandImages": {
             "BOT": {
                 "header": "https://image.s50.sfmc-content.com/lib/fe3a11717564047c721370/m/1/ff5c8deb-6196-4b6b-b5b4-98d7bba6c8e0.png",
@@ -465,8 +527,8 @@ export const ui = {
                     "color": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/44a793fd-aa8e-4def-9a6b-aa0ca6c4672f.png"
                 },
                 "banner": {
-                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7cc71adc-1e16-4a6c-a13c-7a6f3bc28268.png",
-                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/d084b402-4ed6-4b60-919e-e9f79efd63e9.png"
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/4049ea0d-8990-472e-b4f6-c60238b52110.gif",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/11bfcc18-0364-461c-9694-b56d3ec6c233.gif"
                 }
             },
             "BLT": {
@@ -478,8 +540,8 @@ export const ui = {
                     "color": "https://image.s50.sfmc-content.com/lib/fe3911717564047c721371/m/1/b91688e8-8997-484e-801a-8f23bb6e26ed.png"
                 },
                 "banner": {
-                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7cc71adc-1e16-4a6c-a13c-7a6f3bc28268.png",
-                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/d084b402-4ed6-4b60-919e-e9f79efd63e9.png"
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/e5c11945-7288-4226-ac4b-95776fa1e563.gif",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/ffcff6d8-01a6-4e0f-a9d8-0d6e854f3116.gif"
                 }
             },
             "BT": {
@@ -491,8 +553,8 @@ export const ui = {
                     "color": "https://image.s50.sfmc-content.com/lib/fe3811717564047c721372/m/1/87daf262-8d2a-49cc-b065-d1dadbf518ad.png"
                 },
                 "banner": {
-                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/a80e3b57-447d-4874-8288-462a25262909.png",
-                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/88de79c3-d7ba-4b75-8aba-2a2f0bcc1af1.png"
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/8575db61-c1bb-420b-a148-4d58bad06219.gif",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/291172af-8107-4009-a458-933c636e08b1.gif"
                 }
             },
             "KB": {
@@ -504,8 +566,8 @@ export const ui = {
                     "color": "https://image.s50.sfmc-content.com/lib/fe3711717564047c721373/m/1/795b57f3-d170-4c8e-9946-c0a122a43002.png"
                 },
                 "banner": {
-                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/a1005274-7355-438e-ae2e-fe594940257e.png",
-                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/24187833-f751-4b6f-a092-68eeedec9cfa.png"
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/28b7ae73-da17-4f3a-ade6-8c49ffe0be36.gif",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/6f69bf6d-e31f-4391-bf71-728062b2a33b.gif"
                 }
             },
             "SMP": {
@@ -517,8 +579,8 @@ export const ui = {
                     "color": "https://image.s50.sfmc-content.com/lib/fe3611717564047c721374/m/1/3809b939-c2e2-4225-825f-40943291146e.png"
                 },
                 "banner": {
-                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b8c4b71a-335e-4a7b-bd33-706de8bdb46a.png",
-                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/78470bb2-c0e7-415b-9def-329029ab38c8.png"
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/ddddc0f8-6f39-47c5-a94e-c6453b9cf90c.gif",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/1223aa57-3f78-4b23-b64b-48be337968ad.gif"
                 }
             },
             "SOR": {
@@ -530,8 +592,8 @@ export const ui = {
                     "color": "https://image.s50.sfmc-content.com/lib/fe3511717564047c721375/m/1/2cf9fa34-3e97-46d6-aad2-3386ec7aab5a.png"
                 },
                 "banner": {
-                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b8c4b71a-335e-4a7b-bd33-706de8bdb46a.png",
-                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/78470bb2-c0e7-415b-9def-329029ab38c8.png"
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/89183df6-e659-4db3-86e9-fe7d62484659.gif",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/1a0fa6e3-ce78-4980-a919-145ad89f6de5.gif"
                 }
             },
             "TA": {
@@ -543,8 +605,8 @@ export const ui = {
                     "color": "https://image.s50.sfmc-content.com/lib/fe3411717564047c721376/m/1/834cac4f-dc78-4975-a4e1-b4d0887d3d88.png"
                 },
                 "banner": {
-                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b8c4b71a-335e-4a7b-bd33-706de8bdb46a.png",
-                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/78470bb2-c0e7-415b-9def-329029ab38c8.png"
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/998f377f-b290-45b7-8fbb-d646898412a4.gif",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/e6fcc83d-1b93-4d38-935b-7ddc9c3510bf.gif"
                 }
             },
             "UT": {
@@ -556,8 +618,8 @@ export const ui = {
                     "color": "https://image.s50.sfmc-content.com/lib/fe3311717564047c721377/m/1/907476bf-6335-41eb-a775-a4df6040e155.png"
                 },
                 "banner": {
-                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/a1005274-7355-438e-ae2e-fe594940257e.png",
-                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/24187833-f751-4b6f-a092-68eeedec9cfa.png"
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/a5d2b3cd-9f12-49bb-bb34-fc0a667c1248.gif",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7fd742e5-87c7-45ad-a5ef-f68fb7435013.gif"
                 }
             },
             "YA": {
@@ -569,8 +631,8 @@ export const ui = {
                     "color": "https://image.s50.sfmc-content.com/lib/fe3211717564047c721378/m/1/bef28c42-1d3a-4d0c-aff0-45121ede68cf.png"
                 },
                 "banner": {
-                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7cc71adc-1e16-4a6c-a13c-7a6f3bc28268.png",
-                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/d084b402-4ed6-4b60-919e-e9f79efd63e9.png"
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/0b2cc58f-2ff7-4a55-9d1a-ae6361855006.gif",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/0a70ed5e-d03b-4dfe-a867-07b124013765.gif"
                 }
             },
             "OB": {
@@ -582,8 +644,8 @@ export const ui = {
                     "color": "https://image.s50.sfmc-content.com/lib/fe3111717564047c721379/m/1/96636bc6-052e-46dc-9650-1fa89e508c0e.png"
                 },
                 "banner": {
-                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/7cc71adc-1e16-4a6c-a13c-7a6f3bc28268.png",
-                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/d084b402-4ed6-4b60-919e-e9f79efd63e9.png"
+                    "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/e4291f22-4831-44f8-897a-442ad6c82cc6.gif",
+                    "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/d49ff461-1491-4173-aa1f-41441a6600d4.gif"
                 }
             }
         }

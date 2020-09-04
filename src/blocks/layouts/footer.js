@@ -44,7 +44,10 @@ export const CONTENT_WRAPPER = `
                     </table>
                     [appIconsHtml]
                     [menuHtml]
+                    [copyrightHtml]
                     [legalHtml]
+                    [addressHtml]
+                    [unsubscribeHtml]
                     <table border="0" cellspacing="0" cellpadding="0" width="100%">
                         <tr>
                             <td height="25" style="font-size: 1px; line-height: 1px; height: 25px;">&nbsp;</td>
@@ -153,12 +156,12 @@ export const COPYRIGHT = `
         </td>
         <td class="w-20" width="100" style="font-size: 1px; line-height: 1px; width: 100px;">&nbsp;</td>
     </tr>
+    [spacerHtml]
 </table>
 <!-- copyright -->
 `;
 
 export const LEGAL = `
-[copyrightHtml]
 <!-- legal -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
     <tr>
@@ -168,10 +171,42 @@ export const LEGAL = `
         </td>
         <td class="w-20" width="100" style="font-size: 1px; line-height: 1px; width: 100px;">&nbsp;</td>
     </tr>
+    [spacerHtml]
 </table>
 <!-- legal -->
 `;
 
+export const ADDRESS = `
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+        <td class="w-20" width="100" style="font-size: 1px; line-height: 1px; width: 100px;">&nbsp;</td>
+        <td class="sans" align="center" style="font-size: 11px; line-height: 16px; color: #2E2926; font-family: 'Sanomat Sans', Arial, sans-serif; font-weight: 300;">
+            <a href="[linkAddress]" target="_blank" style="color: #2E2926; text-decoration: none;">
+                [textAddress]
+            </a>
+        </td>
+        <td class="w-20" width="100" style="font-size: 1px; line-height: 1px; width: 100px;">&nbsp;</td>
+    </tr>
+    [spacerHtml]
+</table>
+<!-- address -->
+`;
+
+export const USUBSCRIBE = `
+<!-- unsubscribe -->
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+        <td class="w-20" width="100" style="font-size: 1px; line-height: 1px; width: 100px;">&nbsp;</td>
+        <td class="sans" align="center" style="font-size: 11px; line-height: 16px; color: [themeColor]; font-family: 'Sanomat Sans', Arial, sans-serif; font-weight: 300;">
+            <a href="[linkUnsubscribe]" target="_blank" style="color: [themeColor]; text-decoration: underline;">
+                [textUnsubscribe]
+            </a>
+        </td>
+        <td class="w-20" width="100" style="font-size: 1px; line-height: 1px; width: 100px;">&nbsp;</td>
+    </tr>
+</table>
+<!-- unsubscribe -->
+`;
 export const SPACER = `
 <tr>
     <td [spacerExtra] height="[spacerHeight]" style="font-size: 1px; line-height: 1px; height: [spacerHeight]px;">&nbsp;</td>
