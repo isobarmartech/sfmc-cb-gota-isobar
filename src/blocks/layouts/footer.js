@@ -197,8 +197,8 @@ export const USUBSCRIBE = `
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
     <tr>
         <td class="w-20" width="100" style="font-size: 1px; line-height: 1px; width: 100px;">&nbsp;</td>
-        <td class="sans" align="center" style="font-size: 11px; line-height: 16px; color: [themeColor]; font-family: 'Sanomat Sans', Arial, sans-serif; font-weight: 300;">
-            <a href="[linkUnsubscribe]" target="_blank" style="color: [themeColor]; text-decoration: none;">
+        <td class="sans" align="center" style="font-size: 11px; line-height: 16px; color: #2E2926; font-family: 'Sanomat Sans', Arial, sans-serif; font-weight: 300;">
+            <a href="[linkUnsubscribe]" target="_blank" style="color: #2E2926; text-decoration: none;">
                 [textUnsubscribe]
             </a>
         </td>

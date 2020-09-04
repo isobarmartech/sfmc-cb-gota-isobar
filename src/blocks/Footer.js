@@ -208,7 +208,7 @@ class Article extends React.Component {
                         toggleIcons: true,
                         toggleMenu: true,
                         toggleCopyright: true,
-                        toggleLegal: true,
+                        toggleLegal: false,
                         toggleAddress: true,
                         toggleUnsubscribe: true,
                         menuAmount: "1",

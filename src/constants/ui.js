@@ -33,7 +33,7 @@ export const ui = {
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
-            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
@@ -71,7 +71,7 @@ export const ui = {
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
-            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
@@ -109,7 +109,7 @@ export const ui = {
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
-            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
@@ -147,7 +147,7 @@ export const ui = {
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
-            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
@@ -185,7 +185,7 @@ export const ui = {
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
-            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
@@ -223,7 +223,7 @@ export const ui = {
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
-            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
@@ -261,7 +261,7 @@ export const ui = {
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
-            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
@@ -299,7 +299,7 @@ export const ui = {
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
-            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
@@ -337,7 +337,7 @@ export const ui = {
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
-            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
@@ -375,7 +375,7 @@ export const ui = {
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
-            "text": "Gota Media AB Box 850 391 28 Kalmar",
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
