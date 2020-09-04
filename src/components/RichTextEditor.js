@@ -107,19 +107,19 @@ export default connect(mapStateToProps, mapDispatchToProps)(RichTextEditor);
 
 export const richTextToHtml = (value) => {
     let richText = value;
-    let areg = /\[a url="([^"]+)"](.+?)\[\/a\]/g;
+    let areg = /\[a url="([^"]+)"]((.|\n)+?)\[\/a\]/g;
     richText = richText.replace(areg, (match, $1, $2) => {
         let result = `<a target="_blank" style="text-decoration: underline; color: [themeColor];" href="${$1}">${$2}</a>`;
         return result;
     });
 
-    let breg = /\[b\](.+?)\[\/b\]/g;
+    let breg = /\[b\]((.|\n)+?)\[\/b\]/g;
     richText = richText.replace(breg, (match, $1) => {
         let result = `<b>${$1}</b>`;
         return result;
     });
 
-    let ireg = /\[i\](.+?)\[\/i\]/g;
+    let ireg = /\[i\]((.|\n)+?)\[\/i\]/g;
     richText = richText.replace(ireg, (match, $1) => {
         let result = `<i>${$1}</i>`;
         return result;
