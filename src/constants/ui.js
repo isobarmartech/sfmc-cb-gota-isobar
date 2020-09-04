@@ -219,7 +219,7 @@ export const ui = {
             "link": "https://etidning.sydostran.se/"
         }],
         "unsubscribe": {
-            "text": "Avregistrera",
+            "text": "Klicka här för att avregistrera dig",
             "link": "{{message.unsubscribeUrl}}"
         },
         "address": {
