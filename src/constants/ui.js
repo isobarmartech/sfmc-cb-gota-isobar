@@ -16,17 +16,20 @@ export const ui = {
             "appstore": "https://apps.apple.com/se/app/minot/id1373783525"
         },
         "menu": [{
-            "title": "Start",
+            "title": "Startsida",
             "link": "https://www.barometern.se/"
         }, {
             "title": "Kundcenter",
             "link": "https://kundcenter.barometern.se/"
         }, {
+            "title": "Mina sidor",
+            "link": "https://kundcenter.barometern.se/"
+        }, {
+            "title": "Prenumerationsvillkor",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
             "title": "Tipsa tidningen",
             "link": "https://www.barometern.se/tipsa-oss"
-        }, {
-            "title": "Läs E-tidningen",
-            "link": "https://etidning.barometern.se/"
         }],
         "unsubscribe": {
             "text": "Klicka här för att avregistrera dig",
@@ -54,17 +57,20 @@ export const ui = {
             "appstore": "https://apps.apple.com/se/app/minblt/id1371335882"
         },
         "menu": [{
-            "title": "Start",
+            "title": "Startsida",
             "link": "https://www.blt.se/"
         }, {
             "title": "Kundcenter",
             "link": "https://www.blt.se/kundcenter"
         }, {
+            "title": "Mina sidor",
+            "link": "https://www.blt.se/kundcenter"
+        }, {
+            "title": "Prenumerationsvillkor",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
             "title": "Tipsa tidningen",
             "link": "https://www.blt.se/tipsa-oss"
-        }, {
-            "title": "Läs E-tidningen",
-            "link": "https://etidning.blt.se/"
         }],
         "unsubscribe": {
             "text": "Klicka här för att avregistrera dig",
@@ -92,17 +98,20 @@ export const ui = {
             "appstore": "https://apps.apple.com/se/app/minbt/id1351181432"
         },
         "menu": [{
-            "title": "Start",
+            "title": "Startsida",
             "link": "https://www.bt.se/"
         }, {
             "title": "Kundcenter",
             "link": "https://www.bt.se/kundcenter"
         }, {
-            "title": "Tipsa tidningen",
-            "link": "https://www.bt.se/tipsa-oss"
+            "title": "Mina sidor",
+            "link": "https://www.bt.se/kundcenter"
         }, {
-            "title": "Läs E-tidningen",
-            "link": "https://etidning.bt.se/"
+            "title": "Prenumerationsvillkor ",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
+            "title": "Tipsa redaktionen",
+            "link": "https://www.bt.se/tipsa-oss"
         }],
         "unsubscribe": {
             "text": "Klicka här för att avregistrera dig",
@@ -130,17 +139,20 @@ export const ui = {
             "appstore": "https://apps.apple.com/se/app/minkb/id1377218854"
         },
         "menu": [{
-            "title": "Start",
+            "title": "Startsida",
             "link": "https://www.kristianstadsbladet.se/"
         }, {
             "title": "Kundcenter",
             "link": "https://www.kristianstadsbladet.se/kundcenter"
         }, {
+            "title": "Mina sidor",
+            "link": "https://www.kristianstadsbladet.se/kundcenter"
+        }, {
+            "title": "Prenumerationsvillkor",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
             "title": "Tipsa tidningen",
             "link": "https://www.kristianstadsbladet.se/tipsa-oss"
-        }, {
-            "title": "Läs E-tidningen",
-            "link": "https://etidning.kristianstadsbladet.se/"
         }],
         "unsubscribe": {
             "text": "Klicka här för att avregistrera dig",
@@ -168,17 +180,20 @@ export const ui = {
             "appstore": "https://apps.apple.com/se/app/minsmp/id1373785440"
         },
         "menu": [{
-            "title": "Start",
+            "title": "Startsida",
             "link": "https://www.smp.se/"
         }, {
             "title": "Kundcenter",
             "link": "https://www.smp.se/kundcenter"
         }, {
+            "title": "Mina sidor",
+            "link": "https://www.smp.se/kundcenter"
+        }, {
+            "title": "Prenumerationsvillkor",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
             "title": "Tipsa tidningen",
             "link": "https://www.smp.se/tipsa-oss"
-        }, {
-            "title": "Läs E-tidningen",
-            "link": "https://etidning.smp.se/"
         }],
         "unsubscribe": {
             "text": "Klicka här för att avregistrera dig",
@@ -206,17 +221,20 @@ export const ui = {
             "appstore": "https://apps.apple.com/se/app/minsyd%C3%B6stran/id1371337398"
         },
         "menu": [{
-            "title": "Start",
+            "title": "Startsida",
             "link": "https://www.sydostran.se/"
         }, {
             "title": "Kundcenter",
             "link": "https://www.sydostran.se/kundcenter"
         }, {
+            "title": "Mina sidor",
+            "link": "https://www.sydostran.se/kundcenter"
+        }, {
+            "title": "Prenumerationsvillkor",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
             "title": "Tipsa tidningen",
             "link": "https://www.sydostran.se/tipsa-oss"
-        }, {
-            "title": "Läs E-tidningen",
-            "link": "https://etidning.sydostran.se/"
         }],
         "unsubscribe": {
             "text": "Klicka här för att avregistrera dig",
@@ -244,17 +262,20 @@ export const ui = {
             "appstore": "https://apps.apple.com/se/app/minta/id1377138104"
         },
         "menu": [{
-            "title": "Start",
+            "title": "Startsida",
             "link": "https://www.trelleborgsallehanda.se/"
         }, {
             "title": "Kundcenter",
             "link": "https://www.trelleborgsallehanda.se/kundcenter"
         }, {
+            "title": "Mina sidor",
+            "link": "https://www.trelleborgsallehanda.se/kundcenter"
+        }, {
+            "title": "Prenumerationsvillkor",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
             "title": "Tipsa tidningen",
             "link": "https://www.trelleborgsallehanda.se/tipsa-oss"
-        }, {
-            "title": "Läs E-tidningen",
-            "link": "https://etidning.trelleborgsallehanda.se/"
         }],
         "unsubscribe": {
             "text": "Klicka här för att avregistrera dig",
@@ -282,17 +303,20 @@ export const ui = {
             "appstore": "https://apps.apple.com/se/app/minut/id1381526851"
         },
         "menu": [{
-            "title": "Start",
+            "title": "Startsida",
             "link": "https://www.ut.se/"
         }, {
             "title": "Kundcenter",
             "link": "https://www.ut.se/kundcenter"
         }, {
+            "title": "Mina sidor",
+            "link": "https://www.ut.se/kundcenter"
+        }, {
+            "title": "Prenumerationsvillkor",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
             "title": "Tipsa tidningen",
             "link": "https://www.ut.se/tipsa-oss"
-        }, {
-            "title": "Läs E-tidningen",
-            "link": "https://etidning.ut.se/"
         }],
         "unsubscribe": {
             "text": "Klicka här för att avregistrera dig",
@@ -320,17 +344,20 @@ export const ui = {
             "appstore": "https://apps.apple.com/se/app/minya/id1377190711"
         },
         "menu": [{
-            "title": "Start",
+            "title": "Startsida",
             "link": "https://www.ystadsallehanda.se/"
         }, {
             "title": "Kundcenter",
             "link": "https://www.ystadsallehanda.se/kundcenter"
         }, {
+            "title": "Mina sidor",
+            "link": "https://www.ystadsallehanda.se/kundcenter"
+        }, {
+            "title": "Prenumerationsvillkor",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
             "title": "Tipsa tidningen",
             "link": "https://www.ystadsallehanda.se/tipsa-oss"
-        }, {
-            "title": "Läs E-tidningen",
-            "link": "https://etidning.ystadsallehanda.se/"
         }],
         "unsubscribe": {
             "text": "Klicka här för att avregistrera dig",
@@ -358,17 +385,20 @@ export const ui = {
             "appstore": "https://apps.apple.com/se/app/min%C3%B6landsbladet/id1388268779"
         },
         "menu": [{
-            "title": "Start",
+            "title": "Startsida",
             "link": "https://www.olandsbladet.se/"
         }, {
             "title": "Kundcenter",
             "link": "https://www.olandsbladet.se/kundcenter"
         }, {
+            "title": "Mina sidor",
+            "link": "https://www.olandsbladet.se/kundcenter"
+        }, {
+            "title": "Prenumerationsvillkor",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
             "title": "Tipsa tidningen",
             "link": "https://www.olandsbladet.se/tipsa-oss"
-        }, {
-            "title": "Läs E-tidningen",
-            "link": "https://etidning.olandsbladet.se/"
         }],
         "unsubscribe": {
             "text": "Klicka här för att avregistrera dig",
