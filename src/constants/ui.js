@@ -332,7 +332,7 @@ export const ui = {
             "signature": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/22a4710e-4ce2-4cd5-a67d-26578fcaa6d4.png"
         }
     }, {
-        "name": "Ystads Allehande",
+        "name": "Ystads Allehanda",
         "id": "YA",
         "colors": ["#005CA9", "#003653", "#00FFFF", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.ystadsallehanda.se/",
