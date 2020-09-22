@@ -61,10 +61,10 @@ export const ui = {
             "link": "https://www.blt.se/"
         }, {
             "title": "Kundcenter",
-            "link": "https://www.blt.se/kundcenter"
+            "link": "https://kundcenter.blt.se/"
         }, {
             "title": "Mina sidor",
-            "link": "https://www.blt.se/kundcenter"
+            "link": "https://kundcenter.blt.se/"
         }, {
             "title": "Prenumerationsvillkor",
             "link": "https://kundcenter.gotamedia.se/villkor/"
@@ -102,10 +102,10 @@ export const ui = {
             "link": "https://www.bt.se/"
         }, {
             "title": "Kundcenter",
-            "link": "https://www.bt.se/kundcenter"
+            "link": "https://kundcenter.bt.se/"
         }, {
             "title": "Mina sidor",
-            "link": "https://www.bt.se/kundcenter"
+            "link": "https://kundcenter.bt.se/"
         }, {
             "title": "Prenumerationsvillkor ",
             "link": "https://kundcenter.gotamedia.se/villkor/"
@@ -143,10 +143,10 @@ export const ui = {
             "link": "https://www.kristianstadsbladet.se/"
         }, {
             "title": "Kundcenter",
-            "link": "https://www.kristianstadsbladet.se/kundcenter"
+            "link": "https://kundcenter.kristianstadsbladet.se/"
         }, {
             "title": "Mina sidor",
-            "link": "https://www.kristianstadsbladet.se/kundcenter"
+            "link": "https://kundcenter.kristianstadsbladet.se/"
         }, {
             "title": "Prenumerationsvillkor",
             "link": "https://kundcenter.gotamedia.se/villkor/"
@@ -184,10 +184,10 @@ export const ui = {
             "link": "https://www.smp.se/"
         }, {
             "title": "Kundcenter",
-            "link": "https://www.smp.se/kundcenter"
+            "link": "https://kundcenter.smp.se/"
         }, {
             "title": "Mina sidor",
-            "link": "https://www.smp.se/kundcenter"
+            "link": "https://kundcenter.smp.se/"
         }, {
             "title": "Prenumerationsvillkor",
             "link": "https://kundcenter.gotamedia.se/villkor/"
@@ -225,10 +225,10 @@ export const ui = {
             "link": "https://www.sydostran.se/"
         }, {
             "title": "Kundcenter",
-            "link": "https://www.sydostran.se/kundcenter"
+            "link": "https://kundcenter.sydostran.se/"
         }, {
             "title": "Mina sidor",
-            "link": "https://www.sydostran.se/kundcenter"
+            "link": "https://kundcenter.sydostran.se/"
         }, {
             "title": "Prenumerationsvillkor",
             "link": "https://kundcenter.gotamedia.se/villkor/"
@@ -266,10 +266,10 @@ export const ui = {
             "link": "https://www.trelleborgsallehanda.se/"
         }, {
             "title": "Kundcenter",
-            "link": "https://www.trelleborgsallehanda.se/kundcenter"
+            "link": "https://kundcenter.trelleborgsallehanda.se/"
         }, {
             "title": "Mina sidor",
-            "link": "https://www.trelleborgsallehanda.se/kundcenter"
+            "link": "https://kundcenter.trelleborgsallehanda.se/"
         }, {
             "title": "Prenumerationsvillkor",
             "link": "https://kundcenter.gotamedia.se/villkor/"
@@ -307,10 +307,10 @@ export const ui = {
             "link": "https://www.ut.se/"
         }, {
             "title": "Kundcenter",
-            "link": "https://www.ut.se/kundcenter"
+            "link": "https://kundcenter.ut.se/"
         }, {
             "title": "Mina sidor",
-            "link": "https://www.ut.se/kundcenter"
+            "link": "https://kundcenter.ut.se/"
         }, {
             "title": "Prenumerationsvillkor",
             "link": "https://kundcenter.gotamedia.se/villkor/"
@@ -348,10 +348,10 @@ export const ui = {
             "link": "https://www.ystadsallehanda.se/"
         }, {
             "title": "Kundcenter",
-            "link": "https://www.ystadsallehanda.se/kundcenter"
+            "link": "https://kundcenter.ystadsallehanda.se/"
         }, {
             "title": "Mina sidor",
-            "link": "https://www.ystadsallehanda.se/kundcenter"
+            "link": "https://kundcenter.ystadsallehanda.se/"
         }, {
             "title": "Prenumerationsvillkor",
             "link": "https://kundcenter.gotamedia.se/villkor/"
@@ -389,10 +389,10 @@ export const ui = {
             "link": "https://www.olandsbladet.se/"
         }, {
             "title": "Kundcenter",
-            "link": "https://www.olandsbladet.se/kundcenter"
+            "link": "https://kundcenter.olandsbladet.se/"
         }, {
             "title": "Mina sidor",
-            "link": "https://www.olandsbladet.se/kundcenter"
+            "link": "https://kundcenter.olandsbladet.se/"
         }, {
             "title": "Prenumerationsvillkor",
             "link": "https://kundcenter.gotamedia.se/villkor/"
