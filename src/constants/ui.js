@@ -500,8 +500,8 @@ export const ui = {
                     "color": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/44a793fd-aa8e-4def-9a6b-aa0ca6c4672f.png"
                 },
                 "banner": {
-                    "desktop": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/b597017f-156a-46f1-b764-43b328dbbf09.gif",
-                    "mobile": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/908c55bc-c703-4844-a8eb-7ef4efaf55d1.gif"
+                    "desktop": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/dfaf63c3-21cf-4966-9a96-23393e0b9a85.gif",
+                    "mobile": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/16f3894d-56da-4cdf-9e4e-2d7950975e56.gif"
                 }
             },
             "BLT": {
@@ -513,8 +513,8 @@ export const ui = {
                     "color": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/b91688e8-8997-484e-801a-8f23bb6e26ed.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/252c91e8-8cf5-4863-855c-636e4c9c9e49.gif",
-                    "mobile": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/e5865e45-70b7-4842-81cd-384f421cb1fb.gif"
+                    "desktop": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/a7aa4381-b5b7-49f1-9d5f-5f1617513c75.gif",
+                    "mobile": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/d81df9af-5ec3-476a-ad3c-d4ea688a54ad.gif"
                 }
             },
             "BT": {
@@ -526,8 +526,8 @@ export const ui = {
                     "color": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/87daf262-8d2a-49cc-b065-d1dadbf518ad.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/9e9b8a0f-2fae-4eda-af5e-12c74b599de3.gif",
-                    "mobile": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/1799cd9d-1c1f-46f1-9b57-d34d462e3834.gif"
+                    "desktop": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/f624e045-b28f-449d-ac21-902362602b05.gif",
+                    "mobile": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/b202baa9-18b0-4384-93d4-e6a5c3a603f4.gif"
                 }
             },
             "KB": {
@@ -539,8 +539,8 @@ export const ui = {
                     "color": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/795b57f3-d170-4c8e-9946-c0a122a43002.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/cd76acf6-a5d9-412a-8807-c96f79652707.gif",
-                    "mobile": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/19bf1355-55d7-4582-97a8-e718ccaa59a6.gif"
+                    "desktop": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/a621162b-aaaa-4d9c-b5dc-91b33f0d8588.gif",
+                    "mobile": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/27dfb5e9-0685-41dc-82b3-2d4ae64b1694.gif"
                 }
             },
             "SMP": {
@@ -552,8 +552,8 @@ export const ui = {
                     "color": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/3809b939-c2e2-4225-825f-40943291146e.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/17ea3fc4-4647-4cb3-9cbd-cf15d366bf32.gif",
-                    "mobile": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/bdcdebda-0cfc-4a27-8372-99721b4f77fc.gif"
+                    "desktop": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/12bd4aff-3edd-4ec8-9d30-56cc3a3478e5.gif",
+                    "mobile": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/a12a3e27-d3d0-4ab4-9693-f40687df45c9.gif"
                 }
             },
             "SOR": {
@@ -565,8 +565,8 @@ export const ui = {
                     "color": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/2cf9fa34-3e97-46d6-aad2-3386ec7aab5a.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/780f1326-afbc-428c-8342-9397be17e011.gif",
-                    "mobile": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/2dd12c8c-d9f3-403e-a3f3-6c8f996aa309.gif"
+                    "desktop": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/b3c72ffc-88ea-4f06-80ec-09d93accba99.gif",
+                    "mobile": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/656fbdd9-3102-4197-a736-bb2e43108a7c.gif"
                 }
             },
             "TA": {
@@ -578,8 +578,8 @@ export const ui = {
                     "color": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/834cac4f-dc78-4975-a4e1-b4d0887d3d88.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/0fecf47c-c0a8-432c-bca6-731264eddb78.gif",
-                    "mobile": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/8b72827e-d11a-47bc-acbe-c2fbc78f2765.gif"
+                    "desktop": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/23368b72-d283-4444-9523-b89af24c2a1d.gif",
+                    "mobile": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/dea41518-6d9e-4e7d-98e6-ee7e0c7440cf.gif"
                 }
             },
             "UT": {
@@ -591,8 +591,8 @@ export const ui = {
                     "color": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/907476bf-6335-41eb-a775-a4df6040e155.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/216bf4aa-33a9-4de0-9f5f-4a2ec3f6b29c.gif",
-                    "mobile": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/78c4f13c-0c5d-4b98-ac70-a0fc2b07f300.gif"
+                    "desktop": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/9ccbf597-8ffd-4de4-9371-c3bf99d6de1b.gif",
+                    "mobile": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/534d4093-59c8-4b02-b50b-0bffb456c812.gif"
                 }
             },
             "YA": {
@@ -604,8 +604,8 @@ export const ui = {
                     "color": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/bef28c42-1d3a-4d0c-aff0-45121ede68cf.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/9e9e2e35-21e8-4240-810a-334b39f0de38.gif",
-                    "mobile": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/f71194e9-26b1-4fad-a2d6-160f2e7cd315.gif"
+                    "desktop": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/9b1f79eb-f717-452b-928b-0e545a283b1b.gif",
+                    "mobile": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/75da33db-e845-4faa-b6af-ee230a04b14b.gif"
                 }
             },
             "OB": {
@@ -617,8 +617,8 @@ export const ui = {
                     "color": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/96636bc6-052e-46dc-9650-1fa89e508c0e.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/f964d4f4-c100-437c-8fb5-537a120de6c1.gif",
-                    "mobile": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/97eb9349-c557-4d59-88bc-ae8e1ab5962e.gif"
+                    "desktop": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/4d687ae8-8bfa-4625-912d-f5a2c6f3adb0.gif",
+                    "mobile": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/18fe4ad3-09de-4a77-9b4f-014b01ae7170.gif"
                 }
             }
         }
