@@ -540,7 +540,7 @@ export const ui = {
                 "banner": {
                     "gif": {
                         "desktop": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/f624e045-b28f-449d-ac21-902362602b05.gif",
-                        "mobile": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/b202baa9-18b0-4384-93d4-e6a5c3a603f4.gif"
+                        "mobile": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/0735ddf2-8534-48af-a2f7-8c71750d2314.gif"
                     },
                     "static": {
                         "desktop": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/9690b79b-548f-41a0-be89-f76655acdb16.png",
