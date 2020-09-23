@@ -500,8 +500,14 @@ export const ui = {
                     "color": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/44a793fd-aa8e-4def-9a6b-aa0ca6c4672f.png"
                 },
                 "banner": {
-                    "desktop": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/dfaf63c3-21cf-4966-9a96-23393e0b9a85.gif",
-                    "mobile": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/16f3894d-56da-4cdf-9e4e-2d7950975e56.gif"
+                    "gif": {
+                        "desktop": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/dfaf63c3-21cf-4966-9a96-23393e0b9a85.gif",
+                        "mobile": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/16f3894d-56da-4cdf-9e4e-2d7950975e56.gif"
+                    },
+                    "static": {
+                        "desktop": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/2ab33bbc-6574-4435-b92f-10a21c4f0f9c.png",
+                        "mobile": "https://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/627f685c-09da-4716-a823-940978529ea5.png"
+                    }
                 }
             },
             "BLT": {
@@ -513,8 +519,14 @@ export const ui = {
                     "color": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/b91688e8-8997-484e-801a-8f23bb6e26ed.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/a7aa4381-b5b7-49f1-9d5f-5f1617513c75.gif",
-                    "mobile": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/d81df9af-5ec3-476a-ad3c-d4ea688a54ad.gif"
+                    "gif": {
+                        "desktop": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/a7aa4381-b5b7-49f1-9d5f-5f1617513c75.gif",
+                        "mobile": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/d81df9af-5ec3-476a-ad3c-d4ea688a54ad.gif"
+                    },
+                    "static": {
+                        "desktop": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/956d14de-96e8-408a-b2cb-8040430a56f9.png",
+                        "mobile": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/ed694372-68df-462d-abb0-e8823bf235d5.png"
+                    }
                 }
             },
             "BT": {
@@ -526,8 +538,14 @@ export const ui = {
                     "color": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/87daf262-8d2a-49cc-b065-d1dadbf518ad.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/f624e045-b28f-449d-ac21-902362602b05.gif",
-                    "mobile": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/b202baa9-18b0-4384-93d4-e6a5c3a603f4.gif"
+                    "gif": {
+                        "desktop": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/f624e045-b28f-449d-ac21-902362602b05.gif",
+                        "mobile": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/b202baa9-18b0-4384-93d4-e6a5c3a603f4.gif"
+                    },
+                    "static": {
+                        "desktop": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/9690b79b-548f-41a0-be89-f76655acdb16.png",
+                        "mobile": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/15787993-8076-4f01-9a25-fad6517688ce.png"
+                    }
                 }
             },
             "KB": {
@@ -539,8 +557,14 @@ export const ui = {
                     "color": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/795b57f3-d170-4c8e-9946-c0a122a43002.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/a621162b-aaaa-4d9c-b5dc-91b33f0d8588.gif",
-                    "mobile": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/27dfb5e9-0685-41dc-82b3-2d4ae64b1694.gif"
+                    "gif": {
+                        "desktop": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/a621162b-aaaa-4d9c-b5dc-91b33f0d8588.gif",
+                        "mobile": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/27dfb5e9-0685-41dc-82b3-2d4ae64b1694.gif"
+                    },
+                    "static": {
+                        "desktop": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/997d9245-03c7-483b-b68f-7206d0ffe9c6.png",
+                        "mobile": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/471d9def-3ba3-4835-8d92-b4fb09bd5aeb.png"
+                    }
                 }
             },
             "SMP": {
@@ -552,8 +576,14 @@ export const ui = {
                     "color": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/3809b939-c2e2-4225-825f-40943291146e.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/12bd4aff-3edd-4ec8-9d30-56cc3a3478e5.gif",
-                    "mobile": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/a12a3e27-d3d0-4ab4-9693-f40687df45c9.gif"
+                    "gif": {
+                        "desktop": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/12bd4aff-3edd-4ec8-9d30-56cc3a3478e5.gif",
+                        "mobile": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/a12a3e27-d3d0-4ab4-9693-f40687df45c9.gif"
+                    },
+                    "static": {
+                        "desktop": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/be2b5291-e0c3-4a4c-bc2d-6a2a39baaecd.png",
+                        "mobile": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/52971978-79e9-4a93-8fd9-e873aac61977.png"
+                    }
                 }
             },
             "SOR": {
@@ -565,8 +595,14 @@ export const ui = {
                     "color": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/2cf9fa34-3e97-46d6-aad2-3386ec7aab5a.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/b3c72ffc-88ea-4f06-80ec-09d93accba99.gif",
-                    "mobile": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/656fbdd9-3102-4197-a736-bb2e43108a7c.gif"
+                    "gif": {
+                        "desktop": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/b3c72ffc-88ea-4f06-80ec-09d93accba99.gif",
+                        "mobile": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/656fbdd9-3102-4197-a736-bb2e43108a7c.gif"
+                    },
+                    "static": {
+                        "desktop": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/e58e93fe-7eab-46ad-be12-256822587d3f.png",
+                        "mobile": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/4548bd6a-9f7f-4846-8556-85058329577f.png"
+                    }
                 }
             },
             "TA": {
@@ -578,8 +614,14 @@ export const ui = {
                     "color": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/834cac4f-dc78-4975-a4e1-b4d0887d3d88.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/23368b72-d283-4444-9523-b89af24c2a1d.gif",
-                    "mobile": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/dea41518-6d9e-4e7d-98e6-ee7e0c7440cf.gif"
+                    "gif": {
+                        "desktop": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/23368b72-d283-4444-9523-b89af24c2a1d.gif",
+                        "mobile": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/dea41518-6d9e-4e7d-98e6-ee7e0c7440cf.gif"
+                    },
+                    "static": {
+                        "desktop": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/660fd21e-d353-4b7a-bc8e-f97d14ddef90.png",
+                        "mobile": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/38a2e0c8-5274-4b03-815d-580b93f52185.png"
+                    }
                 }
             },
             "UT": {
@@ -591,8 +633,14 @@ export const ui = {
                     "color": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/907476bf-6335-41eb-a775-a4df6040e155.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/9ccbf597-8ffd-4de4-9371-c3bf99d6de1b.gif",
-                    "mobile": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/534d4093-59c8-4b02-b50b-0bffb456c812.gif"
+                    "gif": {
+                        "desktop": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/9ccbf597-8ffd-4de4-9371-c3bf99d6de1b.gif",
+                        "mobile": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/534d4093-59c8-4b02-b50b-0bffb456c812.gif"
+                    },
+                    "static": {
+                        "desktop": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/ee44251f-fef3-4f89-a40e-f3ed35c3d362.png",
+                        "mobile": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/f8345318-c8d3-40b0-8de1-f123321de928.png"
+                    }
                 }
             },
             "YA": {
@@ -604,8 +652,14 @@ export const ui = {
                     "color": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/bef28c42-1d3a-4d0c-aff0-45121ede68cf.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/9b1f79eb-f717-452b-928b-0e545a283b1b.gif",
-                    "mobile": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/75da33db-e845-4faa-b6af-ee230a04b14b.gif"
+                    "gif": {
+                        "desktop": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/9b1f79eb-f717-452b-928b-0e545a283b1b.gif",
+                        "mobile": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/75da33db-e845-4faa-b6af-ee230a04b14b.gif"
+                    },
+                    "static": {
+                        "desktop": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/277e9140-c759-496a-8438-7005e7609ce0.png",
+                        "mobile": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/a1dbc61c-97e4-4b02-a8a0-43bd5cf77307.png"
+                    }
                 }
             },
             "OB": {
@@ -617,8 +671,14 @@ export const ui = {
                     "color": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/96636bc6-052e-46dc-9650-1fa89e508c0e.png"
                 },
                 "banner": {
-                    "desktop": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/4d687ae8-8bfa-4625-912d-f5a2c6f3adb0.gif",
-                    "mobile": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/18fe4ad3-09de-4a77-9b4f-014b01ae7170.gif"
+                    "gif": {
+                        "desktop": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/4d687ae8-8bfa-4625-912d-f5a2c6f3adb0.gif",
+                        "mobile": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/18fe4ad3-09de-4a77-9b4f-014b01ae7170.gif"
+                    },
+                    "static": {
+                        "desktop": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/6e468ac4-5ce0-4960-803d-cb62a0592a1d.png",
+                        "mobile": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/8ad88806-1fda-429a-8286-eb33d1cd6f36.png"
+                    }
                 }
             }
         }

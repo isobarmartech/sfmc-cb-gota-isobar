@@ -3,6 +3,8 @@ import {
     Card,
     Input,
     IconSettings,
+    RadioButtonGroup,
+    Radio,
     Dropdown,
     Checkbox
 } from "@salesforce/design-system-react";
@@ -23,19 +25,32 @@ class Article extends React.Component {
         let pattern, regex;
         let html = LAYOUT;
 
-        if (this.props.content.toggleGif) {
+        if (this.props.content.toggleBanner) {
             regex = /\[gifHtml\]/gi;
             html = html.replace(regex, GIFBANNER);
-        } else if (!this.props.content.toggleGif) {
+        } else if (!this.props.content.toggleBanner) {
             regex = /\[gifHtml\]/gi;
             html = html.replace(regex, "");
         }
 
-        regex = /\[bannerDesktop\]/gi;
-        html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.desktop);
+        if (this.props.content.toggleBanner && this.props.content.bannerType == "gif") {
 
-        regex = /\[bannerMobile\]/gi;
-        html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.mobile);
+            regex = /\[bannerDesktop\]/gi;
+            html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.gif.desktop);
+
+            regex = /\[bannerMobile\]/gi;
+            html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.gif.mobile);
+
+        } else if (this.props.content.toggleBanner && this.props.content.bannerType == "static") {
+
+            regex = /\[bannerDesktop\]/gi;
+            html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.static.desktop);
+
+            regex = /\[bannerMobile\]/gi;
+            html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.static.mobile);
+
+        }
+
 
         regex = /\[imgLogo\]/gi;
         html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header);
@@ -64,7 +79,8 @@ class Article extends React.Component {
             } else {
                 this.props.initFromSaved({
                     content: {
-                        toggleGif: true,
+                        toggleBanner: true,
+                        bannerType: "gif",
                         themeColor: "",
                         bannerDesktop: "",
                         bannerMobile: "",
@@ -129,7 +145,7 @@ class Article extends React.Component {
                     <>
                         <div className="slds-clearfix">
                             <div className="slds-float_left slds-m-right_medium slds-m-top_small">
-                                <div className="slds-text-title slds-m-bottom_xx-small">Gif Banner</div>
+                                <div className="slds-text-title slds-m-bottom_xx-small">Banner</div>
                                 <Checkbox
                                     labels={{
                                         label: '',
@@ -137,11 +153,39 @@ class Article extends React.Component {
                                         toggleEnabled: ''
                                     }}
                                     variant="toggle"
-                                    checked={this.props.content.toggleGif}
-                                    onChange={(event) => { this.onChange('toggleGif', event.target.checked) }}
+                                    checked={this.props.content.toggleBanner}
+                                    onChange={(event) => { this.onChange('toggleBanner', event.target.checked) }}
                                 />
                             </div>
                         </div>
+                        {this.props.content.toggleBanner ? (
+                            <>
+                                <div className="slds-clearfix">
+                                    <div className="slds-float_left slds-m-right_medium slds-m-top_small">
+                                        <div className="slds-text-title slds-m-bottom_xx-small">Banner type</div>
+                                        <RadioButtonGroup
+                                            onChange={event => {
+                                                this.onChange("bannerType", event.target.value);
+                                            }}
+                                        >
+                                            <Radio
+                                                label="Gif"
+                                                variant="button-group"
+                                                value="gif"
+                                                checked={this.props.content.bannerType === "gif"}
+                                            ></Radio>
+                                            <Radio
+                                                label="Static"
+                                                variant="button-group"
+                                                value="static"
+                                                checked={this.props.content.bannerType === "static"}
+                                            ></Radio>
+                                        </RadioButtonGroup>
+                                    </div>
+                                </div>
+                            </>
+                        ) : null}
+
                         <div className="slds-clearfix">
                             <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Logo link</div>
                             <Input
@@ -151,7 +195,7 @@ class Article extends React.Component {
                                 }}
                             />
                         </div>
-                        {this.props.content.toggleGif ? (
+                        {this.props.content.toggleBanner ? (
                             <>
                                 <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Banner link</div>
                                 <Input
