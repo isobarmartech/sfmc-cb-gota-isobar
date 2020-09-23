@@ -33,7 +33,7 @@ class Article extends React.Component {
             html = html.replace(regex, "");
         }
 
-        if (this.props.content.toggleBanner && this.props.content.bannerType == "gif") {
+        if (this.props.content.toggleBanner && this.props.content.bannerType === "gif") {
 
             regex = /\[bannerDesktop\]/gi;
             html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.gif.desktop);
@@ -41,7 +41,7 @@ class Article extends React.Component {
             regex = /\[bannerMobile\]/gi;
             html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.gif.mobile);
 
-        } else if (this.props.content.toggleBanner && this.props.content.bannerType == "static") {
+        } else if (this.props.content.toggleBanner && this.props.content.bannerType === "static") {
 
             regex = /\[bannerDesktop\]/gi;
             html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].banner.static.desktop);
