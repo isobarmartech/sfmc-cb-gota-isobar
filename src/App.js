@@ -21,6 +21,9 @@ function App() {
           <a href="/checklist">Checklist</a>
         </li>
         <li>
+          <a href="/checklist_v2">Checklist_v2</a>
+        </li>
+        <li>
           <a href="/product">Product</a>
         </li>
         <li>

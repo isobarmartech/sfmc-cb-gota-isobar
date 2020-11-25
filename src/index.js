@@ -13,6 +13,7 @@ import NewsHero from "./blocks/NewsHero";
 import NewsStory from "./blocks/NewsStory";
 import SoftHero from "./blocks/SoftHero";
 import Checklist from "./blocks/Checklist";
+import Checklist_v2 from "./blocks/Checklist_v2";
 import Product from "./blocks/Product";
 import Columns from "./blocks/Columns";
 import AppModule from "./blocks/AppModule";
@@ -29,6 +30,7 @@ ReactDOM.render(
                     <Route exact path="/newsStory" component={NewsStory} />
                     <Route exact path="/softHero" component={SoftHero} />
                     <Route exact path="/checklist" component={Checklist} />
+                    <Route exact path="/checklist_v2" component={Checklist_v2} />
                     <Route exact path="/product" component={Product} />
                     <Route exact path="/columns" component={Columns} />
                     <Route exact path="/appModule" component={AppModule} />
