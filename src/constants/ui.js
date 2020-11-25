@@ -293,7 +293,7 @@ export const ui = {
     }, {
         "name": "Ulricehamns Tidning",
         "id": "UT",
-        "colors": ["#ED7E00", "#3C2814", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
+        "colors": ["#005CA9", "#003653", "#00FFFF", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
         "website": "https://www.ut.se/",
         "facebook": "https://www.facebook.com/ulrtid/",
         "twitter": "https://twitter.com/ulrtid",
