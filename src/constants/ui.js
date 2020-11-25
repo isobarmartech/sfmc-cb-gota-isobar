@@ -41,7 +41,7 @@ export const ui = {
         },
         "publisher": {
             "name": "Anders Enström",
-            "title": "Chefredaktör & ansvarig utgivare",
+            "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/192ed1f1-fdab-4ea0-8620-264653006a90.png"
         }
     }, {
@@ -82,7 +82,7 @@ export const ui = {
         },
         "publisher": {
             "name": "Mimmi Karlsson-Bernfalk",
-            "title": "Chefredaktör & ansvarig utgivare",
+            "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/022f67c9-1c72-4fbc-bdaa-b1c1a9dfe15c.png"
         }
     }, {
@@ -123,7 +123,7 @@ export const ui = {
         },
         "publisher": {
             "name": "Stefan Eklund",
-            "title": "Chefredaktör & ansvarig utgivare",
+            "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/fb6dd450-d557-420a-a2ec-4fcd5b037c2d.png"
         }
     }, {
@@ -163,8 +163,8 @@ export const ui = {
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
-            "name": "Jörgen Svensson",
-            "title": "Chefredaktör & ansvarig utgivare",
+            "name": "Jörgen Svensson",
+            "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/fb5da1e8-a7f9-46c9-a5fe-75c3fc7f99c5.png"
         }
     }, {
@@ -204,8 +204,8 @@ export const ui = {
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
-            "name": "Kristina Bingström",
-            "title": "Chefredaktör & ansvarig utgivare",
+            "name": "Kristina Bingström",
+            "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/46bbf67e-a54f-4c49-9bee-c8746e572acd.png"
         }
     }, {
@@ -246,7 +246,7 @@ export const ui = {
         },
         "publisher": {
             "name": "Anders Nilsson",
-            "title": "Chefredaktör & ansvarig utgivare",
+            "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/682c8fa2-6e79-4783-9da3-a2bd5249de58.png"
         }
     }, {
@@ -287,7 +287,7 @@ export const ui = {
         },
         "publisher": {
             "name": "Martin Falkenby",
-            "title": "Chefredaktör & ansvarig utgivare",
+            "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/e9f9f102-9b59-4679-9a60-8ffa24a1c49e.png"
         }
     }, {
@@ -328,7 +328,7 @@ export const ui = {
         },
         "publisher": {
             "name": "Kajsa Kettil",
-            "title": "Chefredaktör & ansvarig utgivare",
+            "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/22a4710e-4ce2-4cd5-a67d-26578fcaa6d4.png"
         }
     }, {
@@ -369,7 +369,7 @@ export const ui = {
         },
         "publisher": {
             "name": "Lars Mohlin",
-            "title": "Chefredaktör & ansvarig utgivare",
+            "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/4fac7dca-3399-4fa5-8137-becf5a8b04ad.png"
         }
     }, {
@@ -410,7 +410,7 @@ export const ui = {
         },
         "publisher": {
             "name": "Peter Boström",
-            "title": "Chefredaktör & ansvarig utgivare",
+            "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/6edab72b-4cd8-4aeb-95ab-78761cb4df75.png"
         }
     }
