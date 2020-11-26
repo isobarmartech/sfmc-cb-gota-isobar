@@ -51,9 +51,13 @@ class Article extends React.Component {
 
         }
 
-
-        regex = /\[imgLogo\]/gi;
-        html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header);
+        if (this.props.content.logoVersion === "gota") {
+            regex = /\[imgLogo\]/gi;
+            html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header_gota);
+        } else {
+            regex = /\[imgLogo\]/gi;
+            html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header);
+        }
 
 
         // Auto version
@@ -87,7 +91,8 @@ class Article extends React.Component {
                         linkLogo: "#",
                         linkBanner: "#",
                         brandName: "Select Brand",
-                        brandId: ""
+                        brandId: "",
+                        logoVersion: "default"
                     }
                 });
             }
@@ -158,6 +163,29 @@ class Article extends React.Component {
                                 />
                             </div>
                         </div>
+                        <div className="slds-clearfix">
+                            <div className="slds-float_left slds-m-right_medium slds-m-top_small">
+                                <div className="slds-text-title slds-m-bottom_xx-small">Logo Version</div>
+                                <RadioButtonGroup
+                                    onChange={event => {
+                                        this.onChange("logoVersion", event.target.value);
+                                    }}
+                                >
+                                    <Radio
+                                        label="Default"
+                                        variant="button-group"
+                                        value="default"
+                                        checked={this.props.content.logoVersion === "default" || this.props.content.logoVersion === undefined}
+                                    ></Radio>
+                                    <Radio
+                                        label="Gota Branded"
+                                        variant="button-group"
+                                        value="gota"
+                                        checked={this.props.content.logoVersion === "gota"}
+                                    ></Radio>
+                                </RadioButtonGroup>
+                            </div>
+                        </div>
                         {this.props.content.toggleBanner ? (
                             <>
                                 <div className="slds-clearfix">
@@ -185,7 +213,6 @@ class Article extends React.Component {
                                 </div>
                             </>
                         ) : null}
-
                         <div className="slds-clearfix">
                             <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Logo link</div>
                             <Input
