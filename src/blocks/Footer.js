@@ -569,6 +569,25 @@ class Article extends React.Component {
                             </>
                         ) : null
                         }
+                        {this.props.content.toggleUnsubscribe ? (
+                            <>
+                                <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Unsubsribe Text</div>
+                                <Input
+                                    value={this.props.content.textUnsubscribe}
+                                    onChange={event => {
+                                        this.onChange("textUnsubscribe", event.target.value);
+                                    }}
+                                />
+                                <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Unsubsribe Link</div>
+                                <Input
+                                    value={this.props.content.linkUnsubscribe}
+                                    onChange={event => {
+                                        this.onChange("linkUnsubscribe", event.target.value);
+                                    }}
+                                />
+                            </>
+                        ) : null
+                        }
                     </>
                 ) : null
                 }
