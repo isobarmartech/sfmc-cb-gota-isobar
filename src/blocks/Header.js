@@ -59,6 +59,19 @@ class Article extends React.Component {
             html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header);
         }
 
+        // BLT Unique Logo height
+        if (this.props.content.brandId === "BLT" && this.props.content.logoVersion === "gota") {
+            regex = /\[heightLogo\]/gi;
+            html = html.replace(regex, "80");
+            regex = /\[heightClass35\]/gi;
+            html = html.replace(regex, "");
+        } else {
+            regex = /\[heightLogo\]/gi;
+            html = html.replace(regex, "40");
+            regex = /\[heightClass35\]/gi;
+            html = html.replace(regex, `class="h-35"`);
+        }
+
 
         // Auto version
         let keys = Object.keys(this.props.content);

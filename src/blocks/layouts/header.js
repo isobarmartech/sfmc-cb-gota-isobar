@@ -29,7 +29,7 @@ export const LAYOUT = `
                     <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
                     <td align="center">
                         <a href="[linkLogo]" target="_blank">
-                            <img src="[imgLogo]" alt="" width="auto" height="40" style="display: block; border: 0; height: 40px;" class="h-35">
+                            <img src="[imgLogo]" alt="" width="auto" height="[heightLogo]" style="display: block; border: 0; height: [heightLogo]px;" [heightClass35]>
                         </a>
                     </td>
                     <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
