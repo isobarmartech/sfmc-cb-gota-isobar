@@ -18,7 +18,7 @@ import Product from "./blocks/Product";
 import Columns from "./blocks/Columns";
 import AppModule from "./blocks/AppModule";
 import Footer from "./blocks/Footer";
-import NewsFeed from "./blocks/NewsFeed";
+import News_Dynamic from "./blocks/News_Dynamic";
 
 ReactDOM.render(
     <React.StrictMode>
@@ -36,7 +36,7 @@ ReactDOM.render(
                     <Route exact path="/columns" component={Columns} />
                     <Route exact path="/appModule" component={AppModule} />
                     <Route exact path="/footer" component={Footer} />
-                    <Route exact path="/newsFeed" component={NewsFeed} />
+                    <Route exact path="/news_Dynamic" component={News_Dynamic} />
                 </Router>
             </Provider>
         </IconSettings>
