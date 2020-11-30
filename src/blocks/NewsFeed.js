@@ -8,7 +8,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT } from "./layouts/news_Dynamic";
+import { LAYOUT } from "./layouts/newsFeed";
 import { ui } from "../constants/ui.js";
 
 var SDK = require("blocksdk");

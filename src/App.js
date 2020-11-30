@@ -36,7 +36,7 @@ function App() {
           <a href="/footer">Footer</a>
         </li>
         <li>
-          <a href="/newsFeed">News Feed Test</a>
+          <a href="/newsFeed">News Feed</a>
         </li>
 
       </ul>
