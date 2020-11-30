@@ -35,6 +35,9 @@ function App() {
         <li>
           <a href="/footer">Footer</a>
         </li>
+        <li>
+          <a href="/news_Dynamic">News - Dynamic</a>
+        </li>
       </ul>
     </Card>
   );

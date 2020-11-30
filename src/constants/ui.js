@@ -43,7 +43,12 @@ export const ui = {
             "name": "Anders Enström",
             "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.barometern.se/lib/fe3a11717564047c721370/m/1/192ed1f1-fdab-4ea0-8620-264653006a90.png"
-        }
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/bot_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/bot_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "BA_Redaktionellt" }]
     }, {
         "name": "Blekinge Läns Tidning",
         "id": "BLT",
@@ -84,7 +89,12 @@ export const ui = {
             "name": "Mimmi Karlsson-Bernfalk",
             "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.blt.se/lib/fe3911717564047c721371/m/1/022f67c9-1c72-4fbc-bdaa-b1c1a9dfe15c.png"
-        }
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/blt_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/blt_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "BLT_Redaktionellt" }]
     }, {
         "name": "Borås Tidning",
         "id": "BT",
@@ -125,7 +135,12 @@ export const ui = {
             "name": "Stefan Eklund",
             "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.bt.se/lib/fe3811717564047c721372/m/1/fb6dd450-d557-420a-a2ec-4fcd5b037c2d.png"
-        }
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/bt_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/bt_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "BT_Redaktionellt" }, { "label": "BT_Klimat" }, { "label": "BT_Affarer" }]
     }, {
         "name": "Kristianstadsbladet",
         "id": "KB",
@@ -166,7 +181,12 @@ export const ui = {
             "name": "Jörgen Svensson",
             "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/fb5da1e8-a7f9-46c9-a5fe-75c3fc7f99c5.png"
-        }
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/kb_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/kb_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "KB_Redaktionellt" }]
     }, {
         "name": "Smålandsposten",
         "id": "SMP",
@@ -207,7 +227,12 @@ export const ui = {
             "name": "Kristina Bingström",
             "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/46bbf67e-a54f-4c49-9bee-c8746e572acd.png"
-        }
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/smp_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/smp_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "SMP_Redaktionellt" }, { "label": "VXOnews_Redaktionellt" }]
     }, {
         "name": "Sydöstran",
         "id": "SOR",
@@ -248,7 +273,12 @@ export const ui = {
             "name": "Anders Nilsson",
             "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.sydostran.se/lib/fe3511717564047c721375/m/1/682c8fa2-6e79-4783-9da3-a2bd5249de58.png"
-        }
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/syd_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/syd_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "SO_Redaktionellt" }]
     }, {
         "name": "Trelleborgs Allehanda",
         "id": "TA",
@@ -289,7 +319,12 @@ export const ui = {
             "name": "Martin Falkenby",
             "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.trelleborgsallehanda.se/lib/fe3411717564047c721376/m/1/e9f9f102-9b59-4679-9a60-8ffa24a1c49e.png"
-        }
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/ta_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/ta_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "TA_Redaktionellt" }]
     }, {
         "name": "Ulricehamns Tidning",
         "id": "UT",
@@ -330,7 +365,12 @@ export const ui = {
             "name": "Kajsa Kettil",
             "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/22a4710e-4ce2-4cd5-a67d-26578fcaa6d4.png"
-        }
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/ut_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/ut_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": []
     }, {
         "name": "Ystads Allehanda",
         "id": "YA",
@@ -371,7 +411,12 @@ export const ui = {
             "name": "Lars Mohlin",
             "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.ystadsallehanda.se/lib/fe3211717564047c721378/m/1/4fac7dca-3399-4fa5-8137-becf5a8b04ad.png"
-        }
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/ya_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/ya_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "YA_Redaktionellt" }]
     }, {
         "name": "Ölandsbladet",
         "id": "OB",
@@ -412,7 +457,12 @@ export const ui = {
             "name": "Peter Boström",
             "title": "Chefredaktör & ansvarig utgivare",
             "signature": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/6edab72b-4cd8-4aeb-95ab-78761cb4df75.png"
-        }
+        },
+        "ad": {
+            "link": "#",
+            "img": "#"
+        },
+        "newsfeeds": [{ "label": "OB_Redaktionellt" }]
     }
     ],
     "modules": {
