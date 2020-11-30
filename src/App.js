@@ -38,6 +38,7 @@ function App() {
         <li>
           <a href="/newsFeed">News Feed</a>
         </li>
+
       </ul>
     </Card>
   );
