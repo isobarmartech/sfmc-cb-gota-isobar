@@ -459,8 +459,8 @@ export const ui = {
             "signature": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/6edab72b-4cd8-4aeb-95ab-78761cb4df75.png"
         },
         "ad": {
-            "link": "#",
-            "img": "#"
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/ob_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/ob_nyhetsbrev&sz=320x320&c=12345"
         },
         "newsfeeds": [{ "label": "OB_Redaktionellt" }]
     }
