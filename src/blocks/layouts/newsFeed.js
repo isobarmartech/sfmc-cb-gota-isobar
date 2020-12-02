@@ -1,6 +1,6 @@
 export const LAYOUT = `
 <!-- %%[
-VAR @rows, @row, @count, @ad, @mod, @link, @img, @title, @description, @random
+VAR @rows, @row, @count, @ad, @mod, @link, @img, @title, @description, @random, @subject
 SET @rows = LookupRows('[newsFeed]', 'Dummy', 1)
 SET @count = RowCount(@rows)
 SET @random = random(100000, 999999)
@@ -17,6 +17,7 @@ SET @title = Field(@row, 'Title')
 SET @description = Field(@row, 'Description')
 SET @img = Field(@row, 'Img')
 IF @I == 1 THEN
+SET @subject = @title
 ]%% -->
 <!-- NEWS HERO START -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
