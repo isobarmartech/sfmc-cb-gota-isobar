@@ -234,6 +234,43 @@ export const ui = {
         },
         "newsfeeds": [{ "label": "SMP_Redaktionellt" }, { "label": "VXOnews_Redaktionellt" }]
     }, {
+        "name": "VXOnews",
+        "id": "VXO",
+        "colors": ["#ED7E00", "#3C2814", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
+        "website": "https://www.vxonews.se/",
+        "facebook": "https://www.facebook.com/vxonews",
+        "twitter": "https://twitter.com/vxonews",
+        "instagram": "https://www.instagram.com/vxonews/",
+        "applinks": {
+            "googleplay": "#",
+            "appstore": "#"
+        },
+        "menu": [{
+            "title": "Startsida",
+            "link": "https://www.vxonews.se/"
+        }, {
+            "title": "Tipsa tidningen",
+            "link": "mailto:tips@vxonews.se"
+        }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
+        "publisher": {
+            "name": "Unknown",
+            "title": "Unknown",
+            "signature": "http://via.placeholder.com/250x70?text=banner+missing"
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/vxo_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/vxo_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "VXO_Redaktionellt" }],
+    }, {
         "name": "Sydöstran",
         "id": "SOR",
         "colors": ["#D00019", "#730E0E", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
@@ -638,6 +675,26 @@ export const ui = {
                     "static": {
                         "desktop": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/be2b5291-e0c3-4a4c-bc2d-6a2a39baaecd.png",
                         "mobile": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/52971978-79e9-4a93-8fd9-e873aac61977.png"
+                    }
+                }
+            },
+            "VXO": {
+                "header": "http://via.placeholder.com/200x40?text=VXOnews",
+                "header_gota": "http://via.placeholder.com/200x40?text=VXOnews-gota",
+                "footer": "http://via.placeholder.com/200x40?text=VXOnews",
+                "app": {
+                    "black": "http://via.placeholder.com/70x70?text=APP",
+                    "white": "http://via.placeholder.com/70x70?text=APP",
+                    "color": "http://via.placeholder.com/70x70?text=APP"
+                },
+                "banner": {
+                    "gif": {
+                        "desktop": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/6691ebc8-33c3-46e6-bfd4-b89f5388c72c.png",
+                        "mobile": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/bdbd3e4b-824d-4b69-9dd2-cdf754b3c0ef.png"
+                    },
+                    "static": {
+                        "desktop": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/6691ebc8-33c3-46e6-bfd4-b89f5388c72c.png",
+                        "mobile": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/bdbd3e4b-824d-4b69-9dd2-cdf754b3c0ef.png"
                     }
                 }
             },
