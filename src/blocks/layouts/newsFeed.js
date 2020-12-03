@@ -19,7 +19,68 @@ SET @img = Field(@row, 'Img')
 IF @I == 1 THEN
 SET @subject = @title
 ]%% -->
-<!-- NEWS HERO START -->
+
+%%[ if 0 == 1 then ]%%
+<!-- temp. editor workaround -->
+<style>
+  body{
+   color: rgb(0,0,0,0);
+    font-size: 0px;
+    line-height: 0px;
+  }
+</style>
+<table  border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
+  <tr>
+  <td height="30" style="font-size: 1px; line-height: 1px; height: 30px;">&nbsp;</td>
+  </tr>
+  <tr>
+  <td>
+  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;" bgcolor="[themeColor]">
+  <tr>
+    <td align="center">
+      <table border="0" cellspacing="0" cellpadding="0" width="600" style="width: 600px;" class="w-full">
+        <tr>
+          <td colspan="3" height="40" style="font-size: 1px; line-height: 1px; height: 40px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="sans font-14" align="center" style="font-size: 16px; line-height: 21px; color: #FFFFFF; font-family: 'Sanomat Sans', Arial, sans-serif; font-weight: 300;">
+            News Feed Placeholder for:
+          </td>
+        </tr>
+        <tr>
+          <td height="10" style="font-size: 1px; line-height: 1px; height: 10px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="serif font-20" align="center" style="font-size: 24px; line-height: 30px; color: #FFFFFF; font-family: 'Sanomat', Georgia, serif; font-weight: 700;">
+            [newsFeed]
+          </td>
+        </tr>
+        <tr>
+          <td height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="sans font-14" align="center" style="font-size: 16px; line-height: 21px; color: #FFFFFF; font-family: 'Sanomat Sans', Arial, sans-serif; font-weight: 300;">
+            The news feed will dynamically render here.
+            <br>
+            Go to the <b>Preview and Test</b> tab to see the final result.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" height="40" style="font-size: 1px; line-height: 1px; height: 40px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+  </td>
+  </tr>
+  <tr>
+  <td height="30" style="font-size: 1px; line-height: 1px; height: 30px;">&nbsp;</td>
+  </tr>
+</table>
+%%[ endif ]%%
+
+%%[ <!-- ]%%
 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
     <tr>
         <td align="center">
@@ -30,7 +91,6 @@ SET @subject = @title
                 <tr>
                     <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
                     <td>
-                        <!-- image -->
                         <table border="0" cellspacing="0" cellpadding="0" width="100%">
                             <tr>
                                 <td>
@@ -43,9 +103,6 @@ SET @subject = @title
                                 <td class="h-20" height="35" style="font-size: 1px; line-height: 1px; height: 35px;">&nbsp;</td>
                             </tr>
                         </table>
-                        <!-- image -->
-                        
-                        <!-- headline -->
                         <table border="0" cellspacing="0" cellpadding="0" width="100%">
                             <tr>
                                 <td class="hide" width="40" style="font-size: 1px; line-height: 1px; width: 40px;">&nbsp;</td>
@@ -60,8 +117,6 @@ SET @subject = @title
                                 <td colspan="3" height="20" style="font-size: 1px; line-height: 1px; height: 20px;">&nbsp;</td>
                             </tr>
                         </table>
-                        <!-- headline -->
-                        <!-- teaser -->
                         <table border="0" cellspacing="0" cellpadding="0" width="100%">
                             <tr>
                                 <td class="hide" width="40" style="font-size: 1px; line-height: 1px; width: 40px;">&nbsp;</td>
@@ -87,7 +142,6 @@ SET @subject = @title
                                 <td colspan="3" height="10" style="font-size: 1px; line-height: 1px; height: 10px;">&nbsp;</td>
                             </tr>
                         </table>
-                        <!-- teaser -->
                     </td>
                     <td class="w-20" width="10" style="font-size: 1px; line-height: 1px; width: 10px;">&nbsp;</td>
                 </tr>
@@ -98,9 +152,9 @@ SET @subject = @title
         </td>
     </tr>
 </table>
-<!-- NEWS HERO END -->
+%%[ --> ]%%
 <!-- %%[ELSE ]%% -->
-<!-- NEWS STORY START -->
+%%[ <!-- ]%%
 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
     <tr>
         <td align="center">
@@ -130,7 +184,6 @@ SET @subject = @title
                                                 <table border="0" cellspacing="0" cellpadding="0" width="100%" dir="ltr">
                                                     <tr>
                                                         <td>
-                                                            <!-- headline -->
                                                             <table border="0" cellspacing="0" cellpadding="0" width="100%">
                                                                 <tr>
                                                                     <td class="serif font-14" align="left" style="font-size: 16px; line-height: 21px; color: #2E2926; font-family: 'Sanomat', Georgia, serif; font-weight: 700;">
@@ -143,8 +196,6 @@ SET @subject = @title
                                                                     <td height="5" style="font-size: 1px; line-height: 1px; height: 5px;">&nbsp;</td>
                                                                 </tr>
                                                             </table>
-                                                            <!-- headline -->
-                                                            <!-- teaser -->
                                                             <table border="0" cellspacing="0" cellpadding="0" width="100%">
                                                                 <tr>
                                                                     <td class="sans font-12" align="left" valign="top" style="font-size: 16px; line-height: 21px; color: #2E2926; font-family: 'Sanomat Sans', Arial, sans-serif; font-weight: 300;">
@@ -154,7 +205,6 @@ SET @subject = @title
                                                                     </td>
                                                                 </tr>
                                                             </table>
-                                                            <!-- teaser -->
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -175,12 +225,12 @@ SET @subject = @title
         </td>
     </tr>
 </table>
-<!-- NEWS STORY END -->
+%%[ --> ]%%
 <!-- %%[
 ENDIF
 IF @I == @ad THEN
 ]%% -->
-<!-- AD START -->
+%%[ <!-- ]%%
 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
     <tr>
         <td align="center">
@@ -221,7 +271,7 @@ IF @I == @ad THEN
         </td>
     </tr>
 </table>
-<!-- AD END -->
+%%[ --> ]%%
 <!-- %%[
 ENDIF
 NEXT @i

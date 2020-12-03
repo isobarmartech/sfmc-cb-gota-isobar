@@ -232,7 +232,7 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/smp_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/smp_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "SMP_Redaktionellt" }, { "label": "VXOnews_Redaktionellt" }]
+        "newsfeeds": [{ "label": "SMP_Redaktionellt" }]
     }, {
         "name": "VXOnews",
         "id": "VXO",
