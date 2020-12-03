@@ -23,15 +23,11 @@ SET @subject = @title
 %%[ if 0 == 1 then ]%%
 <!-- temp. editor workaround -->
 <style>
-    .editor-gears-content{
-        color: rgb(0,0,0,0);
+    .body{
         font-size: 0px;
-        line-height: 0px;
     }
-    .editor-gears-content>table {
-        color: #2E2926;
+    .body>table {
         font-size: initial;
-        line-height: initial;
     }
 </style>
 <table  border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
