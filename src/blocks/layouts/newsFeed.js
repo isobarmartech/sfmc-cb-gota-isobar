@@ -23,11 +23,16 @@ SET @subject = @title
 %%[ if 0 == 1 then ]%%
 <!-- temp. editor workaround -->
 <style>
-  body{
-   color: rgb(0,0,0,0);
-    font-size: 0px;
-    line-height: 0px;
-  }
+    .editor-gears-content{
+        color: rgb(0,0,0,0);
+        font-size: 0px;
+        line-height: 0px;
+    }
+    .editor-gears-content>table {
+        color: #2E2926;
+        font-size: initial;
+        line-height: initial;
+    }
 </style>
 <table  border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
   <tr>
@@ -80,7 +85,7 @@ SET @subject = @title
 </table>
 %%[ endif ]%%
 
-%%[ <!-- ]%%
+%%[ /* <!-- */ ]%%
 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
     <tr>
         <td align="center">
@@ -152,9 +157,9 @@ SET @subject = @title
         </td>
     </tr>
 </table>
-%%[ --> ]%%
+%%[ /* --> */ ]%%
 <!-- %%[ELSE ]%% -->
-%%[ <!-- ]%%
+%%[ /* <!-- */ ]%%
 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
     <tr>
         <td align="center">
@@ -225,12 +230,12 @@ SET @subject = @title
         </td>
     </tr>
 </table>
-%%[ --> ]%%
+%%[ /* --> */ ]%%
 <!-- %%[
 ENDIF
 IF @I == @ad THEN
 ]%% -->
-%%[ <!-- ]%%
+%%[ /* <!-- */ ]%%
 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%;">
     <tr>
         <td align="center">
@@ -271,7 +276,7 @@ IF @I == @ad THEN
         </td>
     </tr>
 </table>
-%%[ --> ]%%
+%%[ /* --> */ ]%%
 <!-- %%[
 ENDIF
 NEXT @i
