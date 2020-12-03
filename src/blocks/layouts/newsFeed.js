@@ -23,10 +23,10 @@ SET @subject = @title
 %%[ if 0 == 1 then ]%%
 <!-- temp. editor workaround -->
 <style>
-    .body{
+    .stylingblock-content-wrapper.camarker-inner{
         font-size: 0px;
     }
-    .body>table {
+    .stylingblock-content-wrapper.camarker-inner>table {
         font-size: initial;
     }
 </style>
