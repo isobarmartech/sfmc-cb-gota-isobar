@@ -679,9 +679,9 @@ export const ui = {
                 }
             },
             "VXO": {
-                "header": "http://via.placeholder.com/200x40?text=VXOnews",
-                "header_gota": "http://via.placeholder.com/200x40?text=VXOnews-gota",
-                "footer": "http://via.placeholder.com/200x40?text=VXOnews",
+                "header": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/b87b6990-8e0d-4a30-8383-93e6d6d76cce.png",
+                "header_gota": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/b87b6990-8e0d-4a30-8383-93e6d6d76cce.png",
+                "footer": "http://image.mail.smp.se/lib/fe3611717564047c721374/m/1/a7f9b496-6ba1-439c-9978-0fea7f717b0e.png",
                 "app": {
                     "black": "http://via.placeholder.com/70x70?text=APP",
                     "white": "http://via.placeholder.com/70x70?text=APP",
