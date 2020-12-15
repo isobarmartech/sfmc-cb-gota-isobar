@@ -10,7 +10,7 @@ import {
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
-import { LAYOUT, APP_ICONS, MENU, MENU_ITEM, COPYRIGHT, LEGAL, CONTENT_WRAPPER, ADDRESS, USUBSCRIBE, SPACER } from "./layouts/footer";
+import { LAYOUT, APP_ICONS, APP_ICONS_NO_TWITTER, MENU, MENU_ITEM, COPYRIGHT, LEGAL, CONTENT_WRAPPER, ADDRESS, USUBSCRIBE, SPACER } from "./layouts/footer";
 import { ui } from "../constants/ui.js";
 import RichTextEditor from '../components/RichTextEditor';
 import { richTextToHtml } from "../components/RichTextEditor";
@@ -37,7 +37,13 @@ class Article extends React.Component {
 
         if (this.props.content.toggleIcons) {
             regex = /\[appIconsHtml\]/gi;
-            html = html.replace(regex, APP_ICONS);
+
+            if (this.props.content.linkTwitter === "") {
+                html = html.replace(regex, APP_ICONS_NO_TWITTER);
+            } else {
+                html = html.replace(regex, APP_ICONS);
+            }
+
             if (this.props.content.toggleMenu || this.props.content.toggleCopyright || this.props.content.toggleLegal || this.props.content.toggleAddress || this.props.content.toggleUnsubscribe) {
                 regex = /\[spacerHtml\]/gi;
                 html = html.replace(regex, SPACER);

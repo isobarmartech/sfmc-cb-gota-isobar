@@ -188,6 +188,43 @@ export const ui = {
         },
         "newsfeeds": [{ "label": "KB_Redaktionellt" }]
     }, {
+        "name": "KalmarPosten",
+        "id": "KP",
+        "colors": ["#D00019", "#730E0E", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
+        "website": "https://www.kalmarposten.se/",
+        "facebook": "https://www.facebook.com/KalmarPosten/",
+        "twitter": "",
+        "instagram": "https://www.instagram.com/kalmarposten/",
+        "applinks": {
+            "googleplay": "#",
+            "appstore": "#"
+        },
+        "menu": [{
+            "title": "Startsida",
+            "link": "https://www.kalmarposten.se/"
+        }, {
+            "title": "Tipsa tidningen",
+            "link": "mailto:tidningen@kalmarposten.se"
+        }],
+        "unsubscribe": {
+            "text": "Klicka här för att avregistrera dig",
+            "link": "{{message.unsubscribeUrl}}"
+        },
+        "address": {
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
+        "publisher": {
+            "name": "Lorem ipsum",
+            "title": "Lorem ipsum",
+            "signature": "http://via.placeholder.com/250x70"
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/kp_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/kp_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "KP_Redaktionellt" }]
+    }, {
         "name": "Smålandsposten",
         "id": "SMP",
         "colors": ["#D00019", "#730E0E", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
@@ -655,6 +692,26 @@ export const ui = {
                     "static": {
                         "desktop": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/997d9245-03c7-483b-b68f-7206d0ffe9c6.png",
                         "mobile": "http://image.mail.kristianstadsbladet.se/lib/fe3711717564047c721373/m/1/471d9def-3ba3-4835-8d92-b4fb09bd5aeb.png"
+                    }
+                }
+            },
+            "KP": {
+                "header": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/e7b8c33c-718f-413f-afe0-56daf3a6a54a.png",
+                "header_gota": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/e7b8c33c-718f-413f-afe0-56daf3a6a54a.png",
+                "footer": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/f1947ae6-c0e7-483d-ab75-275423ff0c3c.png",
+                "app": {
+                    "black": "http://via.placeholder.com/70x70",
+                    "white": "http://via.placeholder.com/70x70",
+                    "color": "http://via.placeholder.com/70x70"
+                },
+                "banner": {
+                    "gif": {
+                        "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b3b3fae6-c640-4566-8750-7aacf02f3d6c.png",
+                        "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/174c2e97-02cd-430c-92d4-fe7007635eae.png"
+                    },
+                    "static": {
+                        "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b3b3fae6-c640-4566-8750-7aacf02f3d6c.png",
+                        "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/174c2e97-02cd-430c-92d4-fe7007635eae.png"
                     }
                 }
             },

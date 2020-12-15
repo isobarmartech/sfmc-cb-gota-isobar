@@ -94,6 +94,33 @@ export const APP_ICONS = `
 <!-- app icons -->
 `;
 
+export const APP_ICONS_NO_TWITTER = `
+<!-- app icons -->
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+        <td align="center">
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="[linkFacebook]" target="_blank">
+                            <img src="https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/95069442-0976-4867-aff8-c57fe9229ff1.png" alt="" width="40" height="40" style="display: block; border: 0; width: 40px;">
+                        </a>
+                    </td>
+                    <td width="30" style="font-size: 1px; line-height: 1px; width: 30px;">&nbsp;</td>
+                    <td>
+                        <a href="[linkInstagram]" target="_blank">
+                            <img src="https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/0ec5ea9b-2fb4-40e9-8e64-6cdab62ca3c3.png" alt="" width="40" height="40" style="display: block; border: 0; width: 40px;">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    [spacerHtml]
+</table>
+<!-- app icons -->
+`;
+
 export const MENU = `
 <!-- menu -->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
