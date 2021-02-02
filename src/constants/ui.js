@@ -31,10 +31,7 @@ export const ui = {
             "title": "Tipsa tidningen",
             "link": "https://www.barometern.se/tipsa-oss"
         }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
+        "unsubscribe": "Klicka här för att avregistrera dig",
         "address": {
             "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
@@ -77,10 +74,7 @@ export const ui = {
             "title": "Tipsa tidningen",
             "link": "https://www.blt.se/tipsa-oss"
         }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
+        "unsubscribe": "Klicka här för att avregistrera dig",
         "address": {
             "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
@@ -123,10 +117,7 @@ export const ui = {
             "title": "Tipsa redaktionen",
             "link": "https://www.bt.se/tipsa-oss"
         }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
+        "unsubscribe": "Klicka här för att avregistrera dig",
         "address": {
             "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
@@ -141,6 +132,40 @@ export const ui = {
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/bt_nyhetsbrev&sz=320x320&c=12345"
         },
         "newsfeeds": [{ "label": "BT_Redaktionellt" }, { "label": "BT_Klimat" }, { "label": "BT_Affarer" }]
+    }, {
+        "name": "KalmarPosten",
+        "id": "KP",
+        "colors": ["#D00019", "#730E0E", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
+        "website": "https://www.kalmarposten.se/",
+        "facebook": "https://www.facebook.com/KalmarPosten/",
+        "twitter": "",
+        "instagram": "https://www.instagram.com/kalmarposten/",
+        "applinks": {
+            "googleplay": "#",
+            "appstore": "#"
+        },
+        "menu": [{
+            "title": "Startsida",
+            "link": "https://www.kalmarposten.se/"
+        }, {
+            "title": "Tipsa tidningen",
+            "link": "mailto:tidningen@kalmarposten.se"
+        }],
+        "unsubscribe": "Klicka här för att avregistrera dig",
+        "address": {
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
+        "publisher": {
+            "name": "Lorem ipsum",
+            "title": "Lorem ipsum",
+            "signature": "http://via.placeholder.com/250x70"
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/kp_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/kp_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "KP_Redaktionellt" }]
     }, {
         "name": "Kristianstadsbladet",
         "id": "KB",
@@ -169,10 +194,7 @@ export const ui = {
             "title": "Tipsa tidningen",
             "link": "https://www.kristianstadsbladet.se/tipsa-oss"
         }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
+        "unsubscribe": "Klicka här för att avregistrera dig",
         "address": {
             "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
@@ -187,43 +209,6 @@ export const ui = {
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/kb_nyhetsbrev&sz=320x320&c=12345"
         },
         "newsfeeds": [{ "label": "KB_Redaktionellt" }]
-    }, {
-        "name": "KalmarPosten",
-        "id": "KP",
-        "colors": ["#D00019", "#730E0E", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
-        "website": "https://www.kalmarposten.se/",
-        "facebook": "https://www.facebook.com/KalmarPosten/",
-        "twitter": "",
-        "instagram": "https://www.instagram.com/kalmarposten/",
-        "applinks": {
-            "googleplay": "#",
-            "appstore": "#"
-        },
-        "menu": [{
-            "title": "Startsida",
-            "link": "https://www.kalmarposten.se/"
-        }, {
-            "title": "Tipsa tidningen",
-            "link": "mailto:tidningen@kalmarposten.se"
-        }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
-        "address": {
-            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
-            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
-        },
-        "publisher": {
-            "name": "Lorem ipsum",
-            "title": "Lorem ipsum",
-            "signature": "http://via.placeholder.com/250x70"
-        },
-        "ad": {
-            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/kp_nyhetsbrev&sz=320x320&c=12345",
-            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/kp_nyhetsbrev&sz=320x320&c=12345"
-        },
-        "newsfeeds": [{ "label": "KP_Redaktionellt" }]
     }, {
         "name": "Smålandsposten",
         "id": "SMP",
@@ -252,10 +237,7 @@ export const ui = {
             "title": "Tipsa tidningen",
             "link": "https://www.smp.se/tipsa-oss"
         }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
+        "unsubscribe": "Klicka här för att avregistrera dig",
         "address": {
             "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
@@ -270,43 +252,6 @@ export const ui = {
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/smp_nyhetsbrev&sz=320x320&c=12345"
         },
         "newsfeeds": [{ "label": "SMP_Redaktionellt" }]
-    }, {
-        "name": "VXOnews",
-        "id": "VXO",
-        "colors": ["#ED7E00", "#3C2814", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
-        "website": "https://www.vxonews.se/",
-        "facebook": "https://www.facebook.com/vxonews",
-        "twitter": "https://twitter.com/vxonews",
-        "instagram": "https://www.instagram.com/vxonews/",
-        "applinks": {
-            "googleplay": "#",
-            "appstore": "#"
-        },
-        "menu": [{
-            "title": "Startsida",
-            "link": "https://www.vxonews.se/"
-        }, {
-            "title": "Tipsa tidningen",
-            "link": "mailto:tips@vxonews.se"
-        }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
-        "address": {
-            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
-            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
-        },
-        "publisher": {
-            "name": "Unknown",
-            "title": "Unknown",
-            "signature": "http://via.placeholder.com/250x70?text=banner+missing"
-        },
-        "ad": {
-            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/vxo_nyhetsbrev&sz=320x320&c=12345",
-            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/vxo_nyhetsbrev&sz=320x320&c=12345"
-        },
-        "newsfeeds": [{ "label": "VXO_Redaktionellt" }],
     }, {
         "name": "Sydöstran",
         "id": "SOR",
@@ -335,10 +280,7 @@ export const ui = {
             "title": "Tipsa tidningen",
             "link": "https://www.sydostran.se/tipsa-oss"
         }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
+        "unsubscribe": "Klicka här för att avregistrera dig",
         "address": {
             "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
@@ -381,10 +323,7 @@ export const ui = {
             "title": "Tipsa tidningen",
             "link": "https://www.trelleborgsallehanda.se/tipsa-oss"
         }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
+        "unsubscribe": "Klicka här för att avregistrera dig",
         "address": {
             "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
@@ -427,10 +366,7 @@ export const ui = {
             "title": "Tipsa tidningen",
             "link": "https://www.ut.se/tipsa-oss"
         }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
+        "unsubscribe": "Klicka här för att avregistrera dig",
         "address": {
             "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
@@ -473,10 +409,7 @@ export const ui = {
             "title": "Tipsa tidningen",
             "link": "https://www.ystadsallehanda.se/tipsa-oss"
         }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
+        "unsubscribe": "Klicka här för att avregistrera dig",
         "address": {
             "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
@@ -491,6 +424,40 @@ export const ui = {
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/ya_nyhetsbrev&sz=320x320&c=12345"
         },
         "newsfeeds": [{ "label": "YA_Redaktionellt" }]
+    }, {
+        "name": "VXOnews",
+        "id": "VXO",
+        "colors": ["#ED7E00", "#3C2814", "#FFED00", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
+        "website": "https://www.vxonews.se/",
+        "facebook": "https://www.facebook.com/vxonews",
+        "twitter": "https://twitter.com/vxonews",
+        "instagram": "https://www.instagram.com/vxonews/",
+        "applinks": {
+            "googleplay": "#",
+            "appstore": "#"
+        },
+        "menu": [{
+            "title": "Startsida",
+            "link": "https://www.vxonews.se/"
+        }, {
+            "title": "Tipsa tidningen",
+            "link": "mailto:tips@vxonews.se"
+        }],
+        "unsubscribe": "Klicka här för att avregistrera dig",
+        "address": {
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
+        "publisher": {
+            "name": "Unknown",
+            "title": "Unknown",
+            "signature": "http://via.placeholder.com/250x70?text=banner+missing"
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/vxo_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/vxo_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "VXO_Redaktionellt" }],
     }, {
         "name": "Ölandsbladet",
         "id": "OB",
@@ -519,10 +486,7 @@ export const ui = {
             "title": "Tipsa tidningen",
             "link": "https://www.olandsbladet.se/tipsa-oss"
         }],
-        "unsubscribe": {
-            "text": "Klicka här för att avregistrera dig",
-            "link": "{{message.unsubscribeUrl}}"
-        },
+        "unsubscribe": "Klicka här för att avregistrera dig",
         "address": {
             "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"

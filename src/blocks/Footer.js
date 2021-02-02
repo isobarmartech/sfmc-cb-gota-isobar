@@ -162,10 +162,14 @@ class Article extends React.Component {
         if (this.props.content.toggleUnsubscribe) {
             regex = /\[unsubscribeHtml\]/gi;
             html = html.replace(regex, USUBSCRIBE);
+
         } else {
             regex = /\[unsubscribeHtml\]/gi;
             html = html.replace(regex, "");
         }
+
+        regex = /\[linkUnsubscribe\]/gi;
+        html = html.replace(regex, `%%=redirectto(cloudpagesurl(id, 'type', ${this.props.content.linkUnsubscribeType}, 'brand', ${this.props.content.brandId}))=%%`);
 
         regex = /\[imgLogo\]/gi;
         html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].footer);
@@ -231,7 +235,7 @@ class Article extends React.Component {
                         linkTwitter: "#",
                         linkInstagram: "#",
                         textUnsubscribe: "",
-                        linkUnsubscribe: "",
+                        linkUnsubscribeType: "editorial",
                         textAddress: "",
                         linkAddress: "",
                         textMenuItem1: "",
@@ -266,8 +270,7 @@ class Article extends React.Component {
                 instagram: `${ui.brands[i].instagram}`,
                 index: i,
                 menuAmount: ui.brands[i].menu.length,
-                textUnsubscribe: ui.brands[i].unsubscribe.text,
-                linkUnsubscribe: ui.brands[i].unsubscribe.link,
+                textUnsubscribe: ui.brands[i].unsubscribe,
                 textAddress: ui.brands[i].address.text,
                 linkAddress: ui.brands[i].address.link,
                 textMenuItem1: ui.brands[i].menu[0] !== undefined ? ui.brands[i].menu[0].title : "Menu item 1",
@@ -315,7 +318,6 @@ class Article extends React.Component {
                                             this.onChange("brandIndex", event.index);
                                             this.onChange("menuAmount", event.menuAmount);
                                             this.onChange("textUnsubscribe", event.textUnsubscribe);
-                                            this.onChange("linkUnsubscribe", event.linkUnsubscribe);
                                             this.onChange("textAddress", event.textAddress);
                                             this.onChange("linkAddress", event.linkAddress);
                                             this.onChange("textMenuItem1", event.textMenuItem1);
@@ -584,13 +586,32 @@ class Article extends React.Component {
                                         this.onChange("textUnsubscribe", event.target.value);
                                     }}
                                 />
-                                <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Unsubsribe Link</div>
-                                <Input
-                                    value={this.props.content.linkUnsubscribe}
-                                    onChange={event => {
-                                        this.onChange("linkUnsubscribe", event.target.value);
-                                    }}
-                                />
+                                <div className="slds-clearfix">
+                                    <div className="slds-float_left slds-m-right_medium slds-m-top_small">
+                                        <div className="slds-text-title">Unsubscribe Type</div>
+                                        <IconSettings iconPath="/assets/icons">
+                                            <div className="slds-grid slds-grid_pull-padded slds-grid_vertical-align-center slds-m-top_xx-small">
+                                                <div className="slds-col_padded" >
+                                                    <div className="slds-float_left">
+                                                        <Dropdown
+                                                            length={null}
+                                                            iconCategory="utility"
+                                                            iconName="down"
+                                                            iconVariant="border-filled"
+                                                            onSelect={event => {
+                                                                this.onChange("linkUnsubscribeType", event.label);
+                                                            }}
+                                                            options={[{ label: "editorial" }, { label: "info" }, { label: "offer" }]}
+                                                        />
+                                                    </div>
+                                                    <div className="slds-float_left slds-text-heading_small slds-p-top_xx-small slds-p-left_x-small">
+                                                        {this.props.content.linkUnsubscribeType}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </IconSettings>
+                                    </div>
+                                </div>
                             </>
                         ) : null
                         }
