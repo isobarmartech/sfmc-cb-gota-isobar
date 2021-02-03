@@ -169,7 +169,7 @@ class Article extends React.Component {
         }
 
         regex = /\[linkUnsubscribe\]/gi;
-        html = html.replace(regex, `%%=redirectto(cloudpagesurl(411, 'type', ${this.props.content.linkUnsubscribeType}, 'brand', ${this.props.content.brandId}))=%%`);
+        html = html.replace(regex, `%%=redirectto(cloudpagesurl(411, 'type', ${this.props.content.linkUnsubscribeType === undefined ? 'editorial' : this.props.content.linkUnsubscribeType}, 'brand', ${this.props.content.brandId}))=%%`);
 
         regex = /\[imgLogo\]/gi;
         html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].footer);
@@ -235,7 +235,7 @@ class Article extends React.Component {
                         linkTwitter: "#",
                         linkInstagram: "#",
                         textUnsubscribe: "",
-                        linkUnsubscribeType: "editorial",
+                        // linkUnsubscribeType: "editorial",
                         textAddress: "",
                         linkAddress: "",
                         textMenuItem1: "",
@@ -605,7 +605,7 @@ class Article extends React.Component {
                                                         />
                                                     </div>
                                                     <div className="slds-float_left slds-text-heading_small slds-p-top_xx-small slds-p-left_x-small">
-                                                        {this.props.content.linkUnsubscribeType}
+                                                        {this.props.content.linkUnsubscribeType === undefined ? 'editorial' : this.props.content.linkUnsubscribeType}
                                                     </div>
                                                 </div>
                                             </div>
