@@ -6,7 +6,8 @@ import {
     Dropdown,
     Input,
     Slider,
-    Checkbox
+    Checkbox,
+    Button
 } from "@salesforce/design-system-react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "../core/helpers";
@@ -169,7 +170,7 @@ class Article extends React.Component {
         }
 
         regex = /\[linkUnsubscribe\]/gi;
-        html = html.replace(regex, `%%=redirectto(cloudpagesurl(411, 'type', ${this.props.content.linkUnsubscribeType === undefined ? 'editorial' : this.props.content.linkUnsubscribeType}, 'brand', ${this.props.content.brandId}))=%%`);
+        html = html.replace(regex, `%%=redirectto(cloudpagesurl(${this.props.content.selectedCloudpageUrl}, 'type', ${this.props.content.linkUnsubscribeType === undefined ? 'editorial' : this.props.content.linkUnsubscribeType}, 'brand', ${this.props.content.brandId}))=%%`);
 
         regex = /\[imgLogo\]/gi;
         html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].footer);
@@ -235,7 +236,9 @@ class Article extends React.Component {
                         linkTwitter: "#",
                         linkInstagram: "#",
                         textUnsubscribe: "",
-                        // linkUnsubscribeType: "editorial",
+                        linkUnsubscribeType: "editorial",
+                        defaultCloudpageUrl: "",
+                        selectedCloudpageUrl: "",
                         textAddress: "",
                         linkAddress: "",
                         textMenuItem1: "",
@@ -282,7 +285,8 @@ class Article extends React.Component {
                 linkMenuItem2: ui.brands[i].menu[1] !== undefined ? ui.brands[i].menu[1].link : "#",
                 linkMenuItem3: ui.brands[i].menu[2] !== undefined ? ui.brands[i].menu[2].link : "#",
                 linkMenuItem4: ui.brands[i].menu[3] !== undefined ? ui.brands[i].menu[3].link : "#",
-                linkMenuItem5: ui.brands[i].menu[4] !== undefined ? ui.brands[i].menu[4].link : "#"
+                linkMenuItem5: ui.brands[i].menu[4] !== undefined ? ui.brands[i].menu[4].link : "#",
+                defaultCloudpageUrl: ui.brands[i].cloudpageUrl
             })
         }
         return arr;
@@ -330,7 +334,8 @@ class Article extends React.Component {
                                             this.onChange("linkMenuItem3", event.linkMenuItem3);
                                             this.onChange("linkMenuItem4", event.linkMenuItem4);
                                             this.onChange("linkMenuItem5", event.linkMenuItem5);
-
+                                            this.onChange("defaultCloudpageUrl", event.defaultCloudpageUrl);
+                                            this.onChange("selectedCloudpageUrl", event.defaultCloudpageUrl);
                                         }}
                                         options={this.brandList()}
                                     />
@@ -608,6 +613,48 @@ class Article extends React.Component {
                                                         {this.props.content.linkUnsubscribeType === undefined ? 'editorial' : this.props.content.linkUnsubscribeType}
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </IconSettings>
+                                    </div>
+                                    <div className="slds-float_left slds-m-left_large slds-m-top_small">
+                                        <IconSettings iconPath="/assets/icons">
+                                            <div className="slds-text-title slds-m-bottom_xx-small">Cloudpage URL</div>
+                                            <div className="slds-float_left">
+                                                <div className="slds-float_left" style={{ width: "90px" }}>
+                                                    <Input
+                                                        maxLength={5}
+                                                        value={this.props.content.selectedCloudpageUrl}
+                                                        onChange={event => {
+                                                            this.onChange("selectedCloudpageUrl", event.target.value);
+                                                        }}
+                                                        errorText={this.props.content.selectedCloudpageUrl === undefined || this.props.content.selectedCloudpageUrl === "" ? "URL missing" : ""}
+                                                    />
+                                                </div>
+                                                {(this.props.content.selectedCloudpageUrl !== this.props.content.defaultCloudpageUrl) || (this.props.content.selectedCloudpageUrl === undefined && this.props.content.defaultCloudpageUrl === undefined) ? (
+                                                    <div className="slds-float_left">
+                                                        <Button
+                                                            iconCategory="utility"
+                                                            iconName="refresh"
+                                                            iconVariant="border-filled"
+                                                            onClick={(e) => {
+                                                                if (this.props.content.selectedCloudpageUrl === undefined || this.props.content.defaultCloudpageUrl === undefined) {
+                                                                    console.log("hard reload")
+                                                                    for (let i = 0; i < this.brandList().length; i++) {
+                                                                        if (this.brandList()[i].value === this.props.content.brandId) {
+                                                                            this.onChange("selectedCloudpageUrl", this.brandList()[i].defaultCloudpageUrl);
+                                                                            this.onChange("defaultCloudpageUrl", this.brandList()[i].defaultCloudpageUrl);
+                                                                        }
+                                                                    }
+                                                                } else {
+                                                                    console.log("soft reload")
+                                                                    this.onChange("selectedCloudpageUrl", this.props.content.defaultCloudpageUrl);
+                                                                }
+
+                                                            }}
+                                                        />
+                                                    </div>
+                                                ) : null
+                                                }
                                             </div>
                                         </IconSettings>
                                     </div>

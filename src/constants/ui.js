@@ -45,7 +45,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/bot_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/bot_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "BA_Redaktionellt" }]
+        "newsfeeds": [{ "label": "BA_Redaktionellt" }],
+        "cloudpageUrl": 385
     }, {
         "name": "Blekinge Läns Tidning",
         "id": "BLT",
@@ -88,7 +89,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/blt_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/blt_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "BLT_Redaktionellt" }]
+        "newsfeeds": [{ "label": "BLT_Redaktionellt" }],
+        "cloudpageUrl": 424
     }, {
         "name": "Borås Tidning",
         "id": "BT",
@@ -131,7 +133,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/bt_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/bt_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "BT_Redaktionellt" }, { "label": "BT_Klimat" }, { "label": "BT_Affarer" }]
+        "newsfeeds": [{ "label": "BT_Redaktionellt" }, { "label": "BT_Klimat" }, { "label": "BT_Affarer" }],
+        "cloudpageUrl": 425
     }, {
         "name": "KalmarPosten",
         "id": "KP",
@@ -165,7 +168,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/kp_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/kp_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "KP_Redaktionellt" }]
+        "newsfeeds": [{ "label": "KP_Redaktionellt" }],
+        "cloudpageUrl": 426
     }, {
         "name": "Kristianstadsbladet",
         "id": "KB",
@@ -208,7 +212,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/kb_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/kb_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "KB_Redaktionellt" }]
+        "newsfeeds": [{ "label": "KB_Redaktionellt" }],
+        "cloudpageUrl": 427
     }, {
         "name": "Smålandsposten",
         "id": "SMP",
@@ -251,7 +256,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/smp_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/smp_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "SMP_Redaktionellt" }]
+        "newsfeeds": [{ "label": "SMP_Redaktionellt" }],
+        "cloudpageUrl": 429
     }, {
         "name": "Sydöstran",
         "id": "SOR",
@@ -294,7 +300,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/syd_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/syd_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "SO_Redaktionellt" }]
+        "newsfeeds": [{ "label": "SO_Redaktionellt" }],
+        "cloudpageUrl": 430
     }, {
         "name": "Trelleborgs Allehanda",
         "id": "TA",
@@ -337,7 +344,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/ta_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/ta_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "TA_Redaktionellt" }]
+        "newsfeeds": [{ "label": "TA_Redaktionellt" }],
+        "cloudpageUrl": 431
     }, {
         "name": "Ulricehamns Tidning",
         "id": "UT",
@@ -380,7 +388,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/ut_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/ut_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": []
+        "newsfeeds": [],
+        "cloudpageUrl": 432
     }, {
         "name": "Ystads Allehanda",
         "id": "YA",
@@ -423,7 +432,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/ya_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/ya_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "YA_Redaktionellt" }]
+        "newsfeeds": [{ "label": "YA_Redaktionellt" }],
+        "cloudpageUrl": 433
     }, {
         "name": "VXOnews",
         "id": "VXO",
@@ -458,6 +468,7 @@ export const ui = {
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/vxo_nyhetsbrev&sz=320x320&c=12345"
         },
         "newsfeeds": [{ "label": "VXO_Redaktionellt" }],
+        "cloudpageUrl": ""
     }, {
         "name": "Ölandsbladet",
         "id": "OB",
@@ -500,7 +511,8 @@ export const ui = {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/ob_nyhetsbrev&sz=320x320&c=12345",
             "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/ob_nyhetsbrev&sz=320x320&c=12345"
         },
-        "newsfeeds": [{ "label": "OB_Redaktionellt" }]
+        "newsfeeds": [{ "label": "OB_Redaktionellt" }],
+        "cloudpageUrl": 428
     }
     ],
     "modules": {
@@ -660,9 +672,9 @@ export const ui = {
                 }
             },
             "KP": {
-                "header": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/e7b8c33c-718f-413f-afe0-56daf3a6a54a.png",
-                "header_gota": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/e7b8c33c-718f-413f-afe0-56daf3a6a54a.png",
-                "footer": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/f1947ae6-c0e7-483d-ab75-275423ff0c3c.png",
+                "header": "http://image.mail.kalmarposten.se/lib/fe3411717564047e751d79/m/1/000a8939-7bb0-4792-8c14-3a0010a64c33.png",
+                "header_gota": "http://image.mail.kalmarposten.se/lib/fe3411717564047e751d79/m/1/000a8939-7bb0-4792-8c14-3a0010a64c33.png",
+                "footer": "http://image.mail.kalmarposten.se/lib/fe3411717564047e751d79/m/1/3cf4e452-b966-49c5-9036-19c3c58cd83d.png",
                 "app": {
                     "black": "http://via.placeholder.com/70x70",
                     "white": "http://via.placeholder.com/70x70",
@@ -670,12 +682,12 @@ export const ui = {
                 },
                 "banner": {
                     "gif": {
-                        "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b3b3fae6-c640-4566-8750-7aacf02f3d6c.png",
-                        "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/174c2e97-02cd-430c-92d4-fe7007635eae.png"
+                        "desktop": "http://image.mail.kalmarposten.se/lib/fe3411717564047e751d79/m/1/4ae58377-fbaf-47c1-8922-9d81c08178f5.png",
+                        "mobile": "http://image.mail.kalmarposten.se/lib/fe3411717564047e751d79/m/1/18278c8b-5ee9-45e1-8d99-9960fbbec86a.png"
                     },
                     "static": {
-                        "desktop": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/b3b3fae6-c640-4566-8750-7aacf02f3d6c.png",
-                        "mobile": "https://image.s50.sfmc-content.com/lib/fe4011717564047c761673/m/1/174c2e97-02cd-430c-92d4-fe7007635eae.png"
+                        "desktop": "http://image.mail.kalmarposten.se/lib/fe3411717564047e751d79/m/1/4ae58377-fbaf-47c1-8922-9d81c08178f5.png",
+                        "mobile": "http://image.mail.kalmarposten.se/lib/fe3411717564047e751d79/m/1/18278c8b-5ee9-45e1-8d99-9960fbbec86a.png"
                     }
                 }
             },
