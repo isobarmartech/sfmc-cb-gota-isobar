@@ -170,7 +170,7 @@ class Article extends React.Component {
         }
 
         regex = /\[linkUnsubscribe\]/gi;
-        html = html.replace(regex, `%%=redirectto(cloudpagesurl(${this.props.content.selectedCloudpageUrl}, 'type', ${this.props.content.linkUnsubscribeType === undefined ? 'editorial' : this.props.content.linkUnsubscribeType}, 'brand', ${this.props.content.brandId}))=%%`);
+        html = html.replace(regex, `%%=redirectto(cloudpagesurl('${this.props.content.selectedCloudpageUrl}', 'type', '${this.props.content.linkUnsubscribeType === undefined ? 'editorial' : this.props.content.linkUnsubscribeType}', 'brand', '${this.props.content.brandId}'))=%%`);
 
         regex = /\[imgLogo\]/gi;
         html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].footer);
