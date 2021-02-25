@@ -1,7 +1,7 @@
 export const LAYOUT = `
 <!-- %%[
 VAR @rows, @row, @count, @ad, @mod, @link, @img, @title, @description, @random, @subject
-SET @rows = LookupRows('[newsFeed]', 'Dummy', 1)
+SET @rows = LookupOrderedRows('[newsFeed]', 10, 'Num ASC', 'Dummy', 1)
 SET @count = RowCount(@rows)
 SET @random = random(100000, 999999)
 /* where to show the ad */
