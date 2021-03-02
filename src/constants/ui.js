@@ -513,6 +513,50 @@ export const ui = {
         },
         "newsfeeds": [{ "label": "OB_Redaktionellt" }],
         "cloudpageUrl": 428
+    }, {
+        "name": "TEST BRAND",
+        "id": "TEST",
+        "colors": ["#005CA9", "#003653", "#00FFFF", "#D10A10", "#E84D0E", "#EFAA00", "#A8C30B", "#66C1BE", "#62B8E8", "#CE95C2", "#DC6BA6"],
+        "website": "https://www.olandsbladet.se/",
+        "facebook": "https://www.facebook.com/Olandsbladet/",
+        "twitter": "https://twitter.com/olandsbladet",
+        "instagram": "https://www.instagram.com/olandsbladet/",
+        "applinks": {
+            "googleplay": "https://play.google.com/store/apps/details?id=se.olandsbladet.reader&hl=sv",
+            "appstore": "https://apps.apple.com/se/app/min%C3%B6landsbladet/id1388268779"
+        },
+        "menu": [{
+            "title": "Startsida",
+            "link": "https://www.olandsbladet.se/"
+        }, {
+            "title": "Kundcenter",
+            "link": "https://kundcenter.olandsbladet.se/"
+        }, {
+            "title": "Mina sidor",
+            "link": "https://kundcenter.olandsbladet.se/"
+        }, {
+            "title": "Prenumerationsvillkor",
+            "link": "https://kundcenter.gotamedia.se/villkor/"
+        }, {
+            "title": "Tipsa tidningen",
+            "link": "https://www.olandsbladet.se/tipsa-oss"
+        }],
+        "unsubscribe": "Klicka här för att avregistrera dig",
+        "address": {
+            "text": "Gota Media AB <br> Box 850 <br> 391 28 Kalmar",
+            "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
+        },
+        "publisher": {
+            "name": "Peter Boström",
+            "title": "Chefredaktör & ansvarig utgivare",
+            "signature": "http://image.mail.olandsbladet.se/lib/fe3111717564047c721379/m/1/6edab72b-4cd8-4aeb-95ab-78761cb4df75.png"
+        },
+        "ad": {
+            "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/ob_nyhetsbrev&sz=320x320&c=12345",
+            "img": "https://pubads.g.doubleclick.net/gampad/ad?iu=/1022696/nyhetsbrev/ob_nyhetsbrev&sz=320x320&c=12345"
+        },
+        "newsfeeds": [{ "label": "OB_Redaktionellt" }],
+        "cloudpageUrl": 428
     }
     ],
     "modules": {
