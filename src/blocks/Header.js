@@ -56,7 +56,7 @@ class Article extends React.Component {
             html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header_gota);
         } else if (this.props.content.logoVersion === "custom") {
             regex = /\[imgLogo\]/gi;
-            html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header_custom);
+            html = html.replace(regex, this.props.content.logoCustomUrl);
         } else {
             regex = /\[imgLogo\]/gi;
             html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header);
@@ -108,7 +108,8 @@ class Article extends React.Component {
                         linkBanner: "#",
                         brandName: "Select Brand",
                         brandId: "",
-                        logoVersion: "default"
+                        logoVersion: "default",
+                        logoCustomUrl: ""
                     }
                 });
             }
@@ -154,6 +155,7 @@ class Article extends React.Component {
                                             this.onChange("linkBanner", event.website);
                                             this.onChange("themeColor", event.brandColor);
                                             this.onChange("brandName", event.label);
+                                            this.onChange("logoCustomUrl", ui.images.brandImages[event.value].header_custom);
                                         }}
                                         options={this.brandList()}
                                     />
@@ -206,19 +208,21 @@ class Article extends React.Component {
                                         checked={this.props.content.logoVersion === "custom"}
                                     ></Radio>
                                 </RadioButtonGroup>
-                                {this.props.content.logoVersion === "custom" ? (
-                                    <>
-                                        <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Custom Logo Url</div>
-                                        <Input
-                                            value={this.props.content.linkBanner}
-                                            onChange={event => {
-                                                this.onChange("linkBanner", event.target.value);
-                                            }}
-                                        />
-                                    </>
-                                ) : null}
                             </div>
                         </div>
+                        {this.props.content.logoVersion === "custom" ? (
+                            <>
+                                <div className="slds-clearfix">
+                                    <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Custom Logo Url <span style={{ color: "#0070d2" }}>- Image Size: Max. 640px Width - 80px Height</span></div>
+                                    <Input
+                                        value={this.props.content.logoCustomUrl}
+                                        onChange={event => {
+                                            this.onChange("logoCustomUrl", event.target.value);
+                                        }}
+                                    />
+                                </div>
+                            </>
+                        ) : null}
                         {this.props.content.toggleBanner ? (
                             <>
                                 <div className="slds-clearfix">
