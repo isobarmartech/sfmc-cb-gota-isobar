@@ -54,6 +54,9 @@ class Article extends React.Component {
         if (this.props.content.logoVersion === "gota") {
             regex = /\[imgLogo\]/gi;
             html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header_gota);
+        } else if (this.props.content.logoVersion === "custom") {
+            regex = /\[imgLogo\]/gi;
+            html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header_custom);
         } else {
             regex = /\[imgLogo\]/gi;
             html = html.replace(regex, ui.images.brandImages[this.props.content.brandId].header);
@@ -196,7 +199,24 @@ class Article extends React.Component {
                                         value="gota"
                                         checked={this.props.content.logoVersion === "gota"}
                                     ></Radio>
+                                    <Radio
+                                        label="Custom"
+                                        variant="button-group"
+                                        value="custom"
+                                        checked={this.props.content.logoVersion === "custom"}
+                                    ></Radio>
                                 </RadioButtonGroup>
+                                {this.props.content.logoVersion === "custom" ? (
+                                    <>
+                                        <div className="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Custom Logo Url</div>
+                                        <Input
+                                            value={this.props.content.linkBanner}
+                                            onChange={event => {
+                                                this.onChange("linkBanner", event.target.value);
+                                            }}
+                                        />
+                                    </>
+                                ) : null}
                             </div>
                         </div>
                         {this.props.content.toggleBanner ? (
