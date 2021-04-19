@@ -236,7 +236,7 @@ class Article extends React.Component {
                         linkTwitter: "#",
                         linkInstagram: "#",
                         textUnsubscribe: "",
-                        linkUnsubscribeType: "editorial",
+                        linkUnsubscribeType: "offer",
                         defaultCloudpageUrl: "",
                         selectedCloudpageUrl: "",
                         textAddress: "",
