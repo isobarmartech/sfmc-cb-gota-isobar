@@ -380,9 +380,9 @@ export const ui = {
             "link": "https://goo.gl/maps/e1NNYoSR5kB9iyyr5"
         },
         "publisher": {
-            "name": "Kajsa Kettil",
+            "name": "Henrik Erickson",
             "title": "Chefredaktör & ansvarig utgivare",
-            "signature": "http://image.mail.ut.se/lib/fe3311717564047c721377/m/1/22a4710e-4ce2-4cd5-a67d-26578fcaa6d4.png"
+            "signature": "https://cdn.gotamedia.se/applications/salesforce/brands/ut/signs/erickson.png"
         },
         "ad": {
             "link": "https://pubads.g.doubleclick.net/gampad/jump?iu=/1022696/nyhetsbrev/ut_nyhetsbrev&sz=320x320&c=12345",
