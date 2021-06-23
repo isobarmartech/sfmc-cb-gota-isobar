@@ -108,7 +108,7 @@ class Article extends React.Component {
                         linkBanner: "#",
                         brandName: "Select Brand",
                         brandId: "",
-                        logoVersion: "default",
+                        logoVersion: "gota",
                         logoCustomUrl: ""
                     }
                 });
@@ -190,16 +190,16 @@ class Article extends React.Component {
                                     }}
                                 >
                                     <Radio
-                                        label="Default"
-                                        variant="button-group"
-                                        value="default"
-                                        checked={this.props.content.logoVersion === "default" || this.props.content.logoVersion === undefined}
-                                    ></Radio>
-                                    <Radio
                                         label="Gota Branded"
                                         variant="button-group"
                                         value="gota"
                                         checked={this.props.content.logoVersion === "gota"}
+                                    ></Radio>
+                                    <Radio
+                                        label="Standard"
+                                        variant="button-group"
+                                        value="default"
+                                        checked={this.props.content.logoVersion === "default" || this.props.content.logoVersion === undefined}
                                     ></Radio>
                                     <Radio
                                         label="Custom"
