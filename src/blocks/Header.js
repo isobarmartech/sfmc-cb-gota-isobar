@@ -100,7 +100,7 @@ class Article extends React.Component {
                 this.props.initFromSaved({
                     content: {
                         toggleBanner: true,
-                        bannerType: "gif",
+                        bannerType: "static",
                         themeColor: "",
                         bannerDesktop: "",
                         bannerMobile: "",
@@ -234,16 +234,16 @@ class Article extends React.Component {
                                             }}
                                         >
                                             <Radio
-                                                label="Gif"
-                                                variant="button-group"
-                                                value="gif"
-                                                checked={this.props.content.bannerType === "gif"}
-                                            ></Radio>
-                                            <Radio
                                                 label="Static"
                                                 variant="button-group"
                                                 value="static"
                                                 checked={this.props.content.bannerType === "static"}
+                                            ></Radio>
+                                            <Radio
+                                                label="Gif"
+                                                variant="button-group"
+                                                value="gif"
+                                                checked={this.props.content.bannerType === "gif"}
                                             ></Radio>
                                         </RadioButtonGroup>
                                     </div>
